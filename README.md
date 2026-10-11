@@ -10,19 +10,19 @@
 
 | งาน | หัวข้อ | โฟลเดอร์ | สถานะ |
 |---|---|---|---|
-| Workshop 1 | สถิติประชากรประเทศไทย | `Workshop 1 สถิติประชากรประเทศไทย/` | ส่งแล้ว |
-| Workshop 2 | Data Presentation | `Workshop 2 Data Presentation/` | ส่งแล้ว |
-| Workshop 3 | What-if Analysis in Excel | `Workshop 3 What if Analysis in Excel/` | ส่งแล้ว |
-| Workshop 4 | Data Preparation | `Workshop 4 …(Data Preparation)/` | ส่งแล้ว |
-| Workshop 5 | Modeling and Evaluation | `Workshop 5 Modeling and Evaluation/` | ส่งแล้ว |
-| Workshop 6 | การสร้างโมเดลและการประเมินผล | `Workshop 6 …/` | ส่งแล้ว |
-| Workshop 7 | Data Visualization (Power BI) | `Workshop 7 Data Visualization/` | ส่งแล้ว |
-| Workshop 8 | Data Analysis Expressions (DAX) | `Workshop 8 Data Analysis Expressions (DAX)/` | ส่งแล้ว |
-| Workshop 9 | Dashboard นักท่องเที่ยวต่างชาติ | `Workshop 9 Dashboard/` | ส่งแล้ว |
-| Workshop 10 | Deployment — พยากรณ์ทะเบียนรถ (กรมการขนส่งทางบก) | `Workshop 10 Deployment/` | ส่งแล้ว |
-| Mini Project 1 | CRISP-DM, ≥5 โมเดล (Altair AI Studio) | `BI Mini Project 1/` | ส่งแล้ว |
-| Mini Project 2 | Binary classification, Auto Model 9 โมเดล | `BI Mini Project 2/` | ส่งแล้ว |
-| Term Project | DLT Brand/Type (Power BI + Python) | `BI Term Project/` | ฉบับร่าง ยังไม่มีช่องส่งใน Classroom |
+| Workshop 1 | สถิติประชากรประเทศไทย | `Workshop 1 สถิติประชากรประเทศไทย/` | เสร็จสิ้น |
+| Workshop 2 | Data Presentation | `Workshop 2 Data Presentation/` | เสร็จสิ้น |
+| Workshop 3 | What-if Analysis in Excel | `Workshop 3 What if Analysis in Excel/` | เสร็จสิ้น |
+| Workshop 4 | Data Preparation | `Workshop 4 …(Data Preparation)/` | เสร็จสิ้น |
+| Workshop 5 | Modeling and Evaluation | `Workshop 5 Modeling and Evaluation/` | เสร็จสิ้น |
+| Workshop 6 | การสร้างโมเดลและการประเมินผล | `Workshop 6 …/` | เสร็จสิ้น |
+| Workshop 7 | Data Visualization (Power BI) | `Workshop 7 Data Visualization/` | เสร็จสิ้น |
+| Workshop 8 | Data Analysis Expressions (DAX) | `Workshop 8 Data Analysis Expressions (DAX)/` | เสร็จสิ้น |
+| Workshop 9 | Dashboard นักท่องเที่ยวต่างชาติ | `Workshop 9 Dashboard/` | เสร็จสิ้น |
+| Workshop 10 | Deployment — พยากรณ์ทะเบียนรถ (กรมการขนส่งทางบก) | `Workshop 10 Deployment/` | เสร็จสิ้น |
+| Mini Project 1 | CRISP-DM, ≥5 โมเดล (Altair AI Studio) | `BI Mini Project 1/` | เสร็จสิ้น |
+| Mini Project 2 | Binary classification, Auto Model 9 โมเดล | `BI Mini Project 2/` | เสร็จสิ้น |
+| Term Project | DLT Brand/Type (Power BI + Python) | `BI Term Project/` | ฉบับร่าง |
 
 ## โครงสร้าง repository
 
