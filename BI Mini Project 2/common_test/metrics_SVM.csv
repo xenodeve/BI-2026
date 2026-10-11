@@ -1,0 +1,10 @@
+"Criterion","Value","Standard Deviation","Variance"
+"accuracy",0.9015,,
+"AUC",0.8712700270675271,,
+"precision",0.8448598130841122,,
+"recall",0.5923984272608126,,
+"f_measure",0.6964560862865947,,
+"false_positive",249.0,,
+"false_negative",933.0,,
+"true_positive",1356.0,,
+"true_negative",9462.0,,

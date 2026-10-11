@@ -1,0 +1,97 @@
+# --- environments, caches, tool state (rebuildable / machine-specific) ---
+.bi-runtime/
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.playwright-mcp/
+.claude/
+.altair-work/
+node_modules/
+*.tmp
+~$*
+
+# --- generated AI Studio (RapidMiner) repository artifacts: huge, rebuilt by running the .rmp ---
+*.rmhdf5table
+*.rmexpred
+*.rmliftchart
+*.rmmodelsim
+*.rmstats
+*.rmperf
+*.rmmodel
+*.ioo
+*.nativeio
+
+# --- scratch/duplicate evidence trees under docs/execution ---
+docs/execution/download-cache-recovery/
+docs/execution/portability-checks/
+docs/execution/native-batch-temp/
+docs/execution/native-before/
+docs/execution/review-update-backups/
+docs/execution/__pycache__/
+
+# --- OS / editor ---
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# --- scratch ---
+.chart-data-*/
+
+# --- open-source cleanup: agent working traces and debugging leftovers ---
+docs/
+HANDOFF-BI-2026.md
+Delivery_Review/
+docs/execution/classroom-receipts/
+# backups / pre-fix copies
+*_before_*
+*.before_*
+*.before-*
+*.bak
+*backup*/
+*backups/
+before_gui_run_*/
+gui_attempt_*/
+explanation_run/
+ui-fix-backups/
+# logs, probes, debug helpers
+*.log
+*.inspect.ndjson
+*[Pp]robe*
+fix_*.py
+exec-*.xml
+generate_id.xml
+*_fix.json
+# automated QA / manifests / previews / drafts
+*_QA_Final.json
+report_qa*.json
+*Package_manifest.json
+*review_manifest.json
+report-qa/
+qa/
+final_report_preview/
+report_previews/
+appendix-preview/
+*_Draft.*
+*Preview_Draft*
+*verification*.json
+*.verify.json
+*_audit.json
+evidence_status.json
+*.template.*
+common_gui_evidence*.json
+NATIVE_BATCH_README.md
+NATIVE_EVIDENCE_GUIDE.md
+# third-party tooling copied in for validation (Microsoft TOM libraries)
+**/analysis/tools/
+# duplicate PBIP report folders (the .pbix is the deliverable; SemanticModel kept for readable DAX)
+**/offline/*.Report/
+# validation / acceptance dumps, copied reference samples, duplicate portability copies
+*_validation.json
+*validation*.json
+*acceptance*.json
+*manifest*.json
+operator-evidence/
+portability-check/
+offline_tools/

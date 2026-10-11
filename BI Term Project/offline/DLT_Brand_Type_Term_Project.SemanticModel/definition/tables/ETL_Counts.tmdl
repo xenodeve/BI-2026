@@ -1,0 +1,39 @@
+table ETL_Counts
+
+	measure 'ETL Input Rows' = MAX(ETL_Counts[InputRows])
+		formatString: #,0
+
+	measure 'ETL Output Rows' = MAX(ETL_Counts[OutputRows])
+		formatString: #,0
+
+	column Stage
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Stage
+
+	column InputRows
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: InputRows
+
+	column OutputRows
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: OutputRows
+
+	column Reason
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Reason
+
+	partition ETL_Counts = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:/Github/BI 2026/BI Term Project/ETL_Counts.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Nulls = Table.ReplaceValue(Headers, "", null, Replacer.ReplaceValue, Table.ColumnNames(Headers)),
+				    Typed = Table.TransformColumnTypes(Nulls, {{"Stage", type text}, {"InputRows", Int64.Type}, {"OutputRows", Int64.Type}, {"Reason", type text}}, "en-US")
+				in
+				    Typed
+

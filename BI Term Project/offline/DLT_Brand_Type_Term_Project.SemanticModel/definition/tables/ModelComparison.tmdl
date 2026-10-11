@@ -1,0 +1,94 @@
+table ModelComparison
+
+	measure 'Validation MAE' = IF(HASONEVALUE(DimSeries[SeriesKey]), MIN(ModelComparison[ValidationMAE]))
+		formatString: #,0.00
+
+	measure 'Test MAE' = IF(HASONEVALUE(DimSeries[SeriesKey]), MIN(ModelComparison[TestMAE]))
+		formatString: #,0.00
+
+	measure 'Selected Model' = IF(HASONEVALUE(DimSeries[SeriesKey]), CALCULATE(SELECTEDVALUE(ModelComparison[Model]), ModelComparison[SelectedModel] = TRUE()), "Choose exactly one series")
+
+	measure 'Selected Validation MAE' = IF(HASONEVALUE(DimSeries[SeriesKey]), CALCULATE(MIN(ModelComparison[ValidationMAE]), ModelComparison[SelectedModel] = TRUE()))
+		formatString: #,0.00
+
+	measure 'Selected Test MAE' = IF(HASONEVALUE(DimSeries[SeriesKey]), CALCULATE(MIN(ModelComparison[TestMAE]), ModelComparison[SelectedModel] = TRUE()))
+		formatString: #,0.00
+
+	measure 'Selected Test RMSE' = IF(HASONEVALUE(DimSeries[SeriesKey]), CALCULATE(MIN(ModelComparison[TestRMSE]), ModelComparison[SelectedModel] = TRUE()))
+		formatString: #,0.00
+
+	measure 'Selected Test R2' = IF(HASONEVALUE(DimSeries[SeriesKey]), CALCULATE(MAX(ModelComparison[TestR2]), ModelComparison[SelectedModel] = TRUE()))
+		formatString: 0.0000
+
+	measure 'Naive Test MAE' = IF(HASONEVALUE(DimSeries[SeriesKey]), CALCULATE(MIN(ModelComparison[TestMAE]), ModelComparison[Model] = "Naive Forecast"))
+		formatString: #,0.00
+
+	measure 'Test Improvement over Naive %' = DIVIDE([Naive Test MAE]-[Selected Test MAE], [Naive Test MAE])
+		formatString: 0.00%
+
+	column SeriesKey
+		dataType: string
+		summarizeBy: none
+		sourceColumn: SeriesKey
+
+	column SegmentType
+		dataType: string
+		summarizeBy: none
+		sourceColumn: SegmentType
+
+	column SegmentName
+		dataType: string
+		summarizeBy: none
+		sourceColumn: SegmentName
+
+	column Model
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Model
+
+	column ValidationMAE
+		dataType: double
+		summarizeBy: none
+		sourceColumn: ValidationMAE
+
+	column ValidationRMSE
+		dataType: double
+		summarizeBy: none
+		sourceColumn: ValidationRMSE
+
+	column ValidationR2
+		dataType: double
+		summarizeBy: none
+		sourceColumn: ValidationR2
+
+	column TestMAE
+		dataType: double
+		summarizeBy: none
+		sourceColumn: TestMAE
+
+	column TestRMSE
+		dataType: double
+		summarizeBy: none
+		sourceColumn: TestRMSE
+
+	column TestR2
+		dataType: double
+		summarizeBy: none
+		sourceColumn: TestR2
+
+	column SelectedModel
+		dataType: boolean
+		summarizeBy: none
+		sourceColumn: SelectedModel
+
+	partition ModelComparison = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:/Github/BI 2026/BI Term Project/ModelComparison.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Nulls = Table.ReplaceValue(Headers, "", null, Replacer.ReplaceValue, Table.ColumnNames(Headers)),
+				    Typed = Table.TransformColumnTypes(Nulls, {{"SeriesKey", type text}, {"SegmentType", type text}, {"SegmentName", type text}, {"Model", type text}, {"ValidationMAE", type number}, {"ValidationRMSE", type number}, {"ValidationR2", type number}, {"TestMAE", type number}, {"TestRMSE", type number}, {"TestR2", type number}, {"SelectedModel", type logical}}, "en-US")
+				in
+				    Typed
+

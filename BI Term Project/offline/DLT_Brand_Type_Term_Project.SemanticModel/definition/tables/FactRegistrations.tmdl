@@ -1,0 +1,83 @@
+table FactRegistrations
+
+	measure 'Total Registrations' = SUM(FactRegistrations[Registrations])
+		formatString: #,0 "registrations"
+
+	measure 'Source Records' = SUM(FactRegistrations[SourceRecords])
+		formatString: #,0
+
+	measure 'Fact Rows' = COUNTROWS(FactRegistrations)
+		formatString: #,0
+
+	measure 'Active Brands' = DISTINCTCOUNT(FactRegistrations[BrandKey])
+		formatString: #,0
+
+	measure 'Active Vehicle Types' = DISTINCTCOUNT(FactRegistrations[VehicleTypeKey])
+		formatString: #,0
+
+	measure 'Average Monthly Registrations' = DIVIDE([Total Registrations], DISTINCTCOUNT(FactRegistrations[Date]), 0)
+		formatString: #,0.00
+
+	measure 'Registrations per Source Record' = DIVIDE([Total Registrations], [Source Records], 0)
+		formatString: #,0.00
+
+	measure 'Brand Share %' = DIVIDE([Total Registrations], CALCULATE([Total Registrations], REMOVEFILTERS(DimBrand)), 0)
+		formatString: 0.00%
+
+	measure 'Vehicle Type Share %' = DIVIDE([Total Registrations], CALCULATE([Total Registrations], REMOVEFILTERS(DimVehicleType)), 0)
+		formatString: 0.00%
+
+	measure 'Previous Year Registrations' = CALCULATE([Total Registrations], DATEADD(DimDate[Date], -1, YEAR))
+		formatString: #,0 "registrations"
+
+	measure 'YoY Growth %' = DIVIDE([Total Registrations] - [Previous Year Registrations], [Previous Year Registrations])
+		formatString: 0.00%
+
+	measure 'Top 3 Brand Share %' = VAR TopBrands = TOPN(3, ALL(DimBrand[Brand]), [Total Registrations], DESC) RETURN DIVIDE(SUMX(TopBrands, [Total Registrations]), CALCULATE([Total Registrations], REMOVEFILTERS(DimBrand)), 0)
+		formatString: 0.00%
+
+	measure 'Selected Brand' = SELECTEDVALUE(DimBrand[Brand], "All / multiple brands")
+
+	measure 'Latest Complete Month' = MAX(FactRegistrations[Date])
+		formatString: MMM yyyy
+
+	measure 'H5 January YoY %' = VAR Jan2026 = CALCULATE([Total Registrations], REMOVEFILTERS(DimDate), DimDate[Year] = 2026, DimDate[Month] = 1) VAR Jan2025 = CALCULATE([Total Registrations], REMOVEFILTERS(DimDate), DimDate[Year] = 2025, DimDate[Month] = 1) RETURN DIVIDE(Jan2026-Jan2025, Jan2025)
+		formatString: 0.00%
+
+	column Date
+		dataType: dateTime
+		formatString: Short Date
+		summarizeBy: none
+		sourceColumn: Date
+
+	column BrandKey
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: BrandKey
+
+	column VehicleTypeKey
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: VehicleTypeKey
+
+	column Registrations
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: Registrations
+
+	column SourceRecords
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: SourceRecords
+
+	partition FactRegistrations = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:/Github/BI 2026/BI Term Project/FactRegistrations.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Nulls = Table.ReplaceValue(Headers, "", null, Replacer.ReplaceValue, Table.ColumnNames(Headers)),
+				    Typed = Table.TransformColumnTypes(Nulls, {{"Date", type date}, {"BrandKey", Int64.Type}, {"VehicleTypeKey", Int64.Type}, {"Registrations", Int64.Type}, {"SourceRecords", Int64.Type}}, "en-US")
+				in
+				    Typed
+

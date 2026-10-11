@@ -1,0 +1,15 @@
+relationship f44852f1-1954-482b-9a88-8f66ba5d47bc
+	fromColumn: 'SalesTable'.'ProductID'
+	toColumn: 'ProductsTable'.'ProductID'
+	crossFilteringBehavior: oneDirection
+
+relationship f189827e-12db-4e10-80be-2122bc8b23e7
+	fromColumn: 'SalesTable'.'CustomerID'
+	toColumn: 'CustomersTable'.'CustomerID'
+	crossFilteringBehavior: oneDirection
+
+relationship d521cc58-506c-4332-b1e0-f0c11973e885
+	fromColumn: 'SalesTable'.'OrderDate'
+	toColumn: 'DateTable'.'Date'
+	crossFilteringBehavior: oneDirection
+

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "DLT_Brand_Type_Term_Project"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "7c2df0a3-8a45-47e3-a7cd-34341ee21b42"
+  }
+}

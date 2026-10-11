@@ -1,0 +1,10 @@
+{
+  "complete": true,
+  "errors": [],
+  "pending": [],
+  "five_native_result_photos_verified": true,
+  "TurboPrep_native_export_verified": true,
+  "actual_relocated_native_GUI_run_verified": true,
+  "GUI_models_provenance": "Actual canonical GUI run12:06:58\u201312:07:06; all5CSVbytes identical original batch/backup",
+  "canonical_raw_metrics_unchanged": true
+}

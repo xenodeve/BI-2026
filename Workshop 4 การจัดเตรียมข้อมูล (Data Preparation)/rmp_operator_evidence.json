@@ -1,0 +1,8 @@
+{
+  "generate_attributes": "rapidminer-studio-core-12.1.1__com__rapidminer__resources__OperatorsCore.xml",
+  "generate_macro": "rapidminer-studio-core-12.1.1__com__rapidminer__resources__OperatorsCore.xml",
+  "multiply": "rapidminer-studio-core-12.1.1__com__rapidminer__resources__OperatorsCore.xml",
+  "read_csv": "rapidminer-studio-core-12.1.1__com__rapidminer__resources__OperatorsCore.xml",
+  "set_role": "rapidminer-studio-core-12.1.1__com__rapidminer__resources__OperatorsCore.xml",
+  "write_csv": "rapidminer-studio-core-12.1.1__com__rapidminer__resources__OperatorsCore.xml"
+}

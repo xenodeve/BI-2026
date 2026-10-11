@@ -1,0 +1,1522 @@
+{
+  "local_instances": {
+    "message": "Found 4 local PowerBI Desktop and Analysis Services instances",
+    "operation": "ListLocalInstances",
+    "data": [
+      {
+        "processId": 33544,
+        "port": 50074,
+        "connectionString": "data source=localhost:50074;Application Name=MCP-PBIModeling",
+        "parentProcessName": "PBIDesktop",
+        "parentWindowTitle": "Untitled - Power BI Desktop",
+        "startTime": "2026-10-10T23:11:28.9675969+07:00"
+      },
+      {
+        "processId": 51628,
+        "port": 50620,
+        "connectionString": "data source=localhost:50620;Application Name=MCP-PBIModeling",
+        "parentProcessName": "PBIDesktop",
+        "parentWindowTitle": "DLT_Brand_Type_Term_Project",
+        "startTime": "2026-10-11T03:23:10.1954364+07:00"
+      },
+      {
+        "processId": 72348,
+        "port": 55099,
+        "connectionString": "data source=localhost:55099;Application Name=MCP-PBIModeling",
+        "parentProcessName": "PBIDesktop",
+        "parentWindowTitle": "DLT_Brand_Type_Term_Project",
+        "startTime": "2026-10-11T04:38:45.3736786+07:00"
+      },
+      {
+        "processId": 75216,
+        "port": 61930,
+        "connectionString": "data source=localhost:61930;Application Name=MCP-PBIModeling",
+        "parentProcessName": "PBIDesktop",
+        "parentWindowTitle": "DLT_Brand_Type_Term_Project",
+        "startTime": "2026-10-11T04:38:25.9890312+07:00"
+      }
+    ]
+  },
+  "verified_engine_parent": {
+    "ProcessId": 51628,
+    "ParentProcessId": 68744,
+    "Name": "msmdsrv.exe"
+  },
+  "connection": {
+    "message": "Connection 'PBIDesktop-DLT_Brand_Type_Term_Project-50620' established successfully",
+    "operation": "Connect",
+    "data": "PBIDesktop-DLT_Brand_Type_Term_Project-50620"
+  },
+  "connections_after_connect": {
+    "message": "Found 1 connections",
+    "operation": "ListConnections",
+    "data": [
+      {
+        "connectionName": "PBIDesktop-DLT_Brand_Type_Term_Project-50620",
+        "databaseName": "4967ffe2-03ef-4eb1-855d-eb81885f9615",
+        "serverName": "XENO\\AnalysisServicesWorkspace_a3732f4a-2be2-4a88-8f43-57829919c80b",
+        "isCloudConnection": false,
+        "isOffline": false,
+        "connectedAt": "2026-10-11T03:39:00.1989003Z",
+        "hasTransaction": false,
+        "hasTrace": false,
+        "sessionId": "9A3DF761-5ADA-4D06-9B90-7351FF4A4F67"
+      }
+    ]
+  },
+  "measures": {
+    "message": "Processed 36 measure(s): 36 succeeded, 0 failed",
+    "operation": "Get",
+    "summary": {
+      "totalItems": 36,
+      "successCount": 36,
+      "failureCount": 0,
+      "executionTime": "00:00:00.1267767"
+    },
+    "results": [
+      {
+        "message": "Successfully retrieved measure 'Total Registrations'",
+        "index": 0,
+        "itemIdentifier": "Total Registrations",
+        "data": {
+          "tableName": "FactRegistrations",
+          "name": "Total Registrations",
+          "expression": "SUM(FactRegistrations[Registrations])",
+          "description": "",
+          "formatString": "#,0 \"registrations\"",
+          "isHidden": false,
+          "isSimpleMeasure": false,
+          "displayFolder": "",
+          "dataType": "Int64",
+          "dataCategory": "",
+          "lineageTag": "5d87ab6a-58cf-4464-b333-37ff849f5a54",
+          "sourceLineageTag": "",
+          "annotations": [],
+          "extendedProperties": [],
+          "state": "Ready",
+          "errorMessage": "",
+          "modifiedTime": "2026-10-10T20:23:23.123333",
+          "structureModifiedTime": "2026-10-10T20:23:19.563333"
+        },
+        "warnings": []
+      },
+      {
+        "message": "Successfully retrieved measure 'Source Records'",
+        "index": 1,
+        "itemIdentifier": "Source Records",
+        "data": {
+          "tableName": "FactRegistrations",
+          "name": "Source Records",
+          "expression": "SUM(FactRegistrations[SourceRecords])",
+          "description": "",
+          "formatString": "#,0",
+          "isHidden": false,
+          "isSimpleMeasure": false,
+          "displayFolder": "",
+          "dataType": "Int64",
+          "dataCategory": "",
+          "lineageTag": "d99d4181-c233-44ac-ba0f-d97eb4f91959",
+          "sourceLineageTag": "",
+          "annotations": [],
+          "extendedProperties": [],
+          "state": "Ready",
+          "errorMessage": "",
+          "modifiedTime": "2026-10-10T20:23:23.123333",
+          "structureModifiedTime": "2026-10-10T20:23:19.563333"
+        },
+        "warnings": []
+      },
+      {
+        "message": "Successfully retrieved measure 'Fact Rows'",
+        "index": 2,
+        "itemIdentifier": "Fact Rows",
+        "data": {
+          "tableName": "FactRegistrations",
+          "name": "Fact Rows",
+          "expression": "COUNTROWS(FactRegistrations)",
+          "description": "",
+          "formatString": "#,0",
+          "isHidden": false,
+          "isSimpleMeasure": false,
+          "displayFolder": "",
+          "dataType": "Int64",
+          "dataCategory": "",
+          "lineageTag": "cc530559-ddcc-4c63-a8db-379cf3ee80f6",
+          "sourceLineageTag": "",
+          "annotations": [],
+          "extendedProperties": [],
+          "state": "Ready",
+          "errorMessage": "",
+          "modifiedTime": "2026-10-10T20:23:23.123333",
+          "structureModifiedTime": "2026-10-10T20:23:19.563333"
+        },
+        "warnings": []
+      },
+      {
+        "message": "Successfully retrieved measure 'Active Brands'",
+        "index": 3,
+        "itemIdentifier": "Active Brands",
+        "data": {
+          "tableName": "FactRegistrations",
+          "name": "Active Brands",
+          "expression": "DISTINCTCOUNT(FactRegistrations[BrandKey])",
+          "description": "",
+          "formatString": "#,0",
+          "isHidden": false,
+          "isSimpleMeasure": false,
+          "displayFolder": "",
+          "dataType": "Int64",
+          "dataCategory": "",
+          "lineageTag": "03ae00df-2f07-4f76-a3e0-537c3bac647d",
+          "sourceLineageTag": "",
+          "annotations": [],
+          "extendedProperties": [],
+          "state": "Ready",
+          "errorMessage": "",
+          "modifiedTime": "2026-10-10T20:23:23.123333",
+          "structureModifiedTime": "2026-10-10T20:23:19.563333"
+        },
+        "warnings": []
+      },
+      {
+        "message": "Successfully retrieved measure 'Active Vehicle Types'",
+        "index": 4,
+        "itemIdentifier": "Active Vehicle Types",
+        "data": {
+          "tableName": "FactRegistrations",
+          "name": "Active Vehicle Types",
+          "expression": "DISTINCTCOUNT(FactRegistrations[VehicleTypeKey])",
+          "description": "",
+          "formatString": "#,0",
+          "isHidden": false,
+          "isSimpleMeasure": false,
+          "displayFolder": "",
+          "dataType": "Int64",
+          "dataCategory": "",
+          "lineageTag": "61afde74-77f8-469c-b939-57f4ee9f8e9f",
+          "sourceLineageTag": "",
+          "annotations": [],
+          "extendedProperties": [],
+          "state": "Ready",
+          "errorMessage": "",
+          "modifiedTime": "2026-10-10T20:23:23.123333",
+          "structureModifiedTime": "2026-10-10T20:23:19.563333"
+        },
+        "warnings": []
+      },
+      {
+        "message": "Successfully retrieved measure 'Average Monthly Registrations'",
+        "index": 5,
+        "itemIdentifier": "Average Monthly Registrations",
+        "data": {
+          "tableName": "FactRegistrations",
+          "name": "Average Monthly Registrations",
+          "expression": "DIVIDE([Total Registrations], DISTINCTCOUNT(FactRegistrations[Date]), 0)",
+          "description": "",
+          "formatString": "#,0.00",
+          "isHidden": false,
+          "isSimpleMeasure": false,
+          "displayFolder": "",
+          "dataType": "Double",
+          "dataCategory": "",
+          "lineageTag": "0984732e-7ca7-4c27-a260-5c0c35012af8",
+          "sourceLineageTag": "",
+          "annotations": [],
+          "extendedProperties": [],
+          "state": "Ready",
+          "errorMessage": "",
+          "modifiedTime": "2026-10-10T20:23:23.123333",
+          "structureModifiedTime": "2026-10-10T20:23:19.563333"
+        },
+        "warnings": []
+      },
+      {
+        "message": "Successfully retrieved measure 'Registrations per Source Record'",
+        "index": 6,
+        "itemIdentifier": "Registrations per Source Record",
+        "data": {
+          "tableName": "FactRegistrations",
+          "name": "Registrations per Source Record",
+          "expression": "DIVIDE([Total Registrations], [Source Records], 0)",
+          "description": "",
+          "formatString": "#,0.00",
+          "isHidden": false,
+          "isSimpleMeasure": false,
+          "displayFolder": "",
+          "dataType": "Double",
+          "dataCategory": "",
+          "lineageTag": "3ff56394-1b31-47d5-80d5-915464f5ff54",
+          "sourceLineageTag": "",
+          "annotations": [],
+          "extendedProperties": [],
+          "state": "Ready",
+          "errorMessage": "",
+          "modifiedTime": "2026-10-10T20:23:23.123333",
+          "structureModifiedTime": "2026-10-10T20:23:19.563333"
+        },
+        "warnings": []
+      },
+      {
+        "message": "Successfully retrieved measure 'Brand Share %'",
+        "index": 7,
+        "itemIdentifier": "Brand Share %",
+        "data": {
+          "tableName": "FactRegistrations",
+          "name": "Brand Share %",
+          "expression": "DIVIDE([Total Registrations], CALCULATE([Total Registrations], REMOVEFILTERS(DimBrand)), 0)",
+          "description": "",
+          "formatString": "0.00%",
+          "isHidden": false,
+          "isSimpleMeasure": false,
+          "displayFolder": "",
+          "dataType": "Double",
+          "dataCategory": "",
+          "lineageTag": "f45ba891-43ea-4270-8228-e5d0dfa2aa2f",
+          "sourceLineageTag": "",
+          "annotations": [],
+          "extendedProperties": [],
+          "state": "Ready",
+          "errorMessage": "",
+          "modifiedTime": "2026-10-10T20:23:23.123333",
+          "structureModifiedTime": "2026-10-10T20:23:19.563333"
+        },
+        "warnings": []
+      },
+      {
+        "message": "Successfully retrieved measure 'Vehicle Type Share %'",
+        "index": 8,
+        "itemIdentifier": "Vehicle Type Share %",
+        "data": {
+          "tableName": "FactRegistrations",
+          "name": "Vehicle Type Share %",
+          "expression": "DIVIDE([Total Registrations], CALCULATE([Total Registrations], REMOVEFILTERS(DimVehicleType)), 0)",
+          "description": "",
+          "formatString": "0.00%",
+          "isHidden": false,
+          "isSimpleMeasure": false,
+          "displayFolder": "",
+          "dataType": "Double",
+          "dataCategory": "",
+          "lineageTag": "52060959-4e82-4f54-8bda-96f63fa77513",
+          "sourceLineageTag": "",
+          "annotations": [],
+          "extendedProperties": [],
+          "state": "Ready",
+          "errorMessage": "",
+          "modifiedTime": "2026-10-10T20:23:23.123333",
+          "structureModifiedTime": "2026-10-10T20:23:19.563333"
+        },
+        "warnings": []
+      },
+      {
+        "message": "Successfully retrieved measure 'Previous Year Registrations'",
+        "index": 9,
+        "itemIdentifier": "Previous Year Registrations",
+        "data": {
+          "tableName": "FactRegistrations",
+          "name": "Previous Year Registrations",
+          "expression": "CALCULATE([Total Registrations], DATEADD(DimDate[Date], -1, YEAR))",
+          "description": "",
+          "formatString": "#,0 \"registrations\"",
+          "isHidden": false,
+          "isSimpleMeasure": false,
+          "displayFolder": "",
+          "dataType": "Int64",
+          "dataCategory": "",
+          "lineageTag": "f498d123-9916-429c-8621-c37eb14a5be0",
+          "sourceLineageTag": "",
+          "annotations": [],
+          "extendedProperties": [],
+          "state": "Ready",
+          "errorMessage": "",
+          "modifiedTime": "2026-10-10T20:23:23.123333",
+          "structureModifiedTime": "2026-10-10T20:23:19.563333"
+        },
+        "warnings": []
+      },
+      {
+        "message": "Successfully retrieved measure 'YoY Growth %'",
+        "index": 10,
+        "itemIdentifier": "YoY Growth %",
+        "data": {
+          "tableName": "FactRegistrations",
+          "name": "YoY Growth %",
+          "expression": "DIVIDE([Total Registrations] - [Previous Year Registrations], [Previous Year Registrations])",
+          "description": "",
+          "formatString": "0.00%",
+          "isHidden": false,
+          "isSimpleMeasure": false,
+          "displayFolder": "",
+          "dataType": "Double",
+          "dataCategory": "",
+          "lineageTag": "9ee729dd-3ef8-41e6-8cfd-e9ba0412495a",
+          "sourceLineageTag": "",
+          "annotations": [],
+          "extendedProperties": [],
+          "state": "Ready",
+          "errorMessage": "",
+          "modifiedTime": "2026-10-10T20:23:23.123333",
+          "structureModifiedTime": "2026-10-10T20:23:19.563333"
+        },
+        "warnings": []
+      },
+      {
+        "message": "Successfully retrieved measure 'Top 3 Brand Share %'",
+        "index": 11,
+        "itemIdentifier": "Top 3 Brand Share %",
+        "data": {
+          "tableName": "FactRegistrations",
+          "name": "Top 3 Brand Share %",
+          "expression": "VAR TopBrands = TOPN(3, ALL(DimBrand[Brand]), [Total Registrations], DESC) RETURN DIVIDE(SUMX(TopBrands, [Total Registrations]), CALCULATE([Total Registrations], REMOVEFILTERS(DimBrand)), 0)",
+          "description": "",
+          "formatString": "0.00%",
+          "isHidden": false,
+          "isSimpleMeasure": false,
+          "displayFolder": "",
+          "dataType": "Double",
+          "dataCategory": "",
+          "lineageTag": "3b56294d-7b10-4b8a-b399-6c7c1634004c",
+          "sourceLineageTag": "",
+          "annotations": [],
+          "extendedProperties": [],
+          "state": "Ready",
+          "errorMessage": "",
+          "modifiedTime": "2026-10-10T20:23:23.123333",
+          "structureModifiedTime": "2026-10-10T20:23:19.563333"
+        },
+        "warnings": []
+      },
+      {
+        "message": "Successfully retrieved measure 'Selected Brand'",
+        "index": 12,
+        "itemIdentifier": "Selected Brand",
+        "data": {
+          "tableName": "FactRegistrations",
+          "name": "Selected Brand",
+          "expression": "SELECTEDVALUE(DimBrand[Brand], \"All / multiple brands\")",
+          "description": "",
+          "formatString": "",
+          "isHidden": false,
+          "isSimpleMeasure": false,
+          "displayFolder": "",
+          "dataType": "String",
+          "dataCategory": "",
+          "lineageTag": "f7af4f89-95a6-4b3a-880f-14a86fdfe5a6",
+          "sourceLineageTag": "",
+          "annotations": [],
+          "extendedProperties": [],
+          "state": "Ready",
+          "errorMessage": "",
+          "modifiedTime": "2026-10-10T20:23:23.123333",
+          "structureModifiedTime": "2026-10-10T20:23:19.563333"
+        },
+        "warnings": []
+      },
+      {
+        "message": "Successfully retrieved measure 'Latest Complete Month'",
+        "index": 13,
+        "itemIdentifier": "Latest Complete Month",
+        "data": {
+          "tableName": "FactRegistrations",
+          "name": "Latest Complete Month",
+          "expression": "MAX(FactRegistrations[Date])",
+          "description": "",
+          "formatString": "MMM yyyy",
+          "isHidden": false,
+          "isSimpleMeasure": false,
+          "displayFolder": "",
+          "dataType": "DateTime",
+          "dataCategory": "",
+          "lineageTag": "6d48b96c-8bb5-46f5-b2a6-b2ea38d7e6c4",
+          "sourceLineageTag": "",
+          "annotations": [],
+          "extendedProperties": [],
+          "state": "Ready",
+          "errorMessage": "",
+          "modifiedTime": "2026-10-10T20:23:23.123333",
+          "structureModifiedTime": "2026-10-10T20:23:19.563333"
+        },
+        "warnings": []
+      },
+      {
+        "message": "Successfully retrieved measure 'H5 January YoY %'",
+        "index": 14,
+        "itemIdentifier": "H5 January YoY %",
+        "data": {
+          "tableName": "FactRegistrations",
+          "name": "H5 January YoY %",
+          "expression": "VAR Jan2026 = CALCULATE([Total Registrations], REMOVEFILTERS(DimDate), DimDate[Year] = 2026, DimDate[Month] = 1) VAR Jan2025 = CALCULATE([Total Registrations], REMOVEFILTERS(DimDate), DimDate[Year] = 2025, DimDate[Month] = 1) RETURN DIVIDE(Jan2026-Jan2025, Jan2025)",
+          "description": "",
+          "formatString": "0.00%",
+          "isHidden": false,
+          "isSimpleMeasure": false,
+          "displayFolder": "",
+          "dataType": "Double",
+          "dataCategory": "",
+          "lineageTag": "38295512-5a0c-440e-a4fb-9e51022440bb",
+          "sourceLineageTag": "",
+          "annotations": [],
+          "extendedProperties": [],
+          "state": "Ready",
+          "errorMessage": "",
+          "modifiedTime": "2026-10-10T20:23:23.123333",
+          "structureModifiedTime": "2026-10-10T20:23:19.563333"
+        },
+        "warnings": []
+      },
+      {
+        "message": "Successfully retrieved measure 'Forecast Actual'",
+        "index": 15,
+        "itemIdentifier": "Forecast Actual",
+        "data": {
+          "tableName": "FactForecast",
+          "name": "Forecast Actual",
+          "expression": "IF(HASONEVALUE(DimSeries[SeriesKey]), SUM(FactForecast[ActualRegistrations]))",
+          "description": "",
+          "formatString": "#,0 \"registrations\"",
+          "isHidden": false,
+          "isSimpleMeasure": false,
+          "displayFolder": "",
+          "dataType": "Double",
+          "dataCategory": "",
+          "lineageTag": "0156881c-7a15-4837-aa5a-7086b315b333",
+          "sourceLineageTag": "",
+          "annotations": [],
+          "extendedProperties": [],
+          "state": "Ready",
+          "errorMessage": "",
+          "modifiedTime": "2026-10-10T20:23:23.123333",
+          "structureModifiedTime": "2026-10-10T20:23:19.563333"
+        },
+        "warnings": []
+      },
+      {
+        "message": "Successfully retrieved measure 'Forecast Prediction'",
+        "index": 16,
+        "itemIdentifier": "Forecast Prediction",
+        "data": {
+          "tableName": "FactForecast",
+          "name": "Forecast Prediction",
+          "expression": "IF(HASONEVALUE(DimSeries[SeriesKey]), SUM(FactForecast[ForecastRegistrations]))",
+          "description": "",
+          "formatString": "#,0 \"registrations\"",
+          "isHidden": false,
+          "isSimpleMeasure": false,
+          "displayFolder": "",
+          "dataType": "Double",
+          "dataCategory": "",
+          "lineageTag": "112de0e5-6829-438d-85d0-fc53a4d48f5e",
+          "sourceLineageTag": "",
+          "annotations": [],
+          "extendedProperties": [],
+          "state": "Ready",
+          "errorMessage": "",
+          "modifiedTime": "2026-10-10T20:23:23.123333",
+          "structureModifiedTime": "2026-10-10T20:23:19.563333"
+        },
+        "warnings": []
+      },
+      {
+        "message": "Successfully retrieved measure 'Future Forecast'",
+        "index": 17,
+        "itemIdentifier": "Future Forecast",
+        "data": {
+          "tableName": "FactForecast",
+          "name": "Future Forecast",
+          "expression": "IF(HASONEVALUE(DimSeries[SeriesKey]), CALCULATE(SUM(FactForecast[ForecastRegistrations]), FactForecast[DatasetSegment] = \"Future\"))",
+          "description": "",
+          "formatString": "#,0 \"registrations\"",
+          "isHidden": false,
+          "isSimpleMeasure": false,
+          "displayFolder": "",
+          "dataType": "Double",
+          "dataCategory": "",
+          "lineageTag": "ec21e138-09de-49a0-9d72-6e5ebee28d79",
+          "sourceLineageTag": "",
+          "annotations": [],
+          "extendedProperties": [],
+          "state": "Ready",
+          "errorMessage": "",
+          "modifiedTime": "2026-10-10T20:23:23.123333",
+          "structureModifiedTime": "2026-10-10T20:23:19.563333"
+        },
+        "warnings": []
+      },
+      {
+        "message": "Successfully retrieved measure 'Selected Series'",
+        "index": 18,
+        "itemIdentifier": "Selected Series",
+        "data": {
+          "tableName": "FactForecast",
+          "name": "Selected Series",
+          "expression": "SELECTEDVALUE(DimSeries[DisplayName], \"Choose exactly one series\")",
+          "description": "",
+          "formatString": "",
+          "isHidden": false,
+          "isSimpleMeasure": false,
+          "displayFolder": "",
+          "dataType": "String",
+          "dataCategory": "",
+          "lineageTag": "d2c7a5ba-74d6-47c1-b118-6e59ed416e17",
+          "sourceLineageTag": "",
+          "annotations": [],
+          "extendedProperties": [],
+          "state": "Ready",
+          "errorMessage": "",
+          "modifiedTime": "2026-10-10T20:23:23.123333",
+          "structureModifiedTime": "2026-10-10T20:23:19.563333"
+        },
+        "warnings": []
+      },
+      {
+        "message": "Successfully retrieved measure 'Forecast Target Month'",
+        "index": 19,
+        "itemIdentifier": "Forecast Target Month",
+        "data": {
+          "tableName": "FactForecast",
+          "name": "Forecast Target Month",
+          "expression": "CALCULATE(MAX(FactForecast[Date]), FactForecast[DatasetSegment] = \"Future\")",
+          "description": "",
+          "formatString": "MMM yyyy",
+          "isHidden": false,
+          "isSimpleMeasure": false,
+          "displayFolder": "",
+          "dataType": "DateTime",
+          "dataCategory": "",
+          "lineageTag": "5bf17f25-edef-45f5-91d2-73baf300ce6b",
+          "sourceLineageTag": "",
+          "annotations": [],
+          "extendedProperties": [],
+          "state": "Ready",
+          "errorMessage": "",
+          "modifiedTime": "2026-10-10T20:23:23.123333",
+          "structureModifiedTime": "2026-10-10T20:23:19.563333"
+        },
+        "warnings": []
+      },
+      {
+        "message": "Successfully retrieved measure 'Validation MAE'",
+        "index": 20,
+        "itemIdentifier": "Validation MAE",
+        "data": {
+          "tableName": "ModelComparison",
+          "name": "Validation MAE",
+          "expression": "IF(HASONEVALUE(DimSeries[SeriesKey]), MIN(ModelComparison[ValidationMAE]))",
+          "description": "",
+          "formatString": "#,0.00",
+          "isHidden": false,
+          "isSimpleMeasure": false,
+          "displayFolder": "",
+          "dataType": "Double",
+          "dataCategory": "",
+          "lineageTag": "c11ab107-fac9-47ff-ad36-b944ed8091b9",
+          "sourceLineageTag": "",
+          "annotations": [],
+          "extendedProperties": [],
+          "state": "Ready",
+          "errorMessage": "",
+          "modifiedTime": "2026-10-10T20:23:23.123333",
+          "structureModifiedTime": "2026-10-10T20:23:19.563333"
+        },
+        "warnings": []
+      },
+      {
+        "message": "Successfully retrieved measure 'Test MAE'",
+        "index": 21,
+        "itemIdentifier": "Test MAE",
+        "data": {
+          "tableName": "ModelComparison",
+          "name": "Test MAE",
+          "expression": "IF(HASONEVALUE(DimSeries[SeriesKey]), MIN(ModelComparison[TestMAE]))",
+          "description": "",
+          "formatString": "#,0.00",
+          "isHidden": false,
+          "isSimpleMeasure": false,
+          "displayFolder": "",
+          "dataType": "Double",
+          "dataCategory": "",
+          "lineageTag": "5e0b3ab2-576e-43df-8101-679e72089484",
+          "sourceLineageTag": "",
+          "annotations": [],
+          "extendedProperties": [],
+          "state": "Ready",
+          "errorMessage": "",
+          "modifiedTime": "2026-10-10T20:23:23.123333",
+          "structureModifiedTime": "2026-10-10T20:23:19.563333"
+        },
+        "warnings": []
+      },
+      {
+        "message": "Successfully retrieved measure 'Selected Model'",
+        "index": 22,
+        "itemIdentifier": "Selected Model",
+        "data": {
+          "tableName": "ModelComparison",
+          "name": "Selected Model",
+          "expression": "IF(HASONEVALUE(DimSeries[SeriesKey]), CALCULATE(SELECTEDVALUE(ModelComparison[Model]), ModelComparison[SelectedModel] = TRUE()), \"Choose exactly one series\")",
+          "description": "",
+          "formatString": "",
+          "isHidden": false,
+          "isSimpleMeasure": false,
+          "displayFolder": "",
+          "dataType": "String",
+          "dataCategory": "",
+          "lineageTag": "fe738d55-3c9c-4b1f-a82a-a702623e0023",
+          "sourceLineageTag": "",
+          "annotations": [],
+          "extendedProperties": [],
+          "state": "Ready",
+          "errorMessage": "",
+          "modifiedTime": "2026-10-10T20:23:23.123333",
+          "structureModifiedTime": "2026-10-10T20:23:19.563333"
+        },
+        "warnings": []
+      },
+      {
+        "message": "Successfully retrieved measure 'Selected Validation MAE'",
+        "index": 23,
+        "itemIdentifier": "Selected Validation MAE",
+        "data": {
+          "tableName": "ModelComparison",
+          "name": "Selected Validation MAE",
+          "expression": "IF(HASONEVALUE(DimSeries[SeriesKey]), CALCULATE(MIN(ModelComparison[ValidationMAE]), ModelComparison[SelectedModel] = TRUE()))",
+          "description": "",
+          "formatString": "#,0.00",
+          "isHidden": false,
+          "isSimpleMeasure": false,
+          "displayFolder": "",
+          "dataType": "Double",
+          "dataCategory": "",
+          "lineageTag": "2808ad12-c796-4bba-8443-bb7596c76a9f",
+          "sourceLineageTag": "",
+          "annotations": [],
+          "extendedProperties": [],
+          "state": "Ready",
+          "errorMessage": "",
+          "modifiedTime": "2026-10-10T20:23:23.123333",
+          "structureModifiedTime": "2026-10-10T20:23:19.563333"
+        },
+        "warnings": []
+      },
+      {
+        "message": "Successfully retrieved measure 'Selected Test MAE'",
+        "index": 24,
+        "itemIdentifier": "Selected Test MAE",
+        "data": {
+          "tableName": "ModelComparison",
+          "name": "Selected Test MAE",
+          "expression": "IF(HASONEVALUE(DimSeries[SeriesKey]), CALCULATE(MIN(ModelComparison[TestMAE]), ModelComparison[SelectedModel] = TRUE()))",
+          "description": "",
+          "formatString": "#,0.00",
+          "isHidden": false,
+          "isSimpleMeasure": false,
+          "displayFolder": "",
+          "dataType": "Double",
+          "dataCategory": "",
+          "lineageTag": "5411ed1c-ddae-43b1-af59-94ce8244d0bd",
+          "sourceLineageTag": "",
+          "annotations": [],
+          "extendedProperties": [],
+          "state": "Ready",
+          "errorMessage": "",
+          "modifiedTime": "2026-10-10T20:23:23.123333",
+          "structureModifiedTime": "2026-10-10T20:23:19.563333"
+        },
+        "warnings": []
+      },
+      {
+        "message": "Successfully retrieved measure 'Selected Test RMSE'",
+        "index": 25,
+        "itemIdentifier": "Selected Test RMSE",
+        "data": {
+          "tableName": "ModelComparison",
+          "name": "Selected Test RMSE",
+          "expression": "IF(HASONEVALUE(DimSeries[SeriesKey]), CALCULATE(MIN(ModelComparison[TestRMSE]), ModelComparison[SelectedModel] = TRUE()))",
+          "description": "",
+          "formatString": "#,0.00",
+          "isHidden": false,
+          "isSimpleMeasure": false,
+          "displayFolder": "",
+          "dataType": "Double",
+          "dataCategory": "",
+          "lineageTag": "fff29ec2-d271-4e57-9ec1-5f3a6e8e4d0f",
+          "sourceLineageTag": "",
+          "annotations": [],
+          "extendedProperties": [],
+          "state": "Ready",
+          "errorMessage": "",
+          "modifiedTime": "2026-10-10T20:23:23.123333",
+          "structureModifiedTime": "2026-10-10T20:23:19.563333"
+        },
+        "warnings": []
+      },
+      {
+        "message": "Successfully retrieved measure 'Selected Test R2'",
+        "index": 26,
+        "itemIdentifier": "Selected Test R2",
+        "data": {
+          "tableName": "ModelComparison",
+          "name": "Selected Test R2",
+          "expression": "IF(HASONEVALUE(DimSeries[SeriesKey]), CALCULATE(MAX(ModelComparison[TestR2]), ModelComparison[SelectedModel] = TRUE()))",
+          "description": "",
+          "formatString": "0.0000",
+          "isHidden": false,
+          "isSimpleMeasure": false,
+          "displayFolder": "",
+          "dataType": "Double",
+          "dataCategory": "",
+          "lineageTag": "de3650a4-5df7-4f4c-8727-47e4267c4770",
+          "sourceLineageTag": "",
+          "annotations": [],
+          "extendedProperties": [],
+          "state": "Ready",
+          "errorMessage": "",
+          "modifiedTime": "2026-10-10T20:23:23.123333",
+          "structureModifiedTime": "2026-10-10T20:23:19.563333"
+        },
+        "warnings": []
+      },
+      {
+        "message": "Successfully retrieved measure 'Naive Test MAE'",
+        "index": 27,
+        "itemIdentifier": "Naive Test MAE",
+        "data": {
+          "tableName": "ModelComparison",
+          "name": "Naive Test MAE",
+          "expression": "IF(HASONEVALUE(DimSeries[SeriesKey]), CALCULATE(MIN(ModelComparison[TestMAE]), ModelComparison[Model] = \"Naive Forecast\"))",
+          "description": "",
+          "formatString": "#,0.00",
+          "isHidden": false,
+          "isSimpleMeasure": false,
+          "displayFolder": "",
+          "dataType": "Double",
+          "dataCategory": "",
+          "lineageTag": "4e1586dc-b203-4d2d-80a7-cdf36e744cd6",
+          "sourceLineageTag": "",
+          "annotations": [],
+          "extendedProperties": [],
+          "state": "Ready",
+          "errorMessage": "",
+          "modifiedTime": "2026-10-10T20:23:23.123333",
+          "structureModifiedTime": "2026-10-10T20:23:19.563333"
+        },
+        "warnings": []
+      },
+      {
+        "message": "Successfully retrieved measure 'Test Improvement over Naive %'",
+        "index": 28,
+        "itemIdentifier": "Test Improvement over Naive %",
+        "data": {
+          "tableName": "ModelComparison",
+          "name": "Test Improvement over Naive %",
+          "expression": "DIVIDE([Naive Test MAE]-[Selected Test MAE], [Naive Test MAE])",
+          "description": "",
+          "formatString": "0.00%",
+          "isHidden": false,
+          "isSimpleMeasure": false,
+          "displayFolder": "",
+          "dataType": "Double",
+          "dataCategory": "",
+          "lineageTag": "51f235b5-e92f-4a70-84fa-e1915e8c4eb6",
+          "sourceLineageTag": "",
+          "annotations": [],
+          "extendedProperties": [],
+          "state": "Ready",
+          "errorMessage": "",
+          "modifiedTime": "2026-10-10T20:23:23.123333",
+          "structureModifiedTime": "2026-10-10T20:23:19.563333"
+        },
+        "warnings": []
+      },
+      {
+        "message": "Successfully retrieved measure 'Raw Records'",
+        "index": 29,
+        "itemIdentifier": "Raw Records",
+        "data": {
+          "tableName": "DataQuality",
+          "name": "Raw Records",
+          "expression": "SUM(DataQuality[SourceRecords])",
+          "description": "",
+          "formatString": "#,0",
+          "isHidden": false,
+          "isSimpleMeasure": false,
+          "displayFolder": "",
+          "dataType": "Int64",
+          "dataCategory": "",
+          "lineageTag": "35ae17b5-0ed5-40ef-b1a4-7c7385e63ea8",
+          "sourceLineageTag": "",
+          "annotations": [],
+          "extendedProperties": [],
+          "state": "Ready",
+          "errorMessage": "",
+          "modifiedTime": "2026-10-10T20:23:23.123333",
+          "structureModifiedTime": "2026-10-10T20:23:19.563333"
+        },
+        "warnings": []
+      },
+      {
+        "message": "Successfully retrieved measure 'Raw Registrations'",
+        "index": 30,
+        "itemIdentifier": "Raw Registrations",
+        "data": {
+          "tableName": "DataQuality",
+          "name": "Raw Registrations",
+          "expression": "SUM(DataQuality[SourceRegistrations])",
+          "description": "",
+          "formatString": "#,0 \"registrations\"",
+          "isHidden": false,
+          "isSimpleMeasure": false,
+          "displayFolder": "",
+          "dataType": "Int64",
+          "dataCategory": "",
+          "lineageTag": "da79d950-b837-462b-bc00-6d71d005d524",
+          "sourceLineageTag": "",
+          "annotations": [],
+          "extendedProperties": [],
+          "state": "Ready",
+          "errorMessage": "",
+          "modifiedTime": "2026-10-10T20:23:23.123333",
+          "structureModifiedTime": "2026-10-10T20:23:19.563333"
+        },
+        "warnings": []
+      },
+      {
+        "message": "Successfully retrieved measure 'Complete Source Months'",
+        "index": 31,
+        "itemIdentifier": "Complete Source Months",
+        "data": {
+          "tableName": "DataQuality",
+          "name": "Complete Source Months",
+          "expression": "CALCULATE(COUNTROWS(DataQuality), DataQuality[UsedForModeling] = TRUE())",
+          "description": "",
+          "formatString": "#,0",
+          "isHidden": false,
+          "isSimpleMeasure": false,
+          "displayFolder": "",
+          "dataType": "Int64",
+          "dataCategory": "",
+          "lineageTag": "c5a15b85-75b3-40dd-972e-134b3e2ef863",
+          "sourceLineageTag": "",
+          "annotations": [],
+          "extendedProperties": [],
+          "state": "Ready",
+          "errorMessage": "",
+          "modifiedTime": "2026-10-10T20:23:23.123333",
+          "structureModifiedTime": "2026-10-10T20:23:19.563333"
+        },
+        "warnings": []
+      },
+      {
+        "message": "Successfully retrieved measure 'Incomplete Registrations'",
+        "index": 32,
+        "itemIdentifier": "Incomplete Registrations",
+        "data": {
+          "tableName": "DataQuality",
+          "name": "Incomplete Registrations",
+          "expression": "CALCULATE(SUM(DataQuality[SourceRegistrations]), DataQuality[IsComplete] = FALSE())",
+          "description": "",
+          "formatString": "#,0 \"registrations\"",
+          "isHidden": false,
+          "isSimpleMeasure": false,
+          "displayFolder": "",
+          "dataType": "Int64",
+          "dataCategory": "",
+          "lineageTag": "2db14257-ac95-49ea-8be7-1d773680dc64",
+          "sourceLineageTag": "",
+          "annotations": [],
+          "extendedProperties": [],
+          "state": "Ready",
+          "errorMessage": "",
+          "modifiedTime": "2026-10-10T20:23:23.123333",
+          "structureModifiedTime": "2026-10-10T20:23:19.563333"
+        },
+        "warnings": []
+      },
+      {
+        "message": "Successfully retrieved measure 'ETL Input Rows'",
+        "index": 33,
+        "itemIdentifier": "ETL Input Rows",
+        "data": {
+          "tableName": "ETL_Counts",
+          "name": "ETL Input Rows",
+          "expression": "MAX(ETL_Counts[InputRows])",
+          "description": "",
+          "formatString": "#,0",
+          "isHidden": false,
+          "isSimpleMeasure": false,
+          "displayFolder": "",
+          "dataType": "Int64",
+          "dataCategory": "",
+          "lineageTag": "bfd3ad92-b677-48cf-9a74-1dd2ecc0b721",
+          "sourceLineageTag": "",
+          "annotations": [],
+          "extendedProperties": [],
+          "state": "Ready",
+          "errorMessage": "",
+          "modifiedTime": "2026-10-10T20:23:23.123333",
+          "structureModifiedTime": "2026-10-10T20:23:19.563333"
+        },
+        "warnings": []
+      },
+      {
+        "message": "Successfully retrieved measure 'ETL Output Rows'",
+        "index": 34,
+        "itemIdentifier": "ETL Output Rows",
+        "data": {
+          "tableName": "ETL_Counts",
+          "name": "ETL Output Rows",
+          "expression": "MAX(ETL_Counts[OutputRows])",
+          "description": "",
+          "formatString": "#,0",
+          "isHidden": false,
+          "isSimpleMeasure": false,
+          "displayFolder": "",
+          "dataType": "Int64",
+          "dataCategory": "",
+          "lineageTag": "0ac186cb-ce89-4ce6-bc17-09a43ec7c1bb",
+          "sourceLineageTag": "",
+          "annotations": [],
+          "extendedProperties": [],
+          "state": "Ready",
+          "errorMessage": "",
+          "modifiedTime": "2026-10-10T20:23:23.123333",
+          "structureModifiedTime": "2026-10-10T20:23:19.563333"
+        },
+        "warnings": []
+      },
+      {
+        "message": "Successfully retrieved measure 'Absolute Test Error'",
+        "index": 35,
+        "itemIdentifier": "Absolute Test Error",
+        "data": {
+          "tableName": "TestErrors",
+          "name": "Absolute Test Error",
+          "expression": "SUM(TestErrors[AbsoluteError])",
+          "description": "",
+          "formatString": "#,0.00",
+          "isHidden": false,
+          "isSimpleMeasure": false,
+          "displayFolder": "",
+          "dataType": "Double",
+          "dataCategory": "",
+          "lineageTag": "ab686bb9-d577-4b18-b3ca-1482813d2feb",
+          "sourceLineageTag": "",
+          "annotations": [],
+          "extendedProperties": [],
+          "state": "Ready",
+          "errorMessage": "",
+          "modifiedTime": "2026-10-10T20:23:23.123333",
+          "structureModifiedTime": "2026-10-10T20:23:19.563333"
+        },
+        "warnings": []
+      }
+    ],
+    "warnings": []
+  },
+  "tables": {
+    "message": "Found 12 tables",
+    "operation": "List",
+    "data": [
+      {
+        "columnCount": 7,
+        "partitionCount": 1,
+        "storageMode": "Import",
+        "name": "DimDate"
+      },
+      {
+        "columnCount": 2,
+        "partitionCount": 1,
+        "storageMode": "Import",
+        "name": "DimBrand"
+      },
+      {
+        "columnCount": 3,
+        "partitionCount": 1,
+        "storageMode": "Import",
+        "name": "DimVehicleType"
+      },
+      {
+        "columnCount": 4,
+        "partitionCount": 1,
+        "storageMode": "Import",
+        "name": "DimSeries"
+      },
+      {
+        "columnCount": 5,
+        "measureCount": 15,
+        "partitionCount": 1,
+        "storageMode": "Import",
+        "name": "FactRegistrations"
+      },
+      {
+        "columnCount": 8,
+        "measureCount": 5,
+        "partitionCount": 1,
+        "storageMode": "Import",
+        "name": "FactForecast"
+      },
+      {
+        "columnCount": 11,
+        "measureCount": 9,
+        "partitionCount": 1,
+        "storageMode": "Import",
+        "name": "ModelComparison"
+      },
+      {
+        "columnCount": 8,
+        "measureCount": 1,
+        "partitionCount": 1,
+        "storageMode": "Import",
+        "name": "TestErrors"
+      },
+      {
+        "columnCount": 5,
+        "measureCount": 4,
+        "partitionCount": 1,
+        "storageMode": "Import",
+        "name": "DataQuality"
+      },
+      {
+        "columnCount": 4,
+        "measureCount": 2,
+        "partitionCount": 1,
+        "storageMode": "Import",
+        "name": "ETL_Counts"
+      },
+      {
+        "columnCount": 6,
+        "partitionCount": 1,
+        "storageMode": "Import",
+        "name": "HypothesisEvidence"
+      },
+      {
+        "columnCount": 3,
+        "partitionCount": 1,
+        "storageMode": "Import",
+        "name": "Metric Parameter"
+      }
+    ]
+  },
+  "relationships": {
+    "message": "Found 8 relationships",
+    "operation": "LIST",
+    "data": [
+      {
+        "fromTable": "FactRegistrations",
+        "fromColumn": "Date",
+        "toTable": "DimDate",
+        "toColumn": "Date",
+        "isActive": true,
+        "crossFilteringBehavior": "OneDirection",
+        "fromCardinality": "Many",
+        "toCardinality": "One",
+        "name": "61191b38-02f6-49e2-83c0-6ddb78eacc74"
+      },
+      {
+        "fromTable": "FactRegistrations",
+        "fromColumn": "BrandKey",
+        "toTable": "DimBrand",
+        "toColumn": "BrandKey",
+        "isActive": true,
+        "crossFilteringBehavior": "OneDirection",
+        "fromCardinality": "Many",
+        "toCardinality": "One",
+        "name": "3f9e80dc-800c-4589-8e7c-f1b5a685929e"
+      },
+      {
+        "fromTable": "FactRegistrations",
+        "fromColumn": "VehicleTypeKey",
+        "toTable": "DimVehicleType",
+        "toColumn": "VehicleTypeKey",
+        "isActive": true,
+        "crossFilteringBehavior": "OneDirection",
+        "fromCardinality": "Many",
+        "toCardinality": "One",
+        "name": "ff00dd2e-cd8a-40cb-821c-0c274d067dab"
+      },
+      {
+        "fromTable": "FactForecast",
+        "fromColumn": "Date",
+        "toTable": "DimDate",
+        "toColumn": "Date",
+        "isActive": true,
+        "crossFilteringBehavior": "OneDirection",
+        "fromCardinality": "Many",
+        "toCardinality": "One",
+        "name": "899293b1-2005-48b0-8fc1-0ec2dfa69139"
+      },
+      {
+        "fromTable": "FactForecast",
+        "fromColumn": "SeriesKey",
+        "toTable": "DimSeries",
+        "toColumn": "SeriesKey",
+        "isActive": true,
+        "crossFilteringBehavior": "OneDirection",
+        "fromCardinality": "Many",
+        "toCardinality": "One",
+        "name": "c23c0135-7068-4e23-8941-39122fa34d9f"
+      },
+      {
+        "fromTable": "ModelComparison",
+        "fromColumn": "SeriesKey",
+        "toTable": "DimSeries",
+        "toColumn": "SeriesKey",
+        "isActive": true,
+        "crossFilteringBehavior": "OneDirection",
+        "fromCardinality": "Many",
+        "toCardinality": "One",
+        "name": "9db03b98-dd86-4f08-aca8-53e5f41af914"
+      },
+      {
+        "fromTable": "TestErrors",
+        "fromColumn": "Date",
+        "toTable": "DimDate",
+        "toColumn": "Date",
+        "isActive": true,
+        "crossFilteringBehavior": "OneDirection",
+        "fromCardinality": "Many",
+        "toCardinality": "One",
+        "name": "53d050c6-da3b-4c2a-be15-c9ba3cdc2e3d"
+      },
+      {
+        "fromTable": "TestErrors",
+        "fromColumn": "SeriesKey",
+        "toTable": "DimSeries",
+        "toColumn": "SeriesKey",
+        "isActive": true,
+        "crossFilteringBehavior": "OneDirection",
+        "fromCardinality": "Many",
+        "toCardinality": "One",
+        "name": "afd6dd44-e2ee-4840-bfb4-b4a819261e34"
+      }
+    ]
+  },
+  "table_metadata": [
+    {
+      "table": "DimSeries",
+      "metadata": {
+        "meta": {
+          "annotations": {
+            "title": "table_operations.exporttmsl",
+            "readOnlyHint": true
+          }
+        },
+        "content": [
+          {
+            "type": "resource",
+            "resource": {
+              "uri": "tmdl://DimSeries.json",
+              "mime_type": "text/plain",
+              "meta": null,
+              "text": "{\r\n  \"create\": {\r\n    \"parentObject\": {\r\n      \"database\": \"4967ffe2-03ef-4eb1-855d-eb81885f9615\"\r\n    },\r\n    \"table\": {\r\n      \"name\": \"DimSeries\",\r\n      \"lineageTag\": \"4cd29bec-c545-4e9d-9a52-b7d484e58675\",\r\n      \"columns\": [\r\n        {\r\n          \"name\": \"SeriesKey\",\r\n          \"dataType\": \"string\",\r\n          \"sourceColumn\": \"SeriesKey\",\r\n          \"lineageTag\": \"bf3d4cfc-eaf9-47d6-834e-7d4328937128\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"SegmentType\",\r\n          \"dataType\": \"string\",\r\n          \"sourceColumn\": \"SegmentType\",\r\n          \"lineageTag\": \"7fbd0c15-b105-491e-ba4c-daed3b9a7d29\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"SegmentName\",\r\n          \"dataType\": \"string\",\r\n          \"sourceColumn\": \"SegmentName\",\r\n          \"lineageTag\": \"3dfb24fb-5dbb-43de-9413-a7e2bba692a3\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"DisplayName\",\r\n          \"dataType\": \"string\",\r\n          \"sourceColumn\": \"DisplayName\",\r\n          \"lineageTag\": \"fa7b9eb1-390b-4728-acc7-a40d5c0bc819\",\r\n          \"summarizeBy\": \"none\"\r\n        }\r\n      ],\r\n      \"partitions\": [\r\n        {\r\n          \"name\": \"DimSeries\",\r\n          \"mode\": \"import\",\r\n          \"source\": {\r\n            \"type\": \"m\",\r\n            \"expression\": [\r\n              \"let\",\r\n              \"    Source = Csv.Document(File.Contents(\\\"D:/Github/BI 2026/BI Term Project/DimSeries.csv\\\"), [Delimiter=\\\",\\\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),\",\r\n              \"    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),\",\r\n              \"    Nulls = Table.ReplaceValue(Headers, \\\"\\\", null, Replacer.ReplaceValue, Table.ColumnNames(Headers)),\",\r\n              \"    Typed = Table.TransformColumnTypes(Nulls, {{\\\"SeriesKey\\\", type text}, {\\\"SegmentType\\\", type text}, {\\\"SegmentName\\\", type text}, {\\\"DisplayName\\\", type text}}, \\\"en-US\\\")\",\r\n              \"in\",\r\n              \"    Typed\"\r\n            ]\r\n          }\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}"
+            },
+            "annotations": null,
+            "meta": null
+          }
+        ],
+        "structured_content": null,
+        "is_error": false,
+        "result_type": "complete"
+      }
+    },
+    {
+      "table": "DataQuality",
+      "metadata": {
+        "meta": {
+          "annotations": {
+            "title": "table_operations.exporttmsl",
+            "readOnlyHint": true
+          }
+        },
+        "content": [
+          {
+            "type": "resource",
+            "resource": {
+              "uri": "tmdl://DataQuality.json",
+              "mime_type": "text/plain",
+              "meta": null,
+              "text": "{\r\n  \"create\": {\r\n    \"parentObject\": {\r\n      \"database\": \"4967ffe2-03ef-4eb1-855d-eb81885f9615\"\r\n    },\r\n    \"table\": {\r\n      \"name\": \"DataQuality\",\r\n      \"lineageTag\": \"629b6bbf-5b13-4b3f-a28a-a8723184e7a3\",\r\n      \"columns\": [\r\n        {\r\n          \"name\": \"Date\",\r\n          \"dataType\": \"dateTime\",\r\n          \"sourceColumn\": \"Date\",\r\n          \"formatString\": \"Short Date\",\r\n          \"lineageTag\": \"2e3ce2c8-1ba2-43b4-839c-dd8d1c10ed31\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"SourceRegistrations\",\r\n          \"dataType\": \"int64\",\r\n          \"sourceColumn\": \"SourceRegistrations\",\r\n          \"lineageTag\": \"af345ab3-8b91-498f-be64-b3e2e1c6af89\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"SourceRecords\",\r\n          \"dataType\": \"int64\",\r\n          \"sourceColumn\": \"SourceRecords\",\r\n          \"lineageTag\": \"f06887ca-4003-4a54-b373-b173391465ed\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"IsComplete\",\r\n          \"dataType\": \"boolean\",\r\n          \"sourceColumn\": \"IsComplete\",\r\n          \"lineageTag\": \"fe1f8434-da78-4e0c-841d-4103b57240b2\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"UsedForModeling\",\r\n          \"dataType\": \"boolean\",\r\n          \"sourceColumn\": \"UsedForModeling\",\r\n          \"lineageTag\": \"af43bfc3-d140-43ad-ba25-8a5c6df09e45\",\r\n          \"summarizeBy\": \"none\"\r\n        }\r\n      ],\r\n      \"partitions\": [\r\n        {\r\n          \"name\": \"DataQuality\",\r\n          \"mode\": \"import\",\r\n          \"source\": {\r\n            \"type\": \"m\",\r\n            \"expression\": [\r\n              \"let\",\r\n              \"    Source = Csv.Document(File.Contents(\\\"D:/Github/BI 2026/BI Term Project/DataQuality.csv\\\"), [Delimiter=\\\",\\\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),\",\r\n              \"    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),\",\r\n              \"    Nulls = Table.ReplaceValue(Headers, \\\"\\\", null, Replacer.ReplaceValue, Table.ColumnNames(Headers)),\",\r\n              \"    Typed = Table.TransformColumnTypes(Nulls, {{\\\"Date\\\", type date}, {\\\"SourceRegistrations\\\", Int64.Type}, {\\\"SourceRecords\\\", Int64.Type}, {\\\"IsComplete\\\", type logical}, {\\\"UsedForModeling\\\", type logical}}, \\\"en-US\\\")\",\r\n              \"in\",\r\n              \"    Typed\"\r\n            ]\r\n          }\r\n        }\r\n      ],\r\n      \"measures\": [\r\n        {\r\n          \"name\": \"Raw Records\",\r\n          \"expression\": \"SUM(DataQuality[SourceRecords])\",\r\n          \"formatString\": \"#,0\",\r\n          \"lineageTag\": \"35ae17b5-0ed5-40ef-b1a4-7c7385e63ea8\"\r\n        },\r\n        {\r\n          \"name\": \"Raw Registrations\",\r\n          \"expression\": \"SUM(DataQuality[SourceRegistrations])\",\r\n          \"formatString\": \"#,0 \\\"registrations\\\"\",\r\n          \"lineageTag\": \"da79d950-b837-462b-bc00-6d71d005d524\"\r\n        },\r\n        {\r\n          \"name\": \"Complete Source Months\",\r\n          \"expression\": \"CALCULATE(COUNTROWS(DataQuality), DataQuality[UsedForModeling] = TRUE())\",\r\n          \"formatString\": \"#,0\",\r\n          \"lineageTag\": \"c5a15b85-75b3-40dd-972e-134b3e2ef863\"\r\n        },\r\n        {\r\n          \"name\": \"Incomplete Registrations\",\r\n          \"expression\": \"CALCULATE(SUM(DataQuality[SourceRegistrations]), DataQuality[IsComplete] = FALSE())\",\r\n          \"formatString\": \"#,0 \\\"registrations\\\"\",\r\n          \"lineageTag\": \"2db14257-ac95-49ea-8be7-1d773680dc64\"\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}"
+            },
+            "annotations": null,
+            "meta": null
+          }
+        ],
+        "structured_content": null,
+        "is_error": false,
+        "result_type": "complete"
+      }
+    },
+    {
+      "table": "HypothesisEvidence",
+      "metadata": {
+        "meta": {
+          "annotations": {
+            "title": "table_operations.exporttmsl",
+            "readOnlyHint": true
+          }
+        },
+        "content": [
+          {
+            "type": "resource",
+            "resource": {
+              "uri": "tmdl://HypothesisEvidence.json",
+              "mime_type": "text/plain",
+              "meta": null,
+              "text": "{\r\n  \"create\": {\r\n    \"parentObject\": {\r\n      \"database\": \"4967ffe2-03ef-4eb1-855d-eb81885f9615\"\r\n    },\r\n    \"table\": {\r\n      \"name\": \"HypothesisEvidence\",\r\n      \"lineageTag\": \"7813c3e9-1d2d-4c28-b456-e374782ba059\",\r\n      \"columns\": [\r\n        {\r\n          \"name\": \"Hypothesis\",\r\n          \"dataType\": \"string\",\r\n          \"sourceColumn\": \"Hypothesis\",\r\n          \"lineageTag\": \"a1746cc5-64f9-4597-93df-f3127d18f5a8\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"Question\",\r\n          \"dataType\": \"string\",\r\n          \"sourceColumn\": \"Question\",\r\n          \"lineageTag\": \"0de40172-d115-4ce0-9957-dd6d2b108451\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"ObservedValue\",\r\n          \"dataType\": \"double\",\r\n          \"sourceColumn\": \"ObservedValue\",\r\n          \"lineageTag\": \"cf4a1fa4-d851-4a9e-b7aa-e64435eabf59\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"Threshold\",\r\n          \"dataType\": \"double\",\r\n          \"sourceColumn\": \"Threshold\",\r\n          \"lineageTag\": \"93b0cc1a-bd91-4089-a74d-e7da1b822959\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"Result\",\r\n          \"dataType\": \"string\",\r\n          \"sourceColumn\": \"Result\",\r\n          \"lineageTag\": \"9e0d04ac-c770-447f-a9e6-577b9b2a96f1\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"Interpretation\",\r\n          \"dataType\": \"string\",\r\n          \"sourceColumn\": \"Interpretation\",\r\n          \"lineageTag\": \"5ee123a9-e16a-4953-9a8e-615616cdd51b\",\r\n          \"summarizeBy\": \"none\"\r\n        }\r\n      ],\r\n      \"partitions\": [\r\n        {\r\n          \"name\": \"HypothesisEvidence\",\r\n          \"mode\": \"import\",\r\n          \"source\": {\r\n            \"type\": \"m\",\r\n            \"expression\": [\r\n              \"let\",\r\n              \"    Source = Csv.Document(File.Contents(\\\"D:/Github/BI 2026/BI Term Project/HypothesisEvidence.csv\\\"), [Delimiter=\\\",\\\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),\",\r\n              \"    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),\",\r\n              \"    Nulls = Table.ReplaceValue(Headers, \\\"\\\", null, Replacer.ReplaceValue, Table.ColumnNames(Headers)),\",\r\n              \"    Typed = Table.TransformColumnTypes(Nulls, {{\\\"Hypothesis\\\", type text}, {\\\"Question\\\", type text}, {\\\"ObservedValue\\\", type number}, {\\\"Threshold\\\", type number}, {\\\"Result\\\", type text}, {\\\"Interpretation\\\", type text}}, \\\"en-US\\\")\",\r\n              \"in\",\r\n              \"    Typed\"\r\n            ]\r\n          }\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}"
+            },
+            "annotations": null,
+            "meta": null
+          }
+        ],
+        "structured_content": null,
+        "is_error": false,
+        "result_type": "complete"
+      }
+    },
+    {
+      "table": "DimVehicleType",
+      "metadata": {
+        "meta": {
+          "annotations": {
+            "title": "table_operations.exporttmsl",
+            "readOnlyHint": true
+          }
+        },
+        "content": [
+          {
+            "type": "resource",
+            "resource": {
+              "uri": "tmdl://DimVehicleType.json",
+              "mime_type": "text/plain",
+              "meta": null,
+              "text": "{\r\n  \"create\": {\r\n    \"parentObject\": {\r\n      \"database\": \"4967ffe2-03ef-4eb1-855d-eb81885f9615\"\r\n    },\r\n    \"table\": {\r\n      \"name\": \"DimVehicleType\",\r\n      \"lineageTag\": \"9282e319-559e-414b-ab1b-2db79f9db4de\",\r\n      \"columns\": [\r\n        {\r\n          \"name\": \"VehicleTypeKey\",\r\n          \"dataType\": \"int64\",\r\n          \"sourceColumn\": \"VehicleTypeKey\",\r\n          \"lineageTag\": \"8737ffdb-93b3-4099-b3f2-eee69ee7a939\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"VehicleType\",\r\n          \"dataType\": \"string\",\r\n          \"sourceColumn\": \"VehicleType\",\r\n          \"lineageTag\": \"0390266e-4df5-4312-8d83-e59f2bce400b\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"VehicleTypeEnglish\",\r\n          \"dataType\": \"string\",\r\n          \"sourceColumn\": \"VehicleTypeEnglish\",\r\n          \"lineageTag\": \"eaaef766-5365-4920-a8b5-f77c3f654270\",\r\n          \"summarizeBy\": \"none\"\r\n        }\r\n      ],\r\n      \"partitions\": [\r\n        {\r\n          \"name\": \"DimVehicleType\",\r\n          \"mode\": \"import\",\r\n          \"source\": {\r\n            \"type\": \"m\",\r\n            \"expression\": [\r\n              \"let\",\r\n              \"    Source = Csv.Document(File.Contents(\\\"D:/Github/BI 2026/BI Term Project/DimVehicleType.csv\\\"), [Delimiter=\\\",\\\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),\",\r\n              \"    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),\",\r\n              \"    Nulls = Table.ReplaceValue(Headers, \\\"\\\", null, Replacer.ReplaceValue, Table.ColumnNames(Headers)),\",\r\n              \"    Typed = Table.TransformColumnTypes(Nulls, {{\\\"VehicleTypeKey\\\", Int64.Type}, {\\\"VehicleType\\\", type text}, {\\\"VehicleTypeEnglish\\\", type text}}, \\\"en-US\\\")\",\r\n              \"in\",\r\n              \"    Typed\"\r\n            ]\r\n          }\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}"
+            },
+            "annotations": null,
+            "meta": null
+          }
+        ],
+        "structured_content": null,
+        "is_error": false,
+        "result_type": "complete"
+      }
+    },
+    {
+      "table": "Metric Parameter",
+      "metadata": {
+        "meta": {
+          "annotations": {
+            "title": "table_operations.exporttmsl",
+            "readOnlyHint": true
+          }
+        },
+        "content": [
+          {
+            "type": "resource",
+            "resource": {
+              "uri": "tmdl://Metric%20Parameter.json",
+              "mime_type": "text/plain",
+              "meta": null,
+              "text": "{\r\n  \"create\": {\r\n    \"parentObject\": {\r\n      \"database\": \"4967ffe2-03ef-4eb1-855d-eb81885f9615\"\r\n    },\r\n    \"table\": {\r\n      \"name\": \"Metric Parameter\",\r\n      \"lineageTag\": \"70d43ac5-9ff7-42f3-925c-fb5365bdb9a2\",\r\n      \"columns\": [\r\n        {\r\n          \"type\": \"calculatedTableColumn\",\r\n          \"name\": \"Metric\",\r\n          \"dataType\": \"string\",\r\n          \"isNameInferred\": false,\r\n          \"sourceColumn\": \"[Value1]\",\r\n          \"sortByColumn\": \"Metric Order\",\r\n          \"lineageTag\": \"ac44d718-f31e-4322-a7b3-be885c25abf8\",\r\n          \"summarizeBy\": \"none\",\r\n          \"relatedColumnDetails\": {\r\n            \"groupByColumns\": [\r\n              {\r\n                \"groupingColumn\": \"Metric Fields\"\r\n              }\r\n            ]\r\n          }\r\n        },\r\n        {\r\n          \"type\": \"calculatedTableColumn\",\r\n          \"name\": \"Metric Fields\",\r\n          \"dataType\": \"string\",\r\n          \"isNameInferred\": false,\r\n          \"isHidden\": true,\r\n          \"sourceColumn\": \"[Value2]\",\r\n          \"sortByColumn\": \"Metric Order\",\r\n          \"lineageTag\": \"868c5732-3a0c-4a0c-bed2-285d0853ac2c\",\r\n          \"summarizeBy\": \"none\",\r\n          \"extendedProperties\": [\r\n            {\r\n              \"type\": \"json\",\r\n              \"name\": \"ParameterMetadata\",\r\n              \"value\": {\r\n                \"version\": 3,\r\n                \"kind\": 2\r\n              }\r\n            }\r\n          ]\r\n        },\r\n        {\r\n          \"type\": \"calculatedTableColumn\",\r\n          \"name\": \"Metric Order\",\r\n          \"dataType\": \"int64\",\r\n          \"isNameInferred\": false,\r\n          \"isHidden\": true,\r\n          \"sourceColumn\": \"[Value3]\",\r\n          \"lineageTag\": \"ef920c14-55a7-4fe6-baac-167502893f2c\",\r\n          \"summarizeBy\": \"none\"\r\n        }\r\n      ],\r\n      \"partitions\": [\r\n        {\r\n          \"name\": \"Metric Parameter\",\r\n          \"mode\": \"import\",\r\n          \"source\": {\r\n            \"type\": \"calculated\",\r\n            \"expression\": [\r\n              \"{\",\r\n              \"    (\\\"Registrations\\\", NAMEOF('FactRegistrations'[Total Registrations]), 0),\",\r\n              \"    (\\\"Source records\\\", NAMEOF('FactRegistrations'[Source Records]), 1),\",\r\n              \"    (\\\"Registrations/source record\\\", NAMEOF('FactRegistrations'[Registrations per Source Record]), 2)\",\r\n              \"}\"\r\n            ]\r\n          }\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}"
+            },
+            "annotations": null,
+            "meta": null
+          }
+        ],
+        "structured_content": null,
+        "is_error": false,
+        "result_type": "complete"
+      }
+    },
+    {
+      "table": "FactForecast",
+      "metadata": {
+        "meta": {
+          "annotations": {
+            "title": "table_operations.exporttmsl",
+            "readOnlyHint": true
+          }
+        },
+        "content": [
+          {
+            "type": "resource",
+            "resource": {
+              "uri": "tmdl://FactForecast.json",
+              "mime_type": "text/plain",
+              "meta": null,
+              "text": "{\r\n  \"create\": {\r\n    \"parentObject\": {\r\n      \"database\": \"4967ffe2-03ef-4eb1-855d-eb81885f9615\"\r\n    },\r\n    \"table\": {\r\n      \"name\": \"FactForecast\",\r\n      \"lineageTag\": \"98d01356-e5d7-4cc7-a385-92e24d166480\",\r\n      \"columns\": [\r\n        {\r\n          \"name\": \"SeriesKey\",\r\n          \"dataType\": \"string\",\r\n          \"sourceColumn\": \"SeriesKey\",\r\n          \"lineageTag\": \"6777f996-e86e-466c-b9e2-02c73f6a429e\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"SegmentType\",\r\n          \"dataType\": \"string\",\r\n          \"sourceColumn\": \"SegmentType\",\r\n          \"lineageTag\": \"1458d9e4-f71c-4acc-8ca8-5b87939c3bc5\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"SegmentName\",\r\n          \"dataType\": \"string\",\r\n          \"sourceColumn\": \"SegmentName\",\r\n          \"lineageTag\": \"0dc7075e-dbc0-4363-a954-51b0489b0f0d\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"Date\",\r\n          \"dataType\": \"dateTime\",\r\n          \"sourceColumn\": \"Date\",\r\n          \"formatString\": \"Short Date\",\r\n          \"lineageTag\": \"aef8fe40-bdaa-478e-90e0-86ee24824f4f\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"ActualRegistrations\",\r\n          \"dataType\": \"double\",\r\n          \"sourceColumn\": \"ActualRegistrations\",\r\n          \"lineageTag\": \"004984da-233a-425c-a329-e81f5a5cb038\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"ForecastRegistrations\",\r\n          \"dataType\": \"double\",\r\n          \"sourceColumn\": \"ForecastRegistrations\",\r\n          \"lineageTag\": \"9a02b063-5e65-414b-84f7-aa8d305c3879\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"DatasetSegment\",\r\n          \"dataType\": \"string\",\r\n          \"sourceColumn\": \"DatasetSegment\",\r\n          \"lineageTag\": \"3cb0ae8d-6c3c-4dfd-b945-75c6704ae766\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"Model\",\r\n          \"dataType\": \"string\",\r\n          \"sourceColumn\": \"Model\",\r\n          \"lineageTag\": \"78b38d53-9838-4100-948c-dfebee587fa5\",\r\n          \"summarizeBy\": \"none\"\r\n        }\r\n      ],\r\n      \"partitions\": [\r\n        {\r\n          \"name\": \"FactForecast\",\r\n          \"mode\": \"import\",\r\n          \"source\": {\r\n            \"type\": \"m\",\r\n            \"expression\": [\r\n              \"let\",\r\n              \"    Source = Csv.Document(File.Contents(\\\"D:/Github/BI 2026/BI Term Project/FactForecast.csv\\\"), [Delimiter=\\\",\\\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),\",\r\n              \"    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),\",\r\n              \"    Nulls = Table.ReplaceValue(Headers, \\\"\\\", null, Replacer.ReplaceValue, Table.ColumnNames(Headers)),\",\r\n              \"    Typed = Table.TransformColumnTypes(Nulls, {{\\\"SeriesKey\\\", type text}, {\\\"SegmentType\\\", type text}, {\\\"SegmentName\\\", type text}, {\\\"Date\\\", type date}, {\\\"ActualRegistrations\\\", type number}, {\\\"ForecastRegistrations\\\", type number}, {\\\"DatasetSegment\\\", type text}, {\\\"Model\\\", type text}}, \\\"en-US\\\")\",\r\n              \"in\",\r\n              \"    Typed\"\r\n            ]\r\n          }\r\n        }\r\n      ],\r\n      \"measures\": [\r\n        {\r\n          \"name\": \"Forecast Actual\",\r\n          \"expression\": \"IF(HASONEVALUE(DimSeries[SeriesKey]), SUM(FactForecast[ActualRegistrations]))\",\r\n          \"formatString\": \"#,0 \\\"registrations\\\"\",\r\n          \"lineageTag\": \"0156881c-7a15-4837-aa5a-7086b315b333\"\r\n        },\r\n        {\r\n          \"name\": \"Forecast Prediction\",\r\n          \"expression\": \"IF(HASONEVALUE(DimSeries[SeriesKey]), SUM(FactForecast[ForecastRegistrations]))\",\r\n          \"formatString\": \"#,0 \\\"registrations\\\"\",\r\n          \"lineageTag\": \"112de0e5-6829-438d-85d0-fc53a4d48f5e\"\r\n        },\r\n        {\r\n          \"name\": \"Future Forecast\",\r\n          \"expression\": \"IF(HASONEVALUE(DimSeries[SeriesKey]), CALCULATE(SUM(FactForecast[ForecastRegistrations]), FactForecast[DatasetSegment] = \\\"Future\\\"))\",\r\n          \"formatString\": \"#,0 \\\"registrations\\\"\",\r\n          \"lineageTag\": \"ec21e138-09de-49a0-9d72-6e5ebee28d79\"\r\n        },\r\n        {\r\n          \"name\": \"Selected Series\",\r\n          \"expression\": \"SELECTEDVALUE(DimSeries[DisplayName], \\\"Choose exactly one series\\\")\",\r\n          \"lineageTag\": \"d2c7a5ba-74d6-47c1-b118-6e59ed416e17\"\r\n        },\r\n        {\r\n          \"name\": \"Forecast Target Month\",\r\n          \"expression\": \"CALCULATE(MAX(FactForecast[Date]), FactForecast[DatasetSegment] = \\\"Future\\\")\",\r\n          \"formatString\": \"MMM yyyy\",\r\n          \"lineageTag\": \"5bf17f25-edef-45f5-91d2-73baf300ce6b\"\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}"
+            },
+            "annotations": null,
+            "meta": null
+          }
+        ],
+        "structured_content": null,
+        "is_error": false,
+        "result_type": "complete"
+      }
+    },
+    {
+      "table": "DimDate",
+      "metadata": {
+        "meta": {
+          "annotations": {
+            "title": "table_operations.exporttmsl",
+            "readOnlyHint": true
+          }
+        },
+        "content": [
+          {
+            "type": "resource",
+            "resource": {
+              "uri": "tmdl://DimDate.json",
+              "mime_type": "text/plain",
+              "meta": null,
+              "text": "{\r\n  \"create\": {\r\n    \"parentObject\": {\r\n      \"database\": \"4967ffe2-03ef-4eb1-855d-eb81885f9615\"\r\n    },\r\n    \"table\": {\r\n      \"name\": \"DimDate\",\r\n      \"lineageTag\": \"aa2fb05d-cf70-4d78-8c89-21651969f810\",\r\n      \"dataCategory\": \"Time\",\r\n      \"columns\": [\r\n        {\r\n          \"name\": \"Date\",\r\n          \"dataType\": \"dateTime\",\r\n          \"isKey\": true,\r\n          \"sourceColumn\": \"Date\",\r\n          \"formatString\": \"Short Date\",\r\n          \"lineageTag\": \"8025025e-eb44-4527-8bf8-36d42aa43628\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"Year\",\r\n          \"dataType\": \"int64\",\r\n          \"sourceColumn\": \"Year\",\r\n          \"lineageTag\": \"037f0c75-0f3e-4918-987c-70408a17da25\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"YearBE\",\r\n          \"dataType\": \"int64\",\r\n          \"sourceColumn\": \"YearBE\",\r\n          \"lineageTag\": \"96d8f0eb-4697-4738-8843-6fbf6f3c55ab\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"Month\",\r\n          \"dataType\": \"int64\",\r\n          \"sourceColumn\": \"Month\",\r\n          \"lineageTag\": \"b271e832-eba5-4b81-bfb3-27b25fb4e6d5\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"YearMonth\",\r\n          \"dataType\": \"string\",\r\n          \"sourceColumn\": \"YearMonth\",\r\n          \"lineageTag\": \"4d47ebcc-fffc-4e39-96bf-879fa495112a\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"YearMonthSort\",\r\n          \"dataType\": \"int64\",\r\n          \"sourceColumn\": \"YearMonthSort\",\r\n          \"lineageTag\": \"08955ef9-a4c0-4562-85f1-b1aacd07f119\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"IsCompleteMonth\",\r\n          \"dataType\": \"boolean\",\r\n          \"sourceColumn\": \"IsCompleteMonth\",\r\n          \"lineageTag\": \"3f2a9ee8-dc44-4807-93e7-c22da0f11581\",\r\n          \"summarizeBy\": \"none\"\r\n        }\r\n      ],\r\n      \"partitions\": [\r\n        {\r\n          \"name\": \"DimDate\",\r\n          \"mode\": \"import\",\r\n          \"source\": {\r\n            \"type\": \"m\",\r\n            \"expression\": [\r\n              \"let\",\r\n              \"    Source = Csv.Document(File.Contents(\\\"D:/Github/BI 2026/BI Term Project/DimDate.csv\\\"), [Delimiter=\\\",\\\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),\",\r\n              \"    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),\",\r\n              \"    Nulls = Table.ReplaceValue(Headers, \\\"\\\", null, Replacer.ReplaceValue, Table.ColumnNames(Headers)),\",\r\n              \"    Typed = Table.TransformColumnTypes(Nulls, {{\\\"Date\\\", type date}, {\\\"Year\\\", Int64.Type}, {\\\"YearBE\\\", Int64.Type}, {\\\"Month\\\", Int64.Type}, {\\\"YearMonth\\\", type text}, {\\\"YearMonthSort\\\", Int64.Type}, {\\\"IsCompleteMonth\\\", type logical}}, \\\"en-US\\\")\",\r\n              \"in\",\r\n              \"    Typed\"\r\n            ]\r\n          }\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}"
+            },
+            "annotations": null,
+            "meta": null
+          }
+        ],
+        "structured_content": null,
+        "is_error": false,
+        "result_type": "complete"
+      }
+    },
+    {
+      "table": "TestErrors",
+      "metadata": {
+        "meta": {
+          "annotations": {
+            "title": "table_operations.exporttmsl",
+            "readOnlyHint": true
+          }
+        },
+        "content": [
+          {
+            "type": "resource",
+            "resource": {
+              "uri": "tmdl://TestErrors.json",
+              "mime_type": "text/plain",
+              "meta": null,
+              "text": "{\r\n  \"create\": {\r\n    \"parentObject\": {\r\n      \"database\": \"4967ffe2-03ef-4eb1-855d-eb81885f9615\"\r\n    },\r\n    \"table\": {\r\n      \"name\": \"TestErrors\",\r\n      \"lineageTag\": \"c6649baf-29ab-4f23-bbfa-9ec3009016fe\",\r\n      \"columns\": [\r\n        {\r\n          \"name\": \"SeriesKey\",\r\n          \"dataType\": \"string\",\r\n          \"sourceColumn\": \"SeriesKey\",\r\n          \"lineageTag\": \"5df08c94-8122-40e6-85f8-60c89bb60aca\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"SegmentType\",\r\n          \"dataType\": \"string\",\r\n          \"sourceColumn\": \"SegmentType\",\r\n          \"lineageTag\": \"7b71119a-8232-4bb0-9417-e21462a9130c\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"SegmentName\",\r\n          \"dataType\": \"string\",\r\n          \"sourceColumn\": \"SegmentName\",\r\n          \"lineageTag\": \"e5a7f141-71af-4bca-b616-a0a1ea02f81f\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"Date\",\r\n          \"dataType\": \"dateTime\",\r\n          \"sourceColumn\": \"Date\",\r\n          \"formatString\": \"Short Date\",\r\n          \"lineageTag\": \"b8060ee2-8fd4-4c06-8dc8-84a6295f4f45\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"ActualRegistrations\",\r\n          \"dataType\": \"double\",\r\n          \"sourceColumn\": \"ActualRegistrations\",\r\n          \"lineageTag\": \"6f9e33b8-899d-485d-9b67-5b8a9e30cd98\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"PredictedRegistrations\",\r\n          \"dataType\": \"double\",\r\n          \"sourceColumn\": \"PredictedRegistrations\",\r\n          \"lineageTag\": \"e4091027-39e0-4fbf-81fa-7718549430e7\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"AbsoluteError\",\r\n          \"dataType\": \"double\",\r\n          \"sourceColumn\": \"AbsoluteError\",\r\n          \"lineageTag\": \"8dac45d7-51da-4ce0-aa6b-b814e1b48bf6\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"Model\",\r\n          \"dataType\": \"string\",\r\n          \"sourceColumn\": \"Model\",\r\n          \"lineageTag\": \"4f501877-ec95-4855-a334-484a70b2bab8\",\r\n          \"summarizeBy\": \"none\"\r\n        }\r\n      ],\r\n      \"partitions\": [\r\n        {\r\n          \"name\": \"TestErrors\",\r\n          \"mode\": \"import\",\r\n          \"source\": {\r\n            \"type\": \"m\",\r\n            \"expression\": [\r\n              \"let\",\r\n              \"    Source = Csv.Document(File.Contents(\\\"D:/Github/BI 2026/BI Term Project/TestErrors.csv\\\"), [Delimiter=\\\",\\\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),\",\r\n              \"    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),\",\r\n              \"    Nulls = Table.ReplaceValue(Headers, \\\"\\\", null, Replacer.ReplaceValue, Table.ColumnNames(Headers)),\",\r\n              \"    Typed = Table.TransformColumnTypes(Nulls, {{\\\"SeriesKey\\\", type text}, {\\\"SegmentType\\\", type text}, {\\\"SegmentName\\\", type text}, {\\\"Date\\\", type date}, {\\\"ActualRegistrations\\\", type number}, {\\\"PredictedRegistrations\\\", type number}, {\\\"AbsoluteError\\\", type number}, {\\\"Model\\\", type text}}, \\\"en-US\\\")\",\r\n              \"in\",\r\n              \"    Typed\"\r\n            ]\r\n          }\r\n        }\r\n      ],\r\n      \"measures\": [\r\n        {\r\n          \"name\": \"Absolute Test Error\",\r\n          \"expression\": \"SUM(TestErrors[AbsoluteError])\",\r\n          \"formatString\": \"#,0.00\",\r\n          \"lineageTag\": \"ab686bb9-d577-4b18-b3ca-1482813d2feb\"\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}"
+            },
+            "annotations": null,
+            "meta": null
+          }
+        ],
+        "structured_content": null,
+        "is_error": false,
+        "result_type": "complete"
+      }
+    },
+    {
+      "table": "FactRegistrations",
+      "metadata": {
+        "meta": {
+          "annotations": {
+            "title": "table_operations.exporttmsl",
+            "readOnlyHint": true
+          }
+        },
+        "content": [
+          {
+            "type": "resource",
+            "resource": {
+              "uri": "tmdl://FactRegistrations.json",
+              "mime_type": "text/plain",
+              "meta": null,
+              "text": "{\r\n  \"create\": {\r\n    \"parentObject\": {\r\n      \"database\": \"4967ffe2-03ef-4eb1-855d-eb81885f9615\"\r\n    },\r\n    \"table\": {\r\n      \"name\": \"FactRegistrations\",\r\n      \"lineageTag\": \"923cd91d-a417-4f18-97bb-4bea6e657b46\",\r\n      \"columns\": [\r\n        {\r\n          \"name\": \"Date\",\r\n          \"dataType\": \"dateTime\",\r\n          \"sourceColumn\": \"Date\",\r\n          \"formatString\": \"Short Date\",\r\n          \"lineageTag\": \"92ccd1fb-9db5-4d0c-989a-27fd6ec47932\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"BrandKey\",\r\n          \"dataType\": \"int64\",\r\n          \"sourceColumn\": \"BrandKey\",\r\n          \"lineageTag\": \"efb8dae6-10ed-49e3-95bb-f4e8d82dff93\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"VehicleTypeKey\",\r\n          \"dataType\": \"int64\",\r\n          \"sourceColumn\": \"VehicleTypeKey\",\r\n          \"lineageTag\": \"038d34de-e14f-48d2-ba4f-95bf1e4cad7b\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"Registrations\",\r\n          \"dataType\": \"int64\",\r\n          \"sourceColumn\": \"Registrations\",\r\n          \"lineageTag\": \"4d47e98b-b662-4500-9c23-a7fa2e7d86cc\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"SourceRecords\",\r\n          \"dataType\": \"int64\",\r\n          \"sourceColumn\": \"SourceRecords\",\r\n          \"lineageTag\": \"29de1c43-70a7-49f0-a463-8539c13ff624\",\r\n          \"summarizeBy\": \"none\"\r\n        }\r\n      ],\r\n      \"partitions\": [\r\n        {\r\n          \"name\": \"FactRegistrations\",\r\n          \"mode\": \"import\",\r\n          \"source\": {\r\n            \"type\": \"m\",\r\n            \"expression\": [\r\n              \"let\",\r\n              \"    Source = Csv.Document(File.Contents(\\\"D:/Github/BI 2026/BI Term Project/FactRegistrations.csv\\\"), [Delimiter=\\\",\\\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),\",\r\n              \"    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),\",\r\n              \"    Nulls = Table.ReplaceValue(Headers, \\\"\\\", null, Replacer.ReplaceValue, Table.ColumnNames(Headers)),\",\r\n              \"    Typed = Table.TransformColumnTypes(Nulls, {{\\\"Date\\\", type date}, {\\\"BrandKey\\\", Int64.Type}, {\\\"VehicleTypeKey\\\", Int64.Type}, {\\\"Registrations\\\", Int64.Type}, {\\\"SourceRecords\\\", Int64.Type}}, \\\"en-US\\\")\",\r\n              \"in\",\r\n              \"    Typed\"\r\n            ]\r\n          }\r\n        }\r\n      ],\r\n      \"measures\": [\r\n        {\r\n          \"name\": \"Total Registrations\",\r\n          \"expression\": \"SUM(FactRegistrations[Registrations])\",\r\n          \"formatString\": \"#,0 \\\"registrations\\\"\",\r\n          \"lineageTag\": \"5d87ab6a-58cf-4464-b333-37ff849f5a54\"\r\n        },\r\n        {\r\n          \"name\": \"Source Records\",\r\n          \"expression\": \"SUM(FactRegistrations[SourceRecords])\",\r\n          \"formatString\": \"#,0\",\r\n          \"lineageTag\": \"d99d4181-c233-44ac-ba0f-d97eb4f91959\"\r\n        },\r\n        {\r\n          \"name\": \"Fact Rows\",\r\n          \"expression\": \"COUNTROWS(FactRegistrations)\",\r\n          \"formatString\": \"#,0\",\r\n          \"lineageTag\": \"cc530559-ddcc-4c63-a8db-379cf3ee80f6\"\r\n        },\r\n        {\r\n          \"name\": \"Active Brands\",\r\n          \"expression\": \"DISTINCTCOUNT(FactRegistrations[BrandKey])\",\r\n          \"formatString\": \"#,0\",\r\n          \"lineageTag\": \"03ae00df-2f07-4f76-a3e0-537c3bac647d\"\r\n        },\r\n        {\r\n          \"name\": \"Active Vehicle Types\",\r\n          \"expression\": \"DISTINCTCOUNT(FactRegistrations[VehicleTypeKey])\",\r\n          \"formatString\": \"#,0\",\r\n          \"lineageTag\": \"61afde74-77f8-469c-b939-57f4ee9f8e9f\"\r\n        },\r\n        {\r\n          \"name\": \"Average Monthly Registrations\",\r\n          \"expression\": \"DIVIDE([Total Registrations], DISTINCTCOUNT(FactRegistrations[Date]), 0)\",\r\n          \"formatString\": \"#,0.00\",\r\n          \"lineageTag\": \"0984732e-7ca7-4c27-a260-5c0c35012af8\"\r\n        },\r\n        {\r\n          \"name\": \"Registrations per Source Record\",\r\n          \"expression\": \"DIVIDE([Total Registrations], [Source Records], 0)\",\r\n          \"formatString\": \"#,0.00\",\r\n          \"lineageTag\": \"3ff56394-1b31-47d5-80d5-915464f5ff54\"\r\n        },\r\n        {\r\n          \"name\": \"Brand Share %\",\r\n          \"expression\": \"DIVIDE([Total Registrations], CALCULATE([Total Registrations], REMOVEFILTERS(DimBrand)), 0)\",\r\n          \"formatString\": \"0.00%\",\r\n          \"lineageTag\": \"f45ba891-43ea-4270-8228-e5d0dfa2aa2f\"\r\n        },\r\n        {\r\n          \"name\": \"Vehicle Type Share %\",\r\n          \"expression\": \"DIVIDE([Total Registrations], CALCULATE([Total Registrations], REMOVEFILTERS(DimVehicleType)), 0)\",\r\n          \"formatString\": \"0.00%\",\r\n          \"lineageTag\": \"52060959-4e82-4f54-8bda-96f63fa77513\"\r\n        },\r\n        {\r\n          \"name\": \"Previous Year Registrations\",\r\n          \"expression\": \"CALCULATE([Total Registrations], DATEADD(DimDate[Date], -1, YEAR))\",\r\n          \"formatString\": \"#,0 \\\"registrations\\\"\",\r\n          \"lineageTag\": \"f498d123-9916-429c-8621-c37eb14a5be0\"\r\n        },\r\n        {\r\n          \"name\": \"YoY Growth %\",\r\n          \"expression\": \"DIVIDE([Total Registrations] - [Previous Year Registrations], [Previous Year Registrations])\",\r\n          \"formatString\": \"0.00%\",\r\n          \"lineageTag\": \"9ee729dd-3ef8-41e6-8cfd-e9ba0412495a\"\r\n        },\r\n        {\r\n          \"name\": \"Top 3 Brand Share %\",\r\n          \"expression\": \"VAR TopBrands = TOPN(3, ALL(DimBrand[Brand]), [Total Registrations], DESC) RETURN DIVIDE(SUMX(TopBrands, [Total Registrations]), CALCULATE([Total Registrations], REMOVEFILTERS(DimBrand)), 0)\",\r\n          \"formatString\": \"0.00%\",\r\n          \"lineageTag\": \"3b56294d-7b10-4b8a-b399-6c7c1634004c\"\r\n        },\r\n        {\r\n          \"name\": \"Selected Brand\",\r\n          \"expression\": \"SELECTEDVALUE(DimBrand[Brand], \\\"All / multiple brands\\\")\",\r\n          \"lineageTag\": \"f7af4f89-95a6-4b3a-880f-14a86fdfe5a6\"\r\n        },\r\n        {\r\n          \"name\": \"Latest Complete Month\",\r\n          \"expression\": \"MAX(FactRegistrations[Date])\",\r\n          \"formatString\": \"MMM yyyy\",\r\n          \"lineageTag\": \"6d48b96c-8bb5-46f5-b2a6-b2ea38d7e6c4\"\r\n        },\r\n        {\r\n          \"name\": \"H5 January YoY %\",\r\n          \"expression\": \"VAR Jan2026 = CALCULATE([Total Registrations], REMOVEFILTERS(DimDate), DimDate[Year] = 2026, DimDate[Month] = 1) VAR Jan2025 = CALCULATE([Total Registrations], REMOVEFILTERS(DimDate), DimDate[Year] = 2025, DimDate[Month] = 1) RETURN DIVIDE(Jan2026-Jan2025, Jan2025)\",\r\n          \"formatString\": \"0.00%\",\r\n          \"lineageTag\": \"38295512-5a0c-440e-a4fb-9e51022440bb\"\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}"
+            },
+            "annotations": null,
+            "meta": null
+          }
+        ],
+        "structured_content": null,
+        "is_error": false,
+        "result_type": "complete"
+      }
+    },
+    {
+      "table": "DimBrand",
+      "metadata": {
+        "meta": {
+          "annotations": {
+            "title": "table_operations.exporttmsl",
+            "readOnlyHint": true
+          }
+        },
+        "content": [
+          {
+            "type": "resource",
+            "resource": {
+              "uri": "tmdl://DimBrand.json",
+              "mime_type": "text/plain",
+              "meta": null,
+              "text": "{\r\n  \"create\": {\r\n    \"parentObject\": {\r\n      \"database\": \"4967ffe2-03ef-4eb1-855d-eb81885f9615\"\r\n    },\r\n    \"table\": {\r\n      \"name\": \"DimBrand\",\r\n      \"lineageTag\": \"ad6686b5-6dc0-4440-a7ab-44b50434f2b8\",\r\n      \"columns\": [\r\n        {\r\n          \"name\": \"BrandKey\",\r\n          \"dataType\": \"int64\",\r\n          \"sourceColumn\": \"BrandKey\",\r\n          \"lineageTag\": \"10af0c0b-2a5c-4a84-9030-c3020d2a4198\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"Brand\",\r\n          \"dataType\": \"string\",\r\n          \"sourceColumn\": \"Brand\",\r\n          \"lineageTag\": \"c89a85cc-7f92-45c8-ad48-caaee04bd51d\",\r\n          \"summarizeBy\": \"none\"\r\n        }\r\n      ],\r\n      \"partitions\": [\r\n        {\r\n          \"name\": \"DimBrand\",\r\n          \"mode\": \"import\",\r\n          \"source\": {\r\n            \"type\": \"m\",\r\n            \"expression\": [\r\n              \"let\",\r\n              \"    Source = Csv.Document(File.Contents(\\\"D:/Github/BI 2026/BI Term Project/DimBrand.csv\\\"), [Delimiter=\\\",\\\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),\",\r\n              \"    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),\",\r\n              \"    Nulls = Table.ReplaceValue(Headers, \\\"\\\", null, Replacer.ReplaceValue, Table.ColumnNames(Headers)),\",\r\n              \"    Typed = Table.TransformColumnTypes(Nulls, {{\\\"BrandKey\\\", Int64.Type}, {\\\"Brand\\\", type text}}, \\\"en-US\\\")\",\r\n              \"in\",\r\n              \"    Typed\"\r\n            ]\r\n          }\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}"
+            },
+            "annotations": null,
+            "meta": null
+          }
+        ],
+        "structured_content": null,
+        "is_error": false,
+        "result_type": "complete"
+      }
+    },
+    {
+      "table": "ETL_Counts",
+      "metadata": {
+        "meta": {
+          "annotations": {
+            "title": "table_operations.exporttmsl",
+            "readOnlyHint": true
+          }
+        },
+        "content": [
+          {
+            "type": "resource",
+            "resource": {
+              "uri": "tmdl://ETL_Counts.json",
+              "mime_type": "text/plain",
+              "meta": null,
+              "text": "{\r\n  \"create\": {\r\n    \"parentObject\": {\r\n      \"database\": \"4967ffe2-03ef-4eb1-855d-eb81885f9615\"\r\n    },\r\n    \"table\": {\r\n      \"name\": \"ETL_Counts\",\r\n      \"lineageTag\": \"33c8b855-ad32-470e-9f67-1fa19519c063\",\r\n      \"columns\": [\r\n        {\r\n          \"name\": \"Stage\",\r\n          \"dataType\": \"string\",\r\n          \"sourceColumn\": \"Stage\",\r\n          \"lineageTag\": \"4784a3c3-0e5e-4446-870a-4180af16ff21\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"InputRows\",\r\n          \"dataType\": \"int64\",\r\n          \"sourceColumn\": \"InputRows\",\r\n          \"lineageTag\": \"651845f1-6240-4f30-934d-41b664bb5328\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"OutputRows\",\r\n          \"dataType\": \"int64\",\r\n          \"sourceColumn\": \"OutputRows\",\r\n          \"lineageTag\": \"8fc2d405-6131-4ed0-b752-9ab85c844b0a\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"Reason\",\r\n          \"dataType\": \"string\",\r\n          \"sourceColumn\": \"Reason\",\r\n          \"lineageTag\": \"229df7ef-47b6-4280-82cc-037ce1f77906\",\r\n          \"summarizeBy\": \"none\"\r\n        }\r\n      ],\r\n      \"partitions\": [\r\n        {\r\n          \"name\": \"ETL_Counts\",\r\n          \"mode\": \"import\",\r\n          \"source\": {\r\n            \"type\": \"m\",\r\n            \"expression\": [\r\n              \"let\",\r\n              \"    Source = Csv.Document(File.Contents(\\\"D:/Github/BI 2026/BI Term Project/ETL_Counts.csv\\\"), [Delimiter=\\\",\\\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),\",\r\n              \"    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),\",\r\n              \"    Nulls = Table.ReplaceValue(Headers, \\\"\\\", null, Replacer.ReplaceValue, Table.ColumnNames(Headers)),\",\r\n              \"    Typed = Table.TransformColumnTypes(Nulls, {{\\\"Stage\\\", type text}, {\\\"InputRows\\\", Int64.Type}, {\\\"OutputRows\\\", Int64.Type}, {\\\"Reason\\\", type text}}, \\\"en-US\\\")\",\r\n              \"in\",\r\n              \"    Typed\"\r\n            ]\r\n          }\r\n        }\r\n      ],\r\n      \"measures\": [\r\n        {\r\n          \"name\": \"ETL Input Rows\",\r\n          \"expression\": \"MAX(ETL_Counts[InputRows])\",\r\n          \"formatString\": \"#,0\",\r\n          \"lineageTag\": \"bfd3ad92-b677-48cf-9a74-1dd2ecc0b721\"\r\n        },\r\n        {\r\n          \"name\": \"ETL Output Rows\",\r\n          \"expression\": \"MAX(ETL_Counts[OutputRows])\",\r\n          \"formatString\": \"#,0\",\r\n          \"lineageTag\": \"0ac186cb-ce89-4ce6-bc17-09a43ec7c1bb\"\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}"
+            },
+            "annotations": null,
+            "meta": null
+          }
+        ],
+        "structured_content": null,
+        "is_error": false,
+        "result_type": "complete"
+      }
+    },
+    {
+      "table": "ModelComparison",
+      "metadata": {
+        "meta": {
+          "annotations": {
+            "title": "table_operations.exporttmsl",
+            "readOnlyHint": true
+          }
+        },
+        "content": [
+          {
+            "type": "resource",
+            "resource": {
+              "uri": "tmdl://ModelComparison.json",
+              "mime_type": "text/plain",
+              "meta": null,
+              "text": "{\r\n  \"create\": {\r\n    \"parentObject\": {\r\n      \"database\": \"4967ffe2-03ef-4eb1-855d-eb81885f9615\"\r\n    },\r\n    \"table\": {\r\n      \"name\": \"ModelComparison\",\r\n      \"lineageTag\": \"21dfb2fc-b3d1-4b22-8410-b6d8399f38fb\",\r\n      \"columns\": [\r\n        {\r\n          \"name\": \"SeriesKey\",\r\n          \"dataType\": \"string\",\r\n          \"sourceColumn\": \"SeriesKey\",\r\n          \"lineageTag\": \"cdc96be2-8816-4f89-b4b6-ca056c21b2a7\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"SegmentType\",\r\n          \"dataType\": \"string\",\r\n          \"sourceColumn\": \"SegmentType\",\r\n          \"lineageTag\": \"8fe30e97-86d9-457e-8153-3660fa6406b7\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"SegmentName\",\r\n          \"dataType\": \"string\",\r\n          \"sourceColumn\": \"SegmentName\",\r\n          \"lineageTag\": \"21486f35-059e-4b79-8e47-a34715ee8193\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"Model\",\r\n          \"dataType\": \"string\",\r\n          \"sourceColumn\": \"Model\",\r\n          \"lineageTag\": \"14fd4c8b-98b0-4906-b0be-462269c2efb7\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"ValidationMAE\",\r\n          \"dataType\": \"double\",\r\n          \"sourceColumn\": \"ValidationMAE\",\r\n          \"lineageTag\": \"29daa4f5-e0cc-48e6-83e2-ac5bc98d734e\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"ValidationRMSE\",\r\n          \"dataType\": \"double\",\r\n          \"sourceColumn\": \"ValidationRMSE\",\r\n          \"lineageTag\": \"8eb437c7-50bd-4dbd-9e41-105aded6ad22\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"ValidationR2\",\r\n          \"dataType\": \"double\",\r\n          \"sourceColumn\": \"ValidationR2\",\r\n          \"lineageTag\": \"b3e1871a-f20f-4e08-9141-68d582516926\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"TestMAE\",\r\n          \"dataType\": \"double\",\r\n          \"sourceColumn\": \"TestMAE\",\r\n          \"lineageTag\": \"51975db6-b2c8-45bc-b2cc-9a3024b3e30f\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"TestRMSE\",\r\n          \"dataType\": \"double\",\r\n          \"sourceColumn\": \"TestRMSE\",\r\n          \"lineageTag\": \"5b084748-120d-4cba-82be-f675a0aec2ec\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"TestR2\",\r\n          \"dataType\": \"double\",\r\n          \"sourceColumn\": \"TestR2\",\r\n          \"lineageTag\": \"bab2c90a-8cca-42d2-b45b-a9751df64ab9\",\r\n          \"summarizeBy\": \"none\"\r\n        },\r\n        {\r\n          \"name\": \"SelectedModel\",\r\n          \"dataType\": \"boolean\",\r\n          \"sourceColumn\": \"SelectedModel\",\r\n          \"lineageTag\": \"dee36124-62ec-4dce-ab27-adaffe8b7e9d\",\r\n          \"summarizeBy\": \"none\"\r\n        }\r\n      ],\r\n      \"partitions\": [\r\n        {\r\n          \"name\": \"ModelComparison\",\r\n          \"mode\": \"import\",\r\n          \"source\": {\r\n            \"type\": \"m\",\r\n            \"expression\": [\r\n              \"let\",\r\n              \"    Source = Csv.Document(File.Contents(\\\"D:/Github/BI 2026/BI Term Project/ModelComparison.csv\\\"), [Delimiter=\\\",\\\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),\",\r\n              \"    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),\",\r\n              \"    Nulls = Table.ReplaceValue(Headers, \\\"\\\", null, Replacer.ReplaceValue, Table.ColumnNames(Headers)),\",\r\n              \"    Typed = Table.TransformColumnTypes(Nulls, {{\\\"SeriesKey\\\", type text}, {\\\"SegmentType\\\", type text}, {\\\"SegmentName\\\", type text}, {\\\"Model\\\", type text}, {\\\"ValidationMAE\\\", type number}, {\\\"ValidationRMSE\\\", type number}, {\\\"ValidationR2\\\", type number}, {\\\"TestMAE\\\", type number}, {\\\"TestRMSE\\\", type number}, {\\\"TestR2\\\", type number}, {\\\"SelectedModel\\\", type logical}}, \\\"en-US\\\")\",\r\n              \"in\",\r\n              \"    Typed\"\r\n            ]\r\n          }\r\n        }\r\n      ],\r\n      \"measures\": [\r\n        {\r\n          \"name\": \"Validation MAE\",\r\n          \"expression\": \"IF(HASONEVALUE(DimSeries[SeriesKey]), MIN(ModelComparison[ValidationMAE]))\",\r\n          \"formatString\": \"#,0.00\",\r\n          \"lineageTag\": \"c11ab107-fac9-47ff-ad36-b944ed8091b9\"\r\n        },\r\n        {\r\n          \"name\": \"Test MAE\",\r\n          \"expression\": \"IF(HASONEVALUE(DimSeries[SeriesKey]), MIN(ModelComparison[TestMAE]))\",\r\n          \"formatString\": \"#,0.00\",\r\n          \"lineageTag\": \"5e0b3ab2-576e-43df-8101-679e72089484\"\r\n        },\r\n        {\r\n          \"name\": \"Selected Model\",\r\n          \"expression\": \"IF(HASONEVALUE(DimSeries[SeriesKey]), CALCULATE(SELECTEDVALUE(ModelComparison[Model]), ModelComparison[SelectedModel] = TRUE()), \\\"Choose exactly one series\\\")\",\r\n          \"lineageTag\": \"fe738d55-3c9c-4b1f-a82a-a702623e0023\"\r\n        },\r\n        {\r\n          \"name\": \"Selected Validation MAE\",\r\n          \"expression\": \"IF(HASONEVALUE(DimSeries[SeriesKey]), CALCULATE(MIN(ModelComparison[ValidationMAE]), ModelComparison[SelectedModel] = TRUE()))\",\r\n          \"formatString\": \"#,0.00\",\r\n          \"lineageTag\": \"2808ad12-c796-4bba-8443-bb7596c76a9f\"\r\n        },\r\n        {\r\n          \"name\": \"Selected Test MAE\",\r\n          \"expression\": \"IF(HASONEVALUE(DimSeries[SeriesKey]), CALCULATE(MIN(ModelComparison[TestMAE]), ModelComparison[SelectedModel] = TRUE()))\",\r\n          \"formatString\": \"#,0.00\",\r\n          \"lineageTag\": \"5411ed1c-ddae-43b1-af59-94ce8244d0bd\"\r\n        },\r\n        {\r\n          \"name\": \"Selected Test RMSE\",\r\n          \"expression\": \"IF(HASONEVALUE(DimSeries[SeriesKey]), CALCULATE(MIN(ModelComparison[TestRMSE]), ModelComparison[SelectedModel] = TRUE()))\",\r\n          \"formatString\": \"#,0.00\",\r\n          \"lineageTag\": \"fff29ec2-d271-4e57-9ec1-5f3a6e8e4d0f\"\r\n        },\r\n        {\r\n          \"name\": \"Selected Test R2\",\r\n          \"expression\": \"IF(HASONEVALUE(DimSeries[SeriesKey]), CALCULATE(MAX(ModelComparison[TestR2]), ModelComparison[SelectedModel] = TRUE()))\",\r\n          \"formatString\": \"0.0000\",\r\n          \"lineageTag\": \"de3650a4-5df7-4f4c-8727-47e4267c4770\"\r\n        },\r\n        {\r\n          \"name\": \"Naive Test MAE\",\r\n          \"expression\": \"IF(HASONEVALUE(DimSeries[SeriesKey]), CALCULATE(MIN(ModelComparison[TestMAE]), ModelComparison[Model] = \\\"Naive Forecast\\\"))\",\r\n          \"formatString\": \"#,0.00\",\r\n          \"lineageTag\": \"4e1586dc-b203-4d2d-80a7-cdf36e744cd6\"\r\n        },\r\n        {\r\n          \"name\": \"Test Improvement over Naive %\",\r\n          \"expression\": \"DIVIDE([Naive Test MAE]-[Selected Test MAE], [Naive Test MAE])\",\r\n          \"formatString\": \"0.00%\",\r\n          \"lineageTag\": \"51f235b5-e92f-4a70-84fa-e1915e8c4eb6\"\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}"
+            },
+            "annotations": null,
+            "meta": null
+          }
+        ],
+        "structured_content": null,
+        "is_error": false,
+        "result_type": "complete"
+      }
+    }
+  ],
+  "operation_scope": "ListLocalInstances, Connect, measure Get, table List/ExportTMSL and relationship List only. No refresh or mutation.",
+  "claim_boundary": "Live metadata associated with the saved file; not a reopened PBIX or a static decode of its compressed DataModel."
+}

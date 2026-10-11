@@ -1,0 +1,33 @@
+table DimSeries
+
+	column SeriesKey
+		dataType: string
+		summarizeBy: none
+		sourceColumn: SeriesKey
+
+	column SegmentType
+		dataType: string
+		summarizeBy: none
+		sourceColumn: SegmentType
+
+	column SegmentName
+		dataType: string
+		summarizeBy: none
+		sourceColumn: SegmentName
+
+	column DisplayName
+		dataType: string
+		summarizeBy: none
+		sourceColumn: DisplayName
+
+	partition DimSeries = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:/Github/BI 2026/BI Term Project/DimSeries.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Nulls = Table.ReplaceValue(Headers, "", null, Replacer.ReplaceValue, Table.ColumnNames(Headers)),
+				    Typed = Table.TransformColumnTypes(Nulls, {{"SeriesKey", type text}, {"SegmentType", type text}, {"SegmentName", type text}, {"DisplayName", type text}}, "en-US")
+				in
+				    Typed
+

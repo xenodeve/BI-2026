@@ -1,0 +1,26 @@
+{
+  "Honda all25months": {
+    "Registrations": 3071944,
+    "SourceRecords": 2031,
+    "FactRows": 82,
+    "Registrations per source record": 1512.5278188084687
+  },
+  "Honda2024-2025": {
+    "Registrations": 2938308,
+    "SourceRecords": 1950,
+    "FactRows": 78,
+    "Registrations per source record": 1506.8246153846153
+  },
+  "2025 passenger cars up7seats": {
+    "Registrations": 506439,
+    "SourceRecords": 6055,
+    "FactRows": 696,
+    "Registrations per source record": 83.63980181668043
+  },
+  "Honda2025 passenger cars up7seats": {
+    "Registrations": 71510,
+    "SourceRecords": 208,
+    "FactRows": 12,
+    "Registrations per source record": 343.7980769230769
+  }
+}

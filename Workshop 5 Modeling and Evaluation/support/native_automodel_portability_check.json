@@ -1,0 +1,78 @@
+{
+  "file_translation_verified": true,
+  "native_actual_GUI_AutoModel_saved_source": "D:\\Github\\BI 2026\\Native_AI_Repository\\Workshop5_AutoModel_20261011",
+  "source_dataset": "WS5_AutoModel_Heart_Native_Prepared.csv",
+  "source_sha256": "fafcc2ff71daf147d0ab3968887dd74330c645e3f6a2341c5a217e52b99658af",
+  "source_copy_exact": true,
+  "native_saved_RMPs_unchanged": true,
+  "existing_WS5_baselines_reports_native_exports_unchanged": true,
+  "target": "HeartDisease",
+  "positive_class": "Yes",
+  "native_selected_inputs": 14,
+  "native_dropped_inputs": [
+    "AlcoholDrinking",
+    "Stroke",
+    "KidneyDisease",
+    "SkinCancer"
+  ],
+  "same_common_holdout_claim": false,
+  "portable_native_execution_pending": false,
+  "processes": [
+    {
+      "model": "Naive Bayes",
+      "native_original_sha256": "7c902845ba4d2c2807ea28a42dec52003061a086cd2b2a871c6009b8415f5a40",
+      "portable_file": "WS5_AutoModel_NB.rmp",
+      "portable_sha256": "eb4ea4c5f4903bb0822b311ca6f77a0b9f13ece042fa633e92c3d53dc17c67c0",
+      "only_initial_repository_source_replaced": true,
+      "all_native_parameters_seeds_caps_splits_14_input_selection_preserved": true,
+      "external_repository_bindings_remaining": 0,
+      "default_initial_cap": "2000000"
+    },
+    {
+      "model": "Logistic Regression",
+      "native_original_sha256": "0fdfd149a2bab73efc38dcec43ba0b2ff4131445f45d6bd15871c452f187f984",
+      "portable_file": "WS5_AutoModel_LR.rmp",
+      "portable_sha256": "8d97458bcbc5c40047d8bfc8c013f92dc885ccb56e14f2e1ca22b1297aac9f3e",
+      "only_initial_repository_source_replaced": true,
+      "all_native_parameters_seeds_caps_splits_14_input_selection_preserved": true,
+      "external_repository_bindings_remaining": 0,
+      "default_initial_cap": "500000"
+    },
+    {
+      "model": "Decision Tree",
+      "native_original_sha256": "7e2ad23d15836df152d9f86b3c035e28ca63188c8140dac9eb87749309c6870c",
+      "portable_file": "WS5_AutoModel_DT.rmp",
+      "portable_sha256": "bf2dc6a533951696f11329f6e5e8f510bce1022c4aa66651428994417b01f10c",
+      "only_initial_repository_source_replaced": true,
+      "all_native_parameters_seeds_caps_splits_14_input_selection_preserved": true,
+      "external_repository_bindings_remaining": 0,
+      "default_initial_cap": "500000"
+    },
+    {
+      "model": "Random Forest",
+      "native_original_sha256": "9e4d1fee5fdcebb3ab1c9722b4050ee1caa8c2509d180d23cb56302b63d877bc",
+      "portable_file": "WS5_AutoModel_RF.rmp",
+      "portable_sha256": "6ee4b135a34b348376a4c333ede6a5ff7e7a4cf225b16ee488d2817d2776c310",
+      "only_initial_repository_source_replaced": true,
+      "all_native_parameters_seeds_caps_splits_14_input_selection_preserved": true,
+      "external_repository_bindings_remaining": 0,
+      "default_initial_cap": "125000"
+    },
+    {
+      "model": "Gradient Boosted Trees",
+      "native_original_sha256": "0aa21b1a1fda9ada7b8388ea48b1d67b7187203d4da3dffbf6b2f0043e343bde",
+      "portable_file": "WS5_AutoModel_GBT.rmp",
+      "portable_sha256": "bd20f9a40683647f3d648f9ff5bb057843febf43abe5d69ea05515af912ed7a1",
+      "only_initial_repository_source_replaced": true,
+      "all_native_parameters_seeds_caps_splits_14_input_selection_preserved": true,
+      "external_repository_bindings_remaining": 0,
+      "default_initial_cap": "125000"
+    }
+  ],
+  "necessary_portable_NB_native_execution_verified": true,
+  "portable_NB_log_sha256": "c72181abf0a5772926d2459990071b6d717973948aa9333d16e4485e1f50b4e4",
+  "loader_verified_source_rows": 319795,
+  "loader_verified_typed_metadata_columns": 19,
+  "all_five_portable_models_rerun_claim": false,
+  "zip_unchanged_sha256": "2eb430988dfe9ab1b8161c384ceb9dae6fc8f14ada5a1bfaeaaba42f662b23f0"
+}

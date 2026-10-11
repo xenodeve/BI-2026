@@ -1,0 +1,24 @@
+{
+  "file_deliverable_scope_pass": true,
+  "teacher_acceptance_or_Classroom_submission_claim": false,
+  "source_requirement_basis": "BI06 PDF3/slide10 describes saved Process reuse; PDF1/slide4 and PDF2/slides5-6 cover Data Quality; no screenshot delivery instruction in all11 slides/title-only WS4Classroom. User approved available-slides scope and source dataset.",
+  "raw_rows": 319795,
+  "raw_columns": 18,
+  "native_prepared_columns": 19,
+  "all_original_values_exactly_preserved": true,
+  "derived_rule_exact_all_rows": true,
+  "no_row_deletion_or_fabrication": true,
+  "missing_cells": 0,
+  "duplicate_rows_retained_and_disclosed": 18078,
+  "no_clipping_imputation_or_deduplication": true,
+  "native_engine_execution_proved": true,
+  "actual_relocation_proved": true,
+  "interactive_TurboPrep_creation_not_claimed": true,
+  "PDF3pages_visually_reviewed_and_truthful": true,
+  "canonical_sha256": {
+    "heart_2020_cleaned.csv": "90a1e2e8bdcb4aba54314a41d35d2ac3be4763e459df33951e08e415f527f5a8",
+    "heart_2020_prepared_native.csv": "fafcc2ff71daf147d0ab3968887dd74330c645e3f6a2341c5a217e52b99658af",
+    "Workshop4_Data_Preparation.rmp": "2af9f70a884eaef965307eb64507e046f22ee0e7204b116bdcc295d711475bf4",
+    "Workshop4_Data_Preparation_Report.pdf": "438353d3448a29b9338af12579fa05398e4a9a43d1d65b5902625019cd557a29"
+  }
+}

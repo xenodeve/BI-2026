@@ -1,0 +1,47 @@
+{
+  "actual_source_exports": [
+    {
+      "model": "Naive Bayes",
+      "file": "native_NB.csv",
+      "bytes": 319
+    },
+    {
+      "model": "Logistic Regression",
+      "file": "native_LR.csv",
+      "bytes": 318
+    },
+    {
+      "model": "Decision Tree",
+      "file": "native_DT.csv",
+      "bytes": 317
+    },
+    {
+      "model": "Random Forest",
+      "file": "native_RF.csv",
+      "bytes": 319
+    },
+    {
+      "model": "Gradient Boosted Trees",
+      "file": "native_GBT.csv",
+      "bytes": 316
+    }
+  ],
+  "actual_export_sha256": {
+    "native_NB.csv": "1827a9a4a9a81376f1644df29b7569f7563e28c4fb3b3e1edb0eb4913e38e8c4",
+    "native_LR.csv": "3661e793d115731811161a6fe39fd96a25e20fa4c441c3396ed869b6a5d1940c",
+    "native_DT.csv": "c497828a8a11436c2ef4d5122eb1296a7c46f132b5b9db89ebca12458b7b72be",
+    "native_RF.csv": "5e87d9b94fbd34e1d8603a5a134972db5b4f83de903c1288cbde02a08ac1c476",
+    "native_GBT.csv": "74336daa8e178c60f960c130b8cb213839f21b3676aecc077a6598107a75665b"
+  },
+  "positive_class": "yes",
+  "confusion_reconciliation": true,
+  "same_test_row_count": 13564,
+  "same_test_positive_count": 1587,
+  "execution_mode": "official installed AI Studio native batch",
+  "run_start_epoch": 1791666656.0,
+  "all_exports_newer_than_run_start": true,
+  "process_finished_successfully": true,
+  "process_sha256": "0a5f5223645f5296b93117afaff17010547974a690d9dfed2ddf4524a7e12018",
+  "log_sha256": "eb9ef262ce74882b1c2a35bef3bd33dec05affc485914e35823ee9879813da0d",
+  "gui_Run_or_TurboPrep_claim": false
+}

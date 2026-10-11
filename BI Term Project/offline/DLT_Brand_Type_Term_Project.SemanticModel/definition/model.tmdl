@@ -1,0 +1,21 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+ref table DimDate
+ref table DimBrand
+ref table DimVehicleType
+ref table DimSeries
+ref table FactRegistrations
+ref table FactForecast
+ref table ModelComparison
+ref table TestErrors
+ref table DataQuality
+ref table ETL_Counts
+ref table HypothesisEvidence
+ref table 'Metric Parameter'
+

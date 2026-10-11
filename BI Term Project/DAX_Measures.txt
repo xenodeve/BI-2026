@@ -1,0 +1,120 @@
+Power BI measure definitions for the proposed DLT brand/type project.
+Create each measure separately. These definitions still require execution and
+verification in the Power BI report. Import CSVs with their exact table names.
+Mark DimDate[Date] as the date table. Relationships are described in the report.
+DimSeries must filter FactForecast, ModelComparison and TestErrors.
+Use one SeriesKey selection for forecast/model cards because series overlap.
+
+Actual Registrations = SUM(FactRegistrations[Registrations])
+
+Source Records = SUM(FactRegistrations[SourceRecords])
+
+Complete Months = DISTINCTCOUNT(FactRegistrations[Date])
+
+Brand Count = DISTINCTCOUNT(FactRegistrations[BrandKey])
+
+Vehicle Type Count = DISTINCTCOUNT(FactRegistrations[VehicleTypeKey])
+
+Registrations Previous Year =
+CALCULATE([Actual Registrations], DATEADD(DimDate[Date], -1, YEAR))
+
+YoY Growth =
+VAR Previous = [Registrations Previous Year]
+RETURN IF(NOT ISBLANK(Previous), DIVIDE([Actual Registrations] - Previous, Previous))
+
+Brand Share =
+DIVIDE([Actual Registrations], CALCULATE([Actual Registrations], REMOVEFILTERS(DimBrand)))
+
+Vehicle Type Share =
+DIVIDE([Actual Registrations], CALCULATE([Actual Registrations], REMOVEFILTERS(DimVehicleType)))
+
+Average Monthly Registrations = DIVIDE([Actual Registrations], [Complete Months])
+
+Future Forecast =
+IF(
+    HASONEVALUE(DimSeries[SeriesKey]),
+    CALCULATE(SUM(FactForecast[ForecastRegistrations]), FactForecast[DatasetSegment] = "Future"),
+    BLANK()
+)
+
+Selected Model =
+IF(
+    HASONEVALUE(DimSeries[SeriesKey]),
+    CALCULATE(SELECTEDVALUE(ModelComparison[Model]), ModelComparison[SelectedModel] = TRUE()),
+    BLANK()
+)
+
+Selected Validation MAE =
+IF(
+    HASONEVALUE(DimSeries[SeriesKey]),
+    CALCULATE(SELECTEDVALUE(ModelComparison[ValidationMAE]), ModelComparison[SelectedModel] = TRUE())
+)
+
+Selected Test MAE =
+IF(
+    HASONEVALUE(DimSeries[SeriesKey]),
+    CALCULATE(SELECTEDVALUE(ModelComparison[TestMAE]), ModelComparison[SelectedModel] = TRUE())
+)
+
+Selected Test RMSE =
+IF(
+    HASONEVALUE(DimSeries[SeriesKey]),
+    CALCULATE(SELECTEDVALUE(ModelComparison[TestRMSE]), ModelComparison[SelectedModel] = TRUE())
+)
+
+Selected Test R2 =
+IF(
+    HASONEVALUE(DimSeries[SeriesKey]),
+    CALCULATE(SELECTEDVALUE(ModelComparison[TestR2]), ModelComparison[SelectedModel] = TRUE())
+)
+
+Forecast Test Actual =
+IF(
+    HASONEVALUE(DimSeries[SeriesKey]),
+    CALCULATE(SUM(FactForecast[ActualRegistrations]), FactForecast[DatasetSegment] = "Test")
+)
+
+Forecast Test Prediction =
+IF(
+    HASONEVALUE(DimSeries[SeriesKey]),
+    CALCULATE(SUM(FactForecast[ForecastRegistrations]), FactForecast[DatasetSegment] = "Test")
+)
+
+Test Absolute Error =
+IF(HASONEVALUE(DimSeries[SeriesKey]), SUM(TestErrors[AbsoluteError]))
+
+Raw Source Records = SUM(DataQuality[SourceRecords])
+
+Incomplete Source Months =
+COUNTROWS(FILTER(ALL(DataQuality), DataQuality[IsComplete] = FALSE()))
+
+Missing Source Months =
+VAR FirstSourceDate = MINX(ALL(DataQuality), DataQuality[Date])
+VAR LastSourceDate = MAXX(ALL(DataQuality), DataQuality[Date])
+VAR ExpectedMonths =
+    SELECTCOLUMNS(
+        FILTER(CALENDAR(FirstSourceDate, LastSourceDate), DAY([Date]) = 1),
+        "MonthDate", [Date]
+    )
+VAR ObservedMonths = SELECTCOLUMNS(ALL(DataQuality), "MonthDate", DataQuality[Date])
+RETURN COUNTROWS(EXCEPT(ExpectedMonths, ObservedMonths))
+
+Expected independent checks before claiming DAX works:
+- No filters: Actual Registrations=5007659; Source Records=35805;
+  Complete Months=25; Brand Count=421; Vehicle Type Count=16.
+- Raw Source Records=68398; Incomplete Source Months=1; Missing Source Months=1.
+- Jan2026: Actual Registrations=250212; Previous Year=227900;
+  YoY Growth=0.0979025888547609 (display about9.7903%).
+- One series S01: Selected Model=Gradient Boosting; Selected Validation MAE=
+  9436.512806019058; Selected Test MAE=16207.591882328572;
+  Selected Test RMSE=20334.013672173664; Selected Test R2=0.4257287139390914.
+- S01 Future Forecast=227934.333617 (compare full CSV precision).
+- With zero or multiple series selected, model/forecast/error cards must be blank.
+- Brand Share retains selected vehicle type/date context while removing Brand.
+- Vehicle Type Share retains selected brand/date context while removing Type.
+- Type and brand shares sum to1 within the appropriate complete context.
+- DataQuality is a disconnected source audit table covering Jan2022-Feb2026,
+  while analytical DimDate covers Jan2024-Feb2026.
+
+Formatting: count/MAE/RMSE #,##0 or #,##0.00; share/growth0.0%; R²0.0000.
+Do not display R² as a percentage. Do not zero-fill future actual.

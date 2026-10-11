@@ -1,0 +1,481 @@
+{
+  "created_local": "2026-10-11T09:12:30.406466",
+  "artifact_type": "Derived charts of official native AI Studio batch exports; NOT GUI screenshots",
+  "figure_count": 14,
+  "common_test_rows": 12000,
+  "positive_class": "Hospitalized",
+  "test_id_label_hash": "5701b5d07bbc5533cadee3fc9feedda58c3897c6d758a0ffde4b840f715b7097",
+  "native_source_hashes_live_verified": true,
+  "new_model_run_performed": false,
+  "GUI_photographs_created": false,
+  "14_GUI_photograph_requirements_completed": false,
+  "source_sha256": {
+    "native_model_comparison.csv": "8287e82334a9ce1a7565e4dcc13d4f4c6d96f0c6202de9d5832ab1cc7ea2c180",
+    "native_model_reading.json": "e04ca7028f522afd61892e8cf0c04feda4b1eba696d241addad0092a1b0cd2a1",
+    "common_test_verification.json": "2219e66f049b4452a07055c049f07faad70aabee9cfee8ce56612f2860aa97b4",
+    "common_test\\explanation_run\\explanation_results_verification.json": "9789529fb85c8ac1b9f19d4d28df1452446fda2db4c8e79c56bbd71b96ba2bd6",
+    "common_test\\explanation_run\\RF_native_feature_weights.csv": "9051e09737f551af8f2e58c1c1ba160993b1d82fa41e32197819ac9abbaee75b",
+    "common_test\\explanation_run\\LR_evaluated_model.nativeio": "eb38047c3f18eb9b8dcb54d5397b91ea2f4cf562f9558f40aef4a360f7d5abb6",
+    "common_test\\explanation_run\\DT_evaluated_model.nativeio": "fb0d509580718cf85cd63a48eae2a9c284240a8900a794462b8dfd2905b0328a"
+  },
+  "protected_before_after_unchanged": true,
+  "protected_sha256": {
+    "MiniProject2_Report_Draft.pdf": "2d7084f7dcb04462aabb5506459669ddc722b2821c3aebb248400084bd809283",
+    "MiniProject2_Report_Draft.docx": "743ff7a360b5a8ddb72e968b76bb5f81cfdacc483a09746e2398459368a24ebf",
+    "collect_evidence.py": "a9b4a11f722b1bd60f3db4c5d4215934ccff930cc22c5ba474a5468343bf8341",
+    "build_report.py": "2a576f9828c5c6fe7970592a3cf3908f7a6e810e5f9b2a792dd6c769bd19bf05",
+    "native_model_comparison.csv": "8287e82334a9ce1a7565e4dcc13d4f4c6d96f0c6202de9d5832ab1cc7ea2c180",
+    "native_model_reading.json": "e04ca7028f522afd61892e8cf0c04feda4b1eba696d241addad0092a1b0cd2a1",
+    "native_setup.json": "b03068e5591ca63c5911506b928cb929bf29de2ab9ce43a9fa50c0d9c6e71770",
+    "common_test_verification.json": "2219e66f049b4452a07055c049f07faad70aabee9cfee8ce56612f2860aa97b4",
+    "evidence_status.json": "d4787690827adcb7c63c47f271f9c15c2c266b811470d7425f68b16fc2bb1a0c",
+    "common_test\\MiniProject2_Common_Test_9Models.rmp": "ac1f471194f460ebd17ce0399c4d59fc632542b3ad4f995f97bdc575fb290b9f",
+    "common_test\\metrics_NB.csv": "5bf761a5208b823cdc0971e4f062a76329271613aed7ac5c3de4620487856b23",
+    "common_test\\predictions_NB.csv": "31b7b436655dcfbb0f7d14b5455306ae52b65c5ac080d9cec8c0a76d703ed621",
+    "common_test\\train_ids_NB.csv": "db8e5a04c6a6c3ce094d74cd8a7b9efd792699d56b509aca2dcb294ee8c66e1b",
+    "common_test\\test_ids_NB.csv": "c9fc2ace144ca48e5309031a88251c96c2801ab369c7bfa1c5c44d720ca00620",
+    "common_test\\metrics_GLM.csv": "4121bb9c232a3a58f5c74c50f1213c4deafc66056163e853b9456071595b1eef",
+    "common_test\\predictions_GLM.csv": "d80525a1ddaf421cb70c9920992b80eadca495496f89ab9eb6a15e466caea674",
+    "common_test\\train_ids_GLM.csv": "db8e5a04c6a6c3ce094d74cd8a7b9efd792699d56b509aca2dcb294ee8c66e1b",
+    "common_test\\test_ids_GLM.csv": "c9fc2ace144ca48e5309031a88251c96c2801ab369c7bfa1c5c44d720ca00620",
+    "common_test\\metrics_LR.csv": "7c129dde3025fc89a02b9daec4f24dedfaec29cd35a188918981413feaf101f8",
+    "common_test\\predictions_LR.csv": "c8aba46ab70ea593bfd84643baebd68c62298fb79a1fc8a0f09ae9d180b4f8d6",
+    "common_test\\train_ids_LR.csv": "db8e5a04c6a6c3ce094d74cd8a7b9efd792699d56b509aca2dcb294ee8c66e1b",
+    "common_test\\test_ids_LR.csv": "c9fc2ace144ca48e5309031a88251c96c2801ab369c7bfa1c5c44d720ca00620",
+    "common_test\\metrics_FLM.csv": "eef28c6ed3b533233bb8bced11e51ac4c8a7b758a395abb8653ab3c7d1e73ced",
+    "common_test\\predictions_FLM.csv": "6ee19c1c1ed1fbdf29755d5cad384aa42dd4bcef711d6cd8c58d67b05843e9e4",
+    "common_test\\train_ids_FLM.csv": "db8e5a04c6a6c3ce094d74cd8a7b9efd792699d56b509aca2dcb294ee8c66e1b",
+    "common_test\\test_ids_FLM.csv": "c9fc2ace144ca48e5309031a88251c96c2801ab369c7bfa1c5c44d720ca00620",
+    "common_test\\metrics_DL.csv": "807565cbf70d78135e172551ee0ae1fc74fa1c29a079d55985d158165ae4531d",
+    "common_test\\predictions_DL.csv": "674a437e1c1a97dee93b5f72e6a310a40c59e2c60be27a5c98a7765dae33d33a",
+    "common_test\\train_ids_DL.csv": "db8e5a04c6a6c3ce094d74cd8a7b9efd792699d56b509aca2dcb294ee8c66e1b",
+    "common_test\\test_ids_DL.csv": "c9fc2ace144ca48e5309031a88251c96c2801ab369c7bfa1c5c44d720ca00620",
+    "common_test\\metrics_DT.csv": "40ee99200bce8d91bc4b48486fce1568e93026a7d0adf890e3dfa20682319ca6",
+    "common_test\\predictions_DT.csv": "f805c5a999f3c493ca3bfd0f9bf1a7f8d02af9b3f83cf4179018638c79e73cc3",
+    "common_test\\train_ids_DT.csv": "db8e5a04c6a6c3ce094d74cd8a7b9efd792699d56b509aca2dcb294ee8c66e1b",
+    "common_test\\test_ids_DT.csv": "c9fc2ace144ca48e5309031a88251c96c2801ab369c7bfa1c5c44d720ca00620",
+    "common_test\\metrics_RF.csv": "e834c45a15212d5cd15fd98c7dbe941bd1bb88c06bf2c9edb4e59904be8ef9d7",
+    "common_test\\predictions_RF.csv": "ae15aef4c55175dd684a48f5a3b927a8e502be8aea76a6c6d5a66fbdf5b056d9",
+    "common_test\\train_ids_RF.csv": "db8e5a04c6a6c3ce094d74cd8a7b9efd792699d56b509aca2dcb294ee8c66e1b",
+    "common_test\\test_ids_RF.csv": "c9fc2ace144ca48e5309031a88251c96c2801ab369c7bfa1c5c44d720ca00620",
+    "common_test\\metrics_GBT.csv": "d158c059c1fa3367f4e120a7601a853d2766978cdc91c35f91979e87cbd0e85b",
+    "common_test\\predictions_GBT.csv": "72b57463d5b16fd4f44fc8038fe33a1ad5104f9b6e80b01f3654a4423df07116",
+    "common_test\\train_ids_GBT.csv": "db8e5a04c6a6c3ce094d74cd8a7b9efd792699d56b509aca2dcb294ee8c66e1b",
+    "common_test\\test_ids_GBT.csv": "c9fc2ace144ca48e5309031a88251c96c2801ab369c7bfa1c5c44d720ca00620",
+    "common_test\\metrics_SVM.csv": "6cd8b9e661dd216b7f3508cd76afd8a99571b0604e4e26c52035230e9e5b0a60",
+    "common_test\\predictions_SVM.csv": "54729800b9ee0c65e6e0a038da6b546204ac10255f8fd1c27652ea3dc7a7d834",
+    "common_test\\train_ids_SVM.csv": "db8e5a04c6a6c3ce094d74cd8a7b9efd792699d56b509aca2dcb294ee8c66e1b",
+    "common_test\\test_ids_SVM.csv": "c9fc2ace144ca48e5309031a88251c96c2801ab369c7bfa1c5c44d720ca00620"
+  },
+  "figures": [
+    {
+      "file": "01_NB_native_batch_metrics.png",
+      "vector_source": "vector_sources\\01_NB_native_batch_metrics.pdf",
+      "caption": "Naive Bayes native metrics",
+      "sources": [
+        "common_test/metrics_NB.csv",
+        "common_test/predictions_NB.csv"
+      ],
+      "displayed_values": {
+        "Accuracy": 0.8750833333333333,
+        "Precision": 0.6910058027079303,
+        "Recall": 0.6242900830056793,
+        "F1": 0.6559559329814092,
+        "AUC": 0.8809061789607804,
+        "tp": 1429,
+        "fp": 639,
+        "fn": 860,
+        "tn": 9072
+      },
+      "sha256": "98e29213d5fb181fba50977f7a3dd9888eda0537320532f969d821772df35f99"
+    },
+    {
+      "file": "02_GLM_native_batch_metrics.png",
+      "vector_source": "vector_sources\\02_GLM_native_batch_metrics.pdf",
+      "caption": "Generalized Linear Model native metrics",
+      "sources": [
+        "common_test/metrics_GLM.csv",
+        "common_test/predictions_GLM.csv"
+      ],
+      "displayed_values": {
+        "Accuracy": 0.90325,
+        "Precision": 0.8275261324041812,
+        "Recall": 0.6225425950196593,
+        "F1": 0.7105459985041137,
+        "AUC": 0.9015187678833072,
+        "tp": 1425,
+        "fp": 297,
+        "fn": 864,
+        "tn": 9414
+      },
+      "sha256": "f00af54c16854093d8c3034900fea2f5ee861c4b41df191b29220291d14f7e0d"
+    },
+    {
+      "file": "03_LR_native_batch_metrics.png",
+      "vector_source": "vector_sources\\03_LR_native_batch_metrics.pdf",
+      "caption": "Logistic Regression native metrics",
+      "sources": [
+        "common_test/metrics_LR.csv",
+        "common_test/predictions_LR.csv"
+      ],
+      "displayed_values": {
+        "Accuracy": 0.8798333333333334,
+        "Precision": 0.8731277533039647,
+        "Recall": 0.4329401485364788,
+        "F1": 0.5788551401869159,
+        "AUC": 0.905527476711292,
+        "tp": 991,
+        "fp": 144,
+        "fn": 1298,
+        "tn": 9567
+      },
+      "sha256": "62b3fec731d3322b8a1390f573efb2f89c8b0292fbf51af98d4d6e320ddeb1e8"
+    },
+    {
+      "file": "04_FLM_native_batch_metrics.png",
+      "vector_source": "vector_sources\\04_FLM_native_batch_metrics.pdf",
+      "caption": "Fast Large Margin native metrics",
+      "sources": [
+        "common_test/metrics_FLM.csv",
+        "common_test/predictions_FLM.csv"
+      ],
+      "displayed_values": {
+        "Accuracy": 0.8549166666666667,
+        "Precision": 0.7433392539964476,
+        "Recall": 0.3656618610747051,
+        "F1": 0.4901903367496339,
+        "AUC": 0.7214789864839598,
+        "tp": 837,
+        "fp": 289,
+        "fn": 1452,
+        "tn": 9422
+      },
+      "sha256": "1fb3c2cd61cfa4e987e1a2b030d99a741ba5146f49e9615309533329533a3899"
+    },
+    {
+      "file": "05_DL_native_batch_metrics.png",
+      "vector_source": "vector_sources\\05_DL_native_batch_metrics.pdf",
+      "caption": "Deep Learning native metrics",
+      "sources": [
+        "common_test/metrics_DL.csv",
+        "common_test/predictions_DL.csv"
+      ],
+      "displayed_values": {
+        "Accuracy": 0.9045,
+        "Precision": 0.77462758289284,
+        "Recall": 0.7042376583660988,
+        "F1": 0.7377574370709382,
+        "AUC": 0.9111739269250024,
+        "tp": 1612,
+        "fp": 469,
+        "fn": 677,
+        "tn": 9242
+      },
+      "sha256": "1e2ab9853b2a9e0119b51d4039cab3ff0c40fb8ee0da58db10b9d419844f4084"
+    },
+    {
+      "file": "06_DT_native_batch_metrics.png",
+      "vector_source": "vector_sources\\06_DT_native_batch_metrics.pdf",
+      "caption": "Decision Tree native metrics",
+      "sources": [
+        "common_test/metrics_DT.csv",
+        "common_test/predictions_DT.csv"
+      ],
+      "displayed_values": {
+        "Accuracy": 0.90275,
+        "Precision": 0.829225352112676,
+        "Recall": 0.617300131061599,
+        "F1": 0.7077385424492862,
+        "AUC": 0.7997192925345903,
+        "tp": 1413,
+        "fp": 291,
+        "fn": 876,
+        "tn": 9420
+      },
+      "sha256": "c339f7dc7e2f0a96e52b8b711aa5f1d5369cf2ddebe1891b0109dcaa9debfc47"
+    },
+    {
+      "file": "07_RF_native_batch_metrics.png",
+      "vector_source": "vector_sources\\07_RF_native_batch_metrics.pdf",
+      "caption": "Random Forest native metrics",
+      "sources": [
+        "common_test/metrics_RF.csv",
+        "common_test/predictions_RF.csv"
+      ],
+      "displayed_values": {
+        "Accuracy": 0.8909166666666667,
+        "Precision": 0.8249336870026526,
+        "Recall": 0.5434687636522499,
+        "F1": 0.6552541480115881,
+        "AUC": 0.9050602382646122,
+        "tp": 1244,
+        "fp": 264,
+        "fn": 1045,
+        "tn": 9447
+      },
+      "sha256": "3eb9f83a819a101e36b430805a059e170c76ab662fc0f36d3bb16846c74232ca"
+    },
+    {
+      "file": "08_GBT_native_batch_metrics.png",
+      "vector_source": "vector_sources\\08_GBT_native_batch_metrics.pdf",
+      "caption": "Gradient Boosted Trees native metrics",
+      "sources": [
+        "common_test/metrics_GBT.csv",
+        "common_test/predictions_GBT.csv"
+      ],
+      "displayed_values": {
+        "Accuracy": 0.8981666666666667,
+        "Precision": 0.774293059125964,
+        "Recall": 0.6579292267365662,
+        "F1": 0.7113840340103921,
+        "AUC": 0.9046367050125196,
+        "tp": 1506,
+        "fp": 439,
+        "fn": 783,
+        "tn": 9272
+      },
+      "sha256": "723889c446f5ec20491fa177e46c85e1ea7f18f76537e6e89d83ed38c48b1fe8"
+    },
+    {
+      "file": "09_SVM_native_batch_metrics.png",
+      "vector_source": "vector_sources\\09_SVM_native_batch_metrics.pdf",
+      "caption": "Support Vector Machine native metrics",
+      "sources": [
+        "common_test/metrics_SVM.csv",
+        "common_test/predictions_SVM.csv"
+      ],
+      "displayed_values": {
+        "Accuracy": 0.9015,
+        "Precision": 0.8448598130841122,
+        "Recall": 0.5923984272608126,
+        "F1": 0.6964560862865947,
+        "AUC": 0.8712700270675271,
+        "tp": 1356,
+        "fp": 249,
+        "fn": 933,
+        "tn": 9462
+      },
+      "sha256": "632422610c4dc4f5f73f84ebed9113b6a3b1a3826fd749c0aec27b09dc823258"
+    },
+    {
+      "file": "10_DL_native_batch_confusion.png",
+      "vector_source": "vector_sources\\10_DL_native_batch_confusion.pdf",
+      "caption": "Selected Deep Learning native confusion matrix",
+      "sources": [
+        "common_test/predictions_DL.csv",
+        "common_test/metrics_DL.csv"
+      ],
+      "displayed_values": {
+        "model": "Deep Learning",
+        "tp": 1612,
+        "fp": 469,
+        "fn": 677,
+        "tn": 9242,
+        "test_set_id": "5701b5d07bbc5533cadee3fc9feedda58c3897c6d758a0ffde4b840f715b7097",
+        "screenshot": null,
+        "native_source": "common_test/predictions_DL.csv",
+        "native_metrics_source": "common_test/metrics_DL.csv",
+        "provenance": "Native AI Studio official batch full common holdout"
+      },
+      "sha256": "bc24db4cb4d07cce17a1c95af9cfb20fb8eef7484976e2cefbe925ceaba1487e"
+    },
+    {
+      "file": "11_DL_native_batch_scoring.png",
+      "vector_source": "vector_sources\\11_DL_native_batch_scoring.pdf",
+      "caption": "One actual native scored row and threshold interpretation",
+      "sources": [
+        "common_test/predictions_DL.csv"
+      ],
+      "displayed_values": {
+        "model": "Deep Learning",
+        "record_inputs": {
+          "USMER": "2",
+          "MEDICAL_UNIT": "3",
+          "SEX": "1",
+          "PNEUMONIA": "1",
+          "AGE": 72.0,
+          "DIABETES": "2",
+          "COPD": "2",
+          "ASTHMA": "2",
+          "INMSUPR": "2",
+          "HIPERTENSION": "2",
+          "OTHER_DISEASE": "2",
+          "CARDIOVASCULAR": "2",
+          "OBESITY": "1",
+          "RENAL_CHRONIC": "2",
+          "TOBACCO": "2"
+        },
+        "prediction": "Hospitalized",
+        "confidence_hospitalized": 0.7119504528306805,
+        "threshold": 0.5,
+        "screenshot": null,
+        "source_row_id": 348,
+        "actual_label": "Hospitalized",
+        "confidence_outpatient": 0.2880495471693196,
+        "native_source": "common_test/predictions_DL.csv",
+        "provenance": "Native AI Studio official batch full common holdout",
+        "gui_threshold_demo_verified": false
+      },
+      "sha256": "864cbd64b1015e532c29803ff45c93545a849cae91c31a3b0c22590795678dff"
+    },
+    {
+      "file": "12_RF_native_gain_ratio_importance.png",
+      "vector_source": "vector_sources\\12_RF_native_gain_ratio_importance.pdf",
+      "caption": "Genuine evaluated-fit Random Forest native gain-ratio importance",
+      "sources": [
+        "common_test\\explanation_run\\RF_native_feature_weights.csv"
+      ],
+      "displayed_values": [
+        {
+          "Attribute": "AGE",
+          "Weight": "0.49164676987916617"
+        },
+        {
+          "Attribute": "SEX",
+          "Weight": "0.1012571792117389"
+        },
+        {
+          "Attribute": "USMER",
+          "Weight": "0.06499197321694164"
+        },
+        {
+          "Attribute": "OBESITY",
+          "Weight": "0.05438056707109954"
+        },
+        {
+          "Attribute": "DIABETES",
+          "Weight": "0.0442887309289181"
+        },
+        {
+          "Attribute": "HIPERTENSION",
+          "Weight": "0.041915342830596884"
+        },
+        {
+          "Attribute": "MEDICAL_UNIT",
+          "Weight": "0.039200269976590194"
+        },
+        {
+          "Attribute": "TOBACCO",
+          "Weight": "0.03711557253213155"
+        },
+        {
+          "Attribute": "OTHER_DISEASE",
+          "Weight": "0.027982742207233343"
+        },
+        {
+          "Attribute": "PNEUMONIA",
+          "Weight": "0.019251173952466314"
+        },
+        {
+          "Attribute": "ASTHMA",
+          "Weight": "0.01904210522332618"
+        },
+        {
+          "Attribute": "CARDIOVASCULAR",
+          "Weight": "0.01869694955541754"
+        },
+        {
+          "Attribute": "COPD",
+          "Weight": "0.015610121818732517"
+        },
+        {
+          "Attribute": "INMSUPR",
+          "Weight": "0.013527895108817078"
+        },
+        {
+          "Attribute": "RENAL_CHRONIC",
+          "Weight": "0.011092606486824122"
+        }
+      ],
+      "sha256": "5f7cd60d4dc07ee715174c3f9049603bdbbbbd3df8c39899eef0362fadc09415"
+    },
+    {
+      "file": "13_LR_native_coefficients.png",
+      "vector_source": "vector_sources\\13_LR_native_coefficients.pdf",
+      "caption": "Actual evaluated-fit native Logistic Regression base coefficients",
+      "sources": [
+        "common_test\\explanation_run\\LR_evaluated_model.nativeio",
+        "native_logistic_coefficients_common.csv"
+      ],
+      "displayed_values": [
+        {
+          "feature": "PNEUMONIA.2",
+          "weight": -3.671459770896794,
+          "reference_category": "1 (omitted level inferred from native dictionary/coefficients)",
+          "interpretation": "ลบ ต่อ base logit ของ Hospitalized; final evaluated model มี native confidence calibration/cost wrapper"
+        },
+        {
+          "feature": "PNEUMONIA.99",
+          "weight": -2.442678065141103,
+          "reference_category": "1 (omitted level inferred from native dictionary/coefficients)",
+          "interpretation": "ลบ ต่อ base logit ของ Hospitalized; final evaluated model มี native confidence calibration/cost wrapper"
+        },
+        {
+          "feature": "MEDICAL_UNIT.10",
+          "weight": 7.5308013803731395,
+          "reference_category": "1 (omitted level inferred from native dictionary/coefficients)",
+          "interpretation": "บวก ต่อ base logit ของ Hospitalized; final evaluated model มี native confidence calibration/cost wrapper"
+        },
+        {
+          "feature": "SEX.2",
+          "weight": 0.3229485590883117,
+          "reference_category": "1 (omitted level inferred from native dictionary/coefficients)",
+          "interpretation": "บวก ต่อ base logit ของ Hospitalized; final evaluated model มี native confidence calibration/cost wrapper"
+        },
+        {
+          "feature": "USMER.2",
+          "weight": -0.8825605570142123,
+          "reference_category": "1 (omitted level inferred from native dictionary/coefficients)",
+          "interpretation": "ลบ ต่อ base logit ของ Hospitalized; final evaluated model มี native confidence calibration/cost wrapper"
+        },
+        {
+          "feature": "AGE",
+          "weight": 0.02630556011400486,
+          "reference_category": "Age in years",
+          "interpretation": "บวก ต่อ base logit ของ Hospitalized; final evaluated model มี native confidence calibration/cost wrapper"
+        }
+      ],
+      "sha256": "b712cf66f5e7f03fad1c530e0997dd2f46a328ab1769881f3d28f529a2f52ff9"
+    },
+    {
+      "file": "14_DT_native_root_leaf_path.png",
+      "vector_source": "vector_sources\\14_DT_native_root_leaf_path.pdf",
+      "caption": "Actual evaluated-fit native Decision Tree path",
+      "sources": [
+        "common_test\\explanation_run\\DT_evaluated_model.nativeio"
+      ],
+      "displayed_values": {
+        "root": "PNEUMONIA",
+        "path_to_leaf": [
+          "PNEUMONIA = 1"
+        ],
+        "leaf_prediction": "Hospitalized",
+        "screenshot": null,
+        "note": "Native evaluated common tree; leaf counters are training-node counts, not test confusion counts. GUI reading screenshot remains pending.",
+        "source_fit": "common_evaluation",
+        "same_fit_proof": "common_test\\explanation_run\\explanation_results_verification.json",
+        "leaf_training_counts": {
+          "Outpatient": 343,
+          "Hospitalized": 1735
+        },
+        "native_artifact": "common_test\\explanation_run\\DT_evaluated_model.nativeio",
+        "native_artifact_sha256": "fb0d509580718cf85cd63a48eae2a9c284240a8900a794462b8dfd2905b0328a"
+      },
+      "sha256": "bae1ff0566248b732a84f0f0aa2c4c8d28f6e4683b1141777cfbf2fbe6cd1c64"
+    }
+  ],
+  "appendix_file": "MiniProject2_Native_Batch_Result_Figures_Appendix.pdf",
+  "appendix_sha256": "c002da2d3c9c8c13564a87e5def0315e2d835a4b2344114cfe09c9ee1719f490",
+  "visual_review_status": "PASS: all 14 final PNGs and all 15 rendered appendix pages visually inspected",
+  "visual_review": {
+    "reviewed_local": "2026-10-11T09:15:52.255302",
+    "png_count": 14,
+    "appendix_page_count": 15,
+    "repairs": [
+      "RF weights use one fixed numeric column; no overlap with category names",
+      "LR categories and coefficients use separate fixed columns; no overlap with negative bars"
+    ],
+    "root_independent_review": "Parent reviewed final RF and LR PNGs at 09:14; both clear and numbers agree with native readings",
+    "required_GUI_photographs_completed": false
+  }
+}

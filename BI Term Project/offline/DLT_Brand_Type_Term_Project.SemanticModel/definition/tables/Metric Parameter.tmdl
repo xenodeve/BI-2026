@@ -1,0 +1,35 @@
+table 'Metric Parameter'
+
+	column Metric
+		dataType: string
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Metric Order'
+
+		relatedColumnDetails
+			groupByColumn: 'Metric Fields'
+
+	column 'Metric Fields'
+		dataType: string
+		isHidden
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Metric Order'
+
+		extendedProperty ParameterMetadata = {"version":3,"kind":2}
+
+	column 'Metric Order'
+		dataType: int64
+		isHidden
+		summarizeBy: none
+		sourceColumn: [Value3]
+
+	partition 'Metric Parameter' = calculated
+		mode: import
+		source =
+				{
+				    ("Registrations", NAMEOF('FactRegistrations'[Total Registrations]), 0),
+				    ("Source records", NAMEOF('FactRegistrations'[Source Records]), 1),
+				    ("Registrations/source record", NAMEOF('FactRegistrations'[Registrations per Source Record]), 2)
+				}
+

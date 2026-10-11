@@ -1,0 +1,68 @@
+table FactForecast
+
+	measure 'Forecast Actual' = IF(HASONEVALUE(DimSeries[SeriesKey]), SUM(FactForecast[ActualRegistrations]))
+		formatString: #,0 "registrations"
+
+	measure 'Forecast Prediction' = IF(HASONEVALUE(DimSeries[SeriesKey]), SUM(FactForecast[ForecastRegistrations]))
+		formatString: #,0 "registrations"
+
+	measure 'Future Forecast' = IF(HASONEVALUE(DimSeries[SeriesKey]), CALCULATE(SUM(FactForecast[ForecastRegistrations]), FactForecast[DatasetSegment] = "Future"))
+		formatString: #,0 "registrations"
+
+	measure 'Selected Series' = SELECTEDVALUE(DimSeries[DisplayName], "Choose exactly one series")
+
+	measure 'Forecast Target Month' = CALCULATE(MAX(FactForecast[Date]), FactForecast[DatasetSegment] = "Future")
+		formatString: MMM yyyy
+
+	column SeriesKey
+		dataType: string
+		summarizeBy: none
+		sourceColumn: SeriesKey
+
+	column SegmentType
+		dataType: string
+		summarizeBy: none
+		sourceColumn: SegmentType
+
+	column SegmentName
+		dataType: string
+		summarizeBy: none
+		sourceColumn: SegmentName
+
+	column Date
+		dataType: dateTime
+		formatString: Short Date
+		summarizeBy: none
+		sourceColumn: Date
+
+	column ActualRegistrations
+		dataType: double
+		summarizeBy: none
+		sourceColumn: ActualRegistrations
+
+	column ForecastRegistrations
+		dataType: double
+		summarizeBy: none
+		sourceColumn: ForecastRegistrations
+
+	column DatasetSegment
+		dataType: string
+		summarizeBy: none
+		sourceColumn: DatasetSegment
+
+	column Model
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Model
+
+	partition FactForecast = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:/Github/BI 2026/BI Term Project/FactForecast.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Nulls = Table.ReplaceValue(Headers, "", null, Replacer.ReplaceValue, Table.ColumnNames(Headers)),
+				    Typed = Table.TransformColumnTypes(Nulls, {{"SeriesKey", type text}, {"SegmentType", type text}, {"SegmentName", type text}, {"Date", type date}, {"ActualRegistrations", type number}, {"ForecastRegistrations", type number}, {"DatasetSegment", type text}, {"Model", type text}}, "en-US")
+				in
+				    Typed
+

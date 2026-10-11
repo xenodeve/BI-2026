@@ -1,0 +1,15 @@
+{
+  "preview_pages": 13,
+  "all13_rendered_PDF_pages_visually_reviewed": true,
+  "metric_pages_all9criteria_full_readable": true,
+  "RF15weights_original_table_visible": true,
+  "confusion_scoring_original_native_values_visible": true,
+  "original_native_photos_unchanged": true,
+  "DOCX_uses_original_full_photo_bytes": true,
+  "DOCX_srcRect_crop_count": 12,
+  "native_Word_pagination_verified": false,
+  "native_Word_limit": "No installed LibreOffice; native Word rendering not performed",
+  "PDF_sha256": "dcd8a3d4b1d6288a20c5ae49a9fb1dc4e8a09f417b1a82465bfbbb6e0be21335",
+  "DOCX_sha256": "e018d03d9e4d25a71ff3034ea5455cbfd37216d3fab89e47aef73818911580f8",
+  "current_gate": "Only LR coefficient photograph pending; preview was generated at12accepted-photo snapshot and is not final report"
+}

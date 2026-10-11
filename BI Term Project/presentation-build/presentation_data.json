@@ -1,0 +1,770 @@
+{
+  "verification": {
+    "status": "Proposal and computed analysis; group identities, uniqueness and instructor topic approval pending",
+    "source_url": "https://gdcatalog.dlt.go.th/en/dataset/stat_1_1_01_first_regis_vehicles_car",
+    "source_sha256": "9fe035b983666fcd021804c5fc1baaff14cd381d5ae1714527cf5ef2ea856f5d",
+    "raw_rows": 68398,
+    "raw_columns": 9,
+    "null_counts": {
+      "ปี พ.ศ.": 0,
+      "เดือน": 0,
+      "ประเภทรถ": 0,
+      "ยี่ห้อ": 0,
+      "รุ่น": 623,
+      "จำนวน": 0,
+      "Source_Year_BE": 0,
+      "Source_Month": 0,
+      "Source_File": 0
+    },
+    "exact_duplicate_rows": 0,
+    "natural_key_duplicate_rows": 0,
+    "raw_count_iqr_high_outliers": 11649,
+    "outlier_action": "Retain valid aggregated counts; category volumes are heterogeneous and high volume is not proof of error",
+    "missing_months": [
+      "2023-12-01"
+    ],
+    "complete_months": 25,
+    "raw_total_registrations": 10276823,
+    "complete_period_registrations": 5007659,
+    "complete_period_source_records": 35805,
+    "fact_rows": 5712,
+    "brands": 421,
+    "vehicle_types": 16,
+    "train_period": [
+      "2024-04-01",
+      "2025-03-01"
+    ],
+    "validation_period": [
+      "2025-04-01",
+      "2025-08-01"
+    ],
+    "test_period": [
+      "2025-09-01",
+      "2026-01-01"
+    ],
+    "observations_per_series": {
+      "source": 25,
+      "modeling": 22,
+      "train": 12,
+      "validation": 5,
+      "test": 5
+    },
+    "selection": "Lowest validation MAE, frozen before test; models refit on train+validation for test and all complete modeling data for future",
+    "feature_definition": [
+      "Lag1",
+      "Lag2",
+      "Lag3",
+      "MonthSin",
+      "MonthCos",
+      "TimeIndex"
+    ],
+    "prediction_constraint": "Negative model predictions clipped to zero before every evaluation and future forecast",
+    "series_selection": "Total + top3 brands + top3 vehicle types ranked only with source months Jan2024-Mar2025",
+    "versions": {
+      "python": "3.11.9",
+      "pandas": "2.3.3",
+      "numpy": "2.3.4",
+      "scikit-learn": "1.7.2"
+    },
+    "selected_models": [
+      {
+        "SeriesKey": "S01",
+        "SegmentType": "Total",
+        "SegmentName": "All",
+        "Model": "Gradient Boosting",
+        "ValidationMAE": 9436.512806019058,
+        "ValidationRMSE": 10404.838103056825,
+        "ValidationR2": 0.6367282014336602,
+        "TestMAE": 16207.591882328572,
+        "TestRMSE": 20334.013672173664,
+        "TestR2": 0.4257287139390914,
+        "SelectedModel": true
+      },
+      {
+        "SeriesKey": "S02",
+        "SegmentType": "Brand",
+        "SegmentName": "HONDA",
+        "Model": "Random Forest",
+        "ValidationMAE": 6645.184969841238,
+        "ValidationRMSE": 7573.577089794418,
+        "ValidationR2": 0.5739484411078744,
+        "TestMAE": 4461.9431797618945,
+        "TestRMSE": 5153.54236314082,
+        "TestR2": 0.5783935017710865,
+        "SelectedModel": true
+      },
+      {
+        "SeriesKey": "S03",
+        "SegmentType": "Brand",
+        "SegmentName": "TOYOTA",
+        "Model": "Ridge Regression",
+        "ValidationMAE": 673.6632916800875,
+        "ValidationRMSE": 801.7985805278086,
+        "ValidationR2": 0.0829272781930559,
+        "TestMAE": 2331.192061298259,
+        "TestRMSE": 3009.207740059393,
+        "TestR2": 0.1598394788519728,
+        "SelectedModel": true
+      },
+      {
+        "SeriesKey": "S04",
+        "SegmentType": "Brand",
+        "SegmentName": "YAMAHA",
+        "Model": "Gradient Boosting",
+        "ValidationMAE": 2080.599481908619,
+        "ValidationRMSE": 2626.2034281579704,
+        "ValidationR2": -0.3751069162849774,
+        "TestMAE": 1255.6541225510118,
+        "TestRMSE": 1559.6412637767603,
+        "TestR2": -0.5592946046220677,
+        "SelectedModel": true
+      },
+      {
+        "SeriesKey": "S05",
+        "SegmentType": "VehicleType",
+        "SegmentName": "รถจักรยานยนต์",
+        "Model": "Random Forest",
+        "ValidationMAE": 8718.210522222227,
+        "ValidationRMSE": 9736.659380969437,
+        "ValidationR2": 0.4534054015764182,
+        "TestMAE": 5760.648680952366,
+        "TestRMSE": 6776.973561705811,
+        "TestR2": 0.31582671237847704,
+        "SelectedModel": true
+      },
+      {
+        "SeriesKey": "S06",
+        "SegmentType": "VehicleType",
+        "SegmentName": "รถยนต์นั่งส่วนบุคคลไม่เกิน 7 คน",
+        "Model": "Ridge Regression",
+        "ValidationMAE": 3521.6854280982384,
+        "ValidationRMSE": 3813.0080588903197,
+        "ValidationR2": -0.3573858835654178,
+        "TestMAE": 9857.362625762853,
+        "TestRMSE": 19228.997773773764,
+        "TestR2": -0.15527804185453475,
+        "SelectedModel": true
+      },
+      {
+        "SeriesKey": "S07",
+        "SegmentType": "VehicleType",
+        "SegmentName": "รถยนต์บรรทุกส่วนบุคคล",
+        "Model": "Naive Forecast",
+        "ValidationMAE": 338.2,
+        "ValidationRMSE": 450.5647567220499,
+        "ValidationR2": -3.743413243609514,
+        "TestMAE": 749.8,
+        "TestRMSE": 964.7153984466092,
+        "TestR2": -0.7220598288042617,
+        "SelectedModel": true
+      }
+    ],
+    "future_forecasts": [
+      {
+        "SeriesKey": "S01",
+        "SegmentType": "Total",
+        "SegmentName": "All",
+        "ActualRegistrations": null,
+        "ForecastRegistrations": 227934.33361677715,
+        "DatasetSegment": "Future",
+        "Model": "Gradient Boosting"
+      },
+      {
+        "SeriesKey": "S02",
+        "SegmentType": "Brand",
+        "SegmentName": "HONDA",
+        "ActualRegistrations": null,
+        "ForecastRegistrations": 128384.54643759021,
+        "DatasetSegment": "Future",
+        "Model": "Random Forest"
+      },
+      {
+        "SeriesKey": "S03",
+        "SegmentType": "Brand",
+        "SegmentName": "TOYOTA",
+        "ActualRegistrations": null,
+        "ForecastRegistrations": 19006.418584717623,
+        "DatasetSegment": "Future",
+        "Model": "Ridge Regression"
+      },
+      {
+        "SeriesKey": "S04",
+        "SegmentType": "Brand",
+        "SegmentName": "YAMAHA",
+        "ActualRegistrations": null,
+        "ForecastRegistrations": 18789.232831342553,
+        "DatasetSegment": "Future",
+        "Model": "Gradient Boosting"
+      },
+      {
+        "SeriesKey": "S05",
+        "SegmentType": "VehicleType",
+        "SegmentName": "รถจักรยานยนต์",
+        "ActualRegistrations": null,
+        "ForecastRegistrations": 147212.76337012986,
+        "DatasetSegment": "Future",
+        "Model": "Random Forest"
+      },
+      {
+        "SeriesKey": "S06",
+        "SegmentType": "VehicleType",
+        "SegmentName": "รถยนต์นั่งส่วนบุคคลไม่เกิน 7 คน",
+        "ActualRegistrations": null,
+        "ForecastRegistrations": 41273.69802128868,
+        "DatasetSegment": "Future",
+        "Model": "Ridge Regression"
+      },
+      {
+        "SeriesKey": "S07",
+        "SegmentType": "VehicleType",
+        "SegmentName": "รถยนต์บรรทุกส่วนบุคคล",
+        "ActualRegistrations": null,
+        "ForecastRegistrations": 6312.0,
+        "DatasetSegment": "Future",
+        "Model": "Naive Forecast"
+      }
+    ],
+    "hypotheses": [
+      {
+        "Hypothesis": "H1",
+        "Question": "Motorcycles exceed 50 percent of registrations in 2024-2025",
+        "ObservedValue": 0.7238296086115095,
+        "Threshold": 0.5,
+        "Result": "Supported descriptively",
+        "Interpretation": "Registration composition, not sales or causal demand"
+      },
+      {
+        "Hypothesis": "H2",
+        "Question": "Honda is the largest brand overall in 2024-2025",
+        "ObservedValue": 0.6176228552835166,
+        "Threshold": 0.0,
+        "Result": "Supported descriptively",
+        "Interpretation": "Overall brand composition mixes motorcycles and passenger cars; compare brands within type for a product decision"
+      },
+      {
+        "Hypothesis": "H3",
+        "Question": "Private passenger car registrations declined in 2025 against 2024",
+        "ObservedValue": 0.03999482506884511,
+        "Threshold": 0.0,
+        "Result": "Not supported descriptively",
+        "Interpretation": "Like-for-like full calendar years within passenger cars up to 7 seats"
+      },
+      {
+        "Hypothesis": "H4",
+        "Question": "The largest 3 brands account for over 70 percent in 2024-2025",
+        "ObservedValue": 0.8143039743795359,
+        "Threshold": 0.7,
+        "Result": "Supported descriptively",
+        "Interpretation": "Full-period concentration is descriptive; predictive segment selection uses training period only"
+      },
+      {
+        "Hypothesis": "H5",
+        "Question": "January 2026 registrations exceed January 2025",
+        "ObservedValue": 0.09790258885476089,
+        "Threshold": 0.0,
+        "Result": "Supported descriptively",
+        "Interpretation": "A one-month year-on-year change does not prove sustained growth"
+      },
+      {
+        "Hypothesis": "H6",
+        "Question": "The validation-selected total model beats Naive on held-out test MAE",
+        "ObservedValue": 0.11003042696725285,
+        "Threshold": 0.0,
+        "Result": "Supported descriptively",
+        "Interpretation": "Test is reporting-only; a negative improvement does not permit switching the selected model"
+      }
+    ],
+    "output_schemas": {
+      "FactRegistrations.csv": {
+        "rows": 5712,
+        "columns": [
+          "Date",
+          "BrandKey",
+          "VehicleTypeKey",
+          "Registrations",
+          "SourceRecords"
+        ]
+      },
+      "DimBrand.csv": {
+        "rows": 421,
+        "columns": [
+          "BrandKey",
+          "Brand"
+        ]
+      },
+      "DimVehicleType.csv": {
+        "rows": 16,
+        "columns": [
+          "VehicleTypeKey",
+          "VehicleType",
+          "VehicleTypeEnglish"
+        ]
+      },
+      "DimDate.csv": {
+        "rows": 790,
+        "columns": [
+          "Date",
+          "Year",
+          "YearBE",
+          "Month",
+          "YearMonth",
+          "YearMonthSort",
+          "IsCompleteMonth"
+        ]
+      },
+      "DimSeries.csv": {
+        "rows": 7,
+        "columns": [
+          "SeriesKey",
+          "SegmentType",
+          "SegmentName",
+          "DisplayName"
+        ]
+      },
+      "BrandMonthly.csv": {
+        "rows": 4387,
+        "columns": [
+          "Date",
+          "BrandKey",
+          "Brand",
+          "Registrations",
+          "SourceRecords",
+          "RegistrationShare"
+        ]
+      },
+      "VehicleTypeMonthly.csv": {
+        "rows": 338,
+        "columns": [
+          "Date",
+          "VehicleTypeKey",
+          "VehicleType",
+          "Registrations",
+          "SourceRecords",
+          "RegistrationShare"
+        ]
+      },
+      "FactForecast.csv": {
+        "rows": 182,
+        "columns": [
+          "SeriesKey",
+          "SegmentType",
+          "SegmentName",
+          "Date",
+          "ActualRegistrations",
+          "ForecastRegistrations",
+          "DatasetSegment",
+          "Model"
+        ]
+      },
+      "ModelComparison.csv": {
+        "rows": 35,
+        "columns": [
+          "SeriesKey",
+          "SegmentType",
+          "SegmentName",
+          "Model",
+          "ValidationMAE",
+          "ValidationRMSE",
+          "ValidationR2",
+          "TestMAE",
+          "TestRMSE",
+          "TestR2",
+          "SelectedModel"
+        ]
+      },
+      "ModelFeatures.csv": {
+        "rows": 154,
+        "columns": [
+          "SeriesKey",
+          "SegmentType",
+          "SegmentName",
+          "Date",
+          "Registrations",
+          "Lag1",
+          "Lag2",
+          "Lag3",
+          "MonthSin",
+          "MonthCos",
+          "TimeIndex"
+        ]
+      },
+      "TestErrors.csv": {
+        "rows": 35,
+        "columns": [
+          "SeriesKey",
+          "SegmentType",
+          "SegmentName",
+          "Date",
+          "ActualRegistrations",
+          "PredictedRegistrations",
+          "AbsoluteError",
+          "Model"
+        ]
+      },
+      "DataQuality.csv": {
+        "rows": 49,
+        "columns": [
+          "Date",
+          "SourceRegistrations",
+          "SourceRecords",
+          "IsComplete",
+          "UsedForModeling"
+        ]
+      },
+      "ETL_Counts.csv": {
+        "rows": 4,
+        "columns": [
+          "Stage",
+          "InputRows",
+          "OutputRows",
+          "Reason"
+        ]
+      },
+      "HypothesisEvidence.csv": {
+        "rows": 6,
+        "columns": [
+          "Hypothesis",
+          "Question",
+          "ObservedValue",
+          "Threshold",
+          "Result",
+          "Interpretation"
+        ]
+      }
+    }
+  },
+  "native_progress": {
+    "full_refresh_reported_pass": true,
+    "native_dax_totals_verified": true,
+    "native_dax_seven_series_verified": true,
+    "unsafe_multi_series_forecast_blank": true,
+    "desktop_process": 68744,
+    "engine_port": 50620,
+    "source_receipts": [
+      "D:\\Github\\BI 2026\\BI Term Project\\native_evidence\\pbi-term-refresh-result.json",
+      "D:\\Github\\BI 2026\\BI Term Project\\native_evidence\\pbi-term-dax-totals-result.json",
+      "D:\\Github\\BI 2026\\BI Term Project\\native_evidence\\pbi-term-dax-forecast-result.json"
+    ],
+    "screenshot_sha256": {
+      "Executive Summary": "1d8b261bbc78f5a7c6512b138fadfa03bafb76dfc7d6f1a601d8a4a2265e9753",
+      "Data Quality": "815525563e83e8cd98c95d99d61fb153154b1a3ffe544ee073903a253972a294",
+      "Diagnostic Insight": "6327c57133c7521d4c7f25d48d52377b5962b11b93445c6063bcff75013347be",
+      "Predictive Results": "7cadf761096855dafb3c5f21f40ebe8800bdb095ba54cac6e61153f9aedb3100",
+      "Decision Recommendation": "bc024820ced77f32dc048c0dd266021f0f510ffb3cd718571abec72828d58640"
+    },
+    "native_field_parameter_authored_selections_verified": true,
+    "native_field_parameter_proof": "docs/execution/term-parameter-native-verification.md",
+    "native_field_parameter_cases": {
+      "canonical_default": {
+        "metric": "Registrations",
+        "HONDA": 2938308
+      },
+      "source_records_clone": {
+        "metric": "Source records",
+        "HONDA": 1950
+      },
+      "registrations_per_record_clone": {
+        "metric": "Registrations/source record",
+        "HONDA": 1506.8246153846153
+      }
+    },
+    "canonical_parameter_patch_scope": {
+      "checked_files": 96,
+      "changed_files": 1,
+      "changed_component": "Metric slicer saved field-identity selection",
+      "semantic_model_and_csv_data_unchanged": true
+    },
+    "pending": [
+      "Final PBIX save and close/reopen",
+      "Actual Metric dropdown clicks",
+      "Brand hover tooltip context",
+      "Drillthrough with retained filters and Ctrl-click Back",
+      "Native Word pagination",
+      "Real group members and topic/dataset approval"
+    ],
+    "scope": "Native operations controlled by root; compute worker checks saved receipts/screenshots. Visible Back label is configuration evidence only."
+  },
+  "top_brands": [
+    [
+      "HONDA",
+      2938308
+    ],
+    [
+      "YAMAHA",
+      472137
+    ],
+    [
+      "TOYOTA",
+      463563
+    ],
+    [
+      "ISUZU",
+      146779
+    ],
+    [
+      "KUBOTA",
+      73374
+    ],
+    [
+      "BYD",
+      68591
+    ]
+  ],
+  "etl": [
+    {
+      "Stage": "Raw read",
+      "InputRows": "68398",
+      "OutputRows": "68398",
+      "Reason": "Original retained without modification"
+    },
+    {
+      "Stage": "Type validation and normalize labels",
+      "InputRows": "68398",
+      "OutputRows": "68398",
+      "Reason": "Validate counts/period and trim labels; missing model mapped to Unknown model"
+    },
+    {
+      "Stage": "Complete consecutive period",
+      "InputRows": "68398",
+      "OutputRows": "35805",
+      "Reason": "Jan 2024-Jan 2026; exclude earlier discontinuous period and incomplete Feb 2026"
+    },
+    {
+      "Stage": "Monthly brand vehicle type fact",
+      "InputRows": "35805",
+      "OutputRows": "5712",
+      "Reason": "Sum registrations at Date Brand VehicleType grain; preserve SourceRecords"
+    }
+  ],
+  "total_models": [
+    {
+      "SeriesKey": "S01",
+      "SegmentType": "Total",
+      "SegmentName": "All",
+      "Model": "Gradient Boosting",
+      "ValidationMAE": "9436.512806019058",
+      "ValidationRMSE": "10404.838103056825",
+      "ValidationR2": "0.6367282014336602",
+      "TestMAE": "16207.591882328572",
+      "TestRMSE": "20334.013672173664",
+      "TestR2": "0.4257287139390914",
+      "SelectedModel": "True"
+    },
+    {
+      "SeriesKey": "S01",
+      "SegmentType": "Total",
+      "SegmentName": "All",
+      "Model": "Random Forest",
+      "ValidationMAE": "11220.822026190523",
+      "ValidationRMSE": "12252.27622051711",
+      "ValidationR2": "0.49627374413860403",
+      "TestMAE": "12789.698142857163",
+      "TestRMSE": "19684.03026379565",
+      "TestR2": "0.4618554733553403",
+      "SelectedModel": "False"
+    },
+    {
+      "SeriesKey": "S01",
+      "SegmentType": "Total",
+      "SegmentName": "All",
+      "Model": "Ridge Regression",
+      "ValidationMAE": "13225.915479501471",
+      "ValidationRMSE": "14636.658881650723",
+      "ValidationR2": "0.2811389833536796",
+      "TestMAE": "15463.316733224394",
+      "TestRMSE": "23944.73188478818",
+      "TestR2": "0.20367410872219216",
+      "SelectedModel": "False"
+    },
+    {
+      "SeriesKey": "S01",
+      "SegmentType": "Total",
+      "SegmentName": "All",
+      "Model": "Naive Forecast",
+      "ValidationMAE": "22610.0",
+      "ValidationRMSE": "25125.97331846072",
+      "ValidationR2": "-1.1183943940571806",
+      "TestMAE": "18211.4",
+      "TestRMSE": "30133.74862508812",
+      "TestR2": "-0.2611803673216617",
+      "SelectedModel": "False"
+    },
+    {
+      "SeriesKey": "S01",
+      "SegmentType": "Total",
+      "SegmentName": "All",
+      "Model": "Linear Regression",
+      "ValidationMAE": "60055.70274101943",
+      "ValidationRMSE": "60586.99252939855",
+      "ValidationR2": "-11.31742198464805",
+      "TestMAE": "12919.129697665374",
+      "TestRMSE": "22847.48573943555",
+      "TestR2": "0.2749838024856096",
+      "SelectedModel": "False"
+    }
+  ],
+  "total_forecast": [
+    {
+      "SeriesKey": "S01",
+      "SegmentType": "Total",
+      "SegmentName": "All",
+      "Date": "2025-03-01",
+      "ActualRegistrations": "210841.0",
+      "ForecastRegistrations": "",
+      "DatasetSegment": "History",
+      "Model": "Gradient Boosting"
+    },
+    {
+      "SeriesKey": "S01",
+      "SegmentType": "Total",
+      "SegmentName": "All",
+      "Date": "2025-04-01",
+      "ActualRegistrations": "185014.0",
+      "ForecastRegistrations": "197334.96874175806",
+      "DatasetSegment": "Validation",
+      "Model": "Gradient Boosting"
+    },
+    {
+      "SeriesKey": "S01",
+      "SegmentType": "Total",
+      "SegmentName": "All",
+      "Date": "2025-05-01",
+      "ActualRegistrations": "227343.0",
+      "ForecastRegistrations": "210825.39304515053",
+      "DatasetSegment": "Validation",
+      "Model": "Gradient Boosting"
+    },
+    {
+      "SeriesKey": "S01",
+      "SegmentType": "Total",
+      "SegmentName": "All",
+      "Date": "2025-06-01",
+      "ActualRegistrations": "215312.0",
+      "ForecastRegistrations": "207550.51034278594",
+      "DatasetSegment": "Validation",
+      "Model": "Gradient Boosting"
+    },
+    {
+      "SeriesKey": "S01",
+      "SegmentType": "Total",
+      "SegmentName": "All",
+      "Date": "2025-07-01",
+      "ActualRegistrations": "201436.0",
+      "ForecastRegistrations": "196608.59799026806",
+      "DatasetSegment": "Validation",
+      "Model": "Gradient Boosting"
+    },
+    {
+      "SeriesKey": "S01",
+      "SegmentType": "Total",
+      "SegmentName": "All",
+      "Date": "2025-08-01",
+      "ActualRegistrations": "182449.0",
+      "ForecastRegistrations": "188204.09666654177",
+      "DatasetSegment": "Validation",
+      "Model": "Gradient Boosting"
+    },
+    {
+      "SeriesKey": "S01",
+      "SegmentType": "Total",
+      "SegmentName": "All",
+      "Date": "2025-09-01",
+      "ActualRegistrations": "188713.0",
+      "ForecastRegistrations": "169523.22606739833",
+      "DatasetSegment": "Test",
+      "Model": "Gradient Boosting"
+    },
+    {
+      "SeriesKey": "S01",
+      "SegmentType": "Total",
+      "SegmentName": "All",
+      "Date": "2025-10-01",
+      "ActualRegistrations": "185344.0",
+      "ForecastRegistrations": "184791.01463591965",
+      "DatasetSegment": "Test",
+      "Model": "Gradient Boosting"
+    },
+    {
+      "SeriesKey": "S01",
+      "SegmentType": "Total",
+      "SegmentName": "All",
+      "Date": "2025-11-01",
+      "ActualRegistrations": "177066.0",
+      "ForecastRegistrations": "184847.0267243076",
+      "DatasetSegment": "Test",
+      "Model": "Gradient Boosting"
+    },
+    {
+      "SeriesKey": "S01",
+      "SegmentType": "Total",
+      "SegmentName": "All",
+      "Date": "2025-12-01",
+      "ActualRegistrations": "184093.0",
+      "ForecastRegistrations": "167494.15109418792",
+      "DatasetSegment": "Test",
+      "Model": "Gradient Boosting"
+    },
+    {
+      "SeriesKey": "S01",
+      "SegmentType": "Total",
+      "SegmentName": "All",
+      "Date": "2026-01-01",
+      "ActualRegistrations": "250212.0",
+      "ForecastRegistrations": "213296.67551515883",
+      "DatasetSegment": "Test",
+      "Model": "Gradient Boosting"
+    },
+    {
+      "SeriesKey": "S01",
+      "SegmentType": "Total",
+      "SegmentName": "All",
+      "Date": "2026-02-01",
+      "ActualRegistrations": "",
+      "ForecastRegistrations": "227934.33361677715",
+      "DatasetSegment": "Future",
+      "Model": "Gradient Boosting"
+    }
+  ],
+  "worst_errors": [
+    {
+      "SeriesKey": "S06",
+      "SegmentType": "VehicleType",
+      "SegmentName": "รถยนต์นั่งส่วนบุคคลไม่เกิน 7 คน",
+      "Date": "2026-01-01",
+      "ActualRegistrations": "83281",
+      "PredictedRegistrations": "40445.42163597404",
+      "AbsoluteError": "42835.57836402596",
+      "Model": "Ridge Regression"
+    },
+    {
+      "SeriesKey": "S01",
+      "SegmentType": "Total",
+      "SegmentName": "All",
+      "Date": "2026-01-01",
+      "ActualRegistrations": "250212",
+      "PredictedRegistrations": "213296.67551515883",
+      "AbsoluteError": "36915.32448484117",
+      "Model": "Gradient Boosting"
+    },
+    {
+      "SeriesKey": "S01",
+      "SegmentType": "Total",
+      "SegmentName": "All",
+      "Date": "2025-09-01",
+      "ActualRegistrations": "188713",
+      "PredictedRegistrations": "169523.22606739833",
+      "AbsoluteError": "19189.773932601674",
+      "Model": "Gradient Boosting"
+    },
+    {
+      "SeriesKey": "S01",
+      "SegmentType": "Total",
+      "SegmentName": "All",
+      "Date": "2025-12-01",
+      "ActualRegistrations": "184093",
+      "PredictedRegistrations": "167494.15109418792",
+      "AbsoluteError": "16598.848905812076",
+      "Model": "Gradient Boosting"
+    }
+  ]
+}

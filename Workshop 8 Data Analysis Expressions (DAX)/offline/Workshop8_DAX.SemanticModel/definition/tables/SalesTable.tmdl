@@ -1,0 +1,99 @@
+table 'SalesTable'
+
+	measure 'Total Sales' = SUM(SalesTable[SalesAmount])
+		formatString: #,0.00 "THB"
+
+	measure 'Total Cost' = SUM(SalesTable[CostAmount])
+		formatString: #,0.00 "THB"
+
+	measure 'Total Profit' = [Total Sales] - [Total Cost]
+		formatString: #,0.00 "THB"
+
+	measure 'Gross Margin %' = DIVIDE([Total Profit], [Total Sales], 0)
+		formatString: 0.00%
+
+	measure 'Total Orders' = DISTINCTCOUNT(SalesTable[OrderID])
+		formatString: #,0
+
+	measure 'Average Order Value' = DIVIDE([Total Sales], [Total Orders], 0)
+		formatString: #,0.00 "THB"
+
+	measure 'Total Quantity' = SUM(SalesTable[Quantity])
+		formatString: #,0
+
+	measure 'Online Sales' = CALCULATE([Total Sales], SalesTable[Channel] = "Online")
+		formatString: #,0.00 "THB"
+
+	measure 'Store Sales' = CALCULATE([Total Sales], SalesTable[Channel] = "Store")
+		formatString: #,0.00 "THB"
+
+	column 'OrderID'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: OrderID
+
+	column 'OrderDate'
+		dataType: dateTime
+		formatString: Short Date
+		summarizeBy: none
+		sourceColumn: OrderDate
+
+	column 'ProductID'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: ProductID
+
+	column 'CustomerID'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: CustomerID
+
+	column 'Quantity'
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: Quantity
+
+	column 'Discount'
+		dataType: double
+		summarizeBy: none
+		sourceColumn: Discount
+
+	column 'Channel'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Channel
+
+	column 'UnitPrice' = RELATED(ProductsTable[UnitPrice])
+		dataType: int64
+		summarizeBy: none
+
+	column 'UnitCost' = RELATED(ProductsTable[UnitCost])
+		dataType: int64
+		summarizeBy: none
+
+	column 'SalesAmount' = SalesTable[Quantity] * SalesTable[UnitPrice] * (1 - SalesTable[Discount])
+		dataType: double
+		summarizeBy: none
+
+	column 'CostAmount' = SalesTable[Quantity] * SalesTable[UnitCost]
+		dataType: double
+		summarizeBy: none
+
+	column 'Profit' = SalesTable[SalesAmount] - SalesTable[CostAmount]
+		dataType: double
+		summarizeBy: none
+
+	column 'ProfitMargin' = DIVIDE(SalesTable[Profit], SalesTable[SalesAmount], 0)
+		dataType: double
+		formatString: 0.00%
+		summarizeBy: none
+
+	partition 'SalesTable' = m
+		mode: import
+		source =
+			let
+			    Source = Excel.Workbook(File.Contents("D:/Github/BI 2026/Workshop 8 Data Analysis Expressions (DAX)/DAX_Lab.xlsx"), null, true),
+			    Raw = Source{[Item="SalesTable",Kind="Table"]}[Data],
+			    Typed = Table.TransformColumnTypes(Raw, {{"OrderID", type text}, {"OrderDate", type date}, {"ProductID", type text}, {"CustomerID", type text}, {"Quantity", Int64.Type}, {"Discount", type number}, {"Channel", type text}})
+			in
+			    Typed

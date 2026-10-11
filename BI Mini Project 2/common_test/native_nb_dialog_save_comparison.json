@@ -1,0 +1,1243 @@
+{
+  "backup": "D:\\Github\\BI 2026\\BI Mini Project 2\\common_test\\model_NB_before_native_dialog_save.rmp",
+  "saved": "D:\\Github\\BI 2026\\BI Mini Project 2\\common_test\\model_NB.rmp",
+  "backup_sha256": "1b8b4e2fee2ca587fa77afe57404a50a7fd2d48c00e9ace9adc4a5d6154cd39a",
+  "saved_sha256": "54f1151dbacd22e845fbb401e5024881d3354f73a20ff274752b0a6a73e4eba6",
+  "operators_before": 355,
+  "operators_after": 355,
+  "configuration_changes": [
+    {
+      "operator": "Create Validation Set",
+      "before": {
+        "class": "subprocess",
+        "compatibility": "12.1.001",
+        "activated": "true",
+        "parameters": {},
+        "lists": {},
+        "connections": [
+          [
+            {
+              "from_op": "Recall Labeled Data (2)",
+              "from_port": "result",
+              "to_op": "Split Data",
+              "to_port": "example set"
+            },
+            {
+              "from_port": "partition 1",
+              "to_port": "input",
+              "from_op": "Split Data",
+              "to_op": "Preserve and Audit train_ids"
+            },
+            {
+              "from_port": "output 1",
+              "to_port": "store",
+              "from_op": "Preserve and Audit train_ids",
+              "to_op": "Remember Training Data"
+            },
+            {
+              "from_port": "output 2",
+              "to_port": "example set input",
+              "from_op": "Preserve and Audit train_ids",
+              "to_op": "Select train_ids"
+            },
+            {
+              "from_port": "example set output",
+              "to_port": "input",
+              "from_op": "Select train_ids",
+              "to_op": "Write train_ids"
+            },
+            {
+              "from_port": "through",
+              "to_port": "out 2",
+              "from_op": "Write train_ids"
+            },
+            {
+              "from_port": "partition 2",
+              "to_port": "input",
+              "from_op": "Split Data",
+              "to_op": "Preserve and Audit test_ids"
+            },
+            {
+              "from_port": "output 1",
+              "to_port": "store",
+              "from_op": "Preserve and Audit test_ids",
+              "to_op": "Remember Validation Data"
+            },
+            {
+              "from_port": "output 2",
+              "to_port": "example set input",
+              "from_op": "Preserve and Audit test_ids",
+              "to_op": "Select test_ids"
+            },
+            {
+              "from_port": "example set output",
+              "to_port": "input",
+              "from_op": "Select test_ids",
+              "to_op": "Write test_ids"
+            },
+            {
+              "from_port": "through",
+              "to_port": "out 1",
+              "from_op": "Write test_ids"
+            }
+          ]
+        ]
+      },
+      "after": {
+        "class": "subprocess",
+        "compatibility": "12.1.001",
+        "activated": "true",
+        "parameters": {},
+        "lists": {},
+        "connections": [
+          [
+            {
+              "from_op": "Recall Labeled Data (2)",
+              "from_port": "result",
+              "to_op": "Split Data",
+              "to_port": "example set"
+            },
+            {
+              "from_op": "Split Data",
+              "from_port": "partition 1",
+              "to_op": "Preserve and Audit train_ids",
+              "to_port": "input"
+            },
+            {
+              "from_op": "Split Data",
+              "from_port": "partition 2",
+              "to_op": "Preserve and Audit test_ids",
+              "to_port": "input"
+            },
+            {
+              "from_op": "Preserve and Audit train_ids",
+              "from_port": "output 1",
+              "to_op": "Remember Training Data",
+              "to_port": "store"
+            },
+            {
+              "from_op": "Preserve and Audit train_ids",
+              "from_port": "output 2",
+              "to_op": "Select train_ids",
+              "to_port": "example set input"
+            },
+            {
+              "from_op": "Select train_ids",
+              "from_port": "example set output",
+              "to_op": "Write train_ids",
+              "to_port": "input"
+            },
+            {
+              "from_op": "Write train_ids",
+              "from_port": "through",
+              "to_port": "out 2"
+            },
+            {
+              "from_op": "Preserve and Audit test_ids",
+              "from_port": "output 1",
+              "to_op": "Remember Validation Data",
+              "to_port": "store"
+            },
+            {
+              "from_op": "Preserve and Audit test_ids",
+              "from_port": "output 2",
+              "to_op": "Select test_ids",
+              "to_port": "example set input"
+            },
+            {
+              "from_op": "Select test_ids",
+              "from_port": "example set output",
+              "to_op": "Write test_ids",
+              "to_port": "input"
+            },
+            {
+              "from_op": "Write test_ids",
+              "from_port": "through",
+              "to_port": "out 1"
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "operator": "Evaluate All Common Test Rows",
+      "before": {
+        "class": "subprocess",
+        "compatibility": "12.1.001",
+        "activated": "true",
+        "parameters": {},
+        "lists": {},
+        "connections": [
+          [
+            {
+              "from_port": "result",
+              "to_port": "model",
+              "from_op": "Recall Common Trained Model",
+              "to_op": "Apply Model Full Common Test"
+            },
+            {
+              "from_port": "result",
+              "to_port": "unlabelled data",
+              "from_op": "Recall Complete Validation Data",
+              "to_op": "Apply Model Full Common Test"
+            },
+            {
+              "from_port": "labelled data",
+              "to_port": "labelled data",
+              "from_op": "Apply Model Full Common Test",
+              "to_op": "Full Common Test Performance"
+            },
+            {
+              "from_port": "performance",
+              "to_port": "performance vector",
+              "from_op": "Full Common Test Performance",
+              "to_op": "Full Performance to Data"
+            },
+            {
+              "from_port": "performance vector",
+              "to_port": "out 1",
+              "from_op": "Full Performance to Data"
+            },
+            {
+              "from_port": "example set",
+              "to_port": "input",
+              "from_op": "Full Performance to Data",
+              "to_op": "Write Full Metrics"
+            },
+            {
+              "from_port": "through",
+              "to_port": "out 3",
+              "from_op": "Write Full Metrics"
+            },
+            {
+              "from_port": "example set",
+              "to_port": "input",
+              "from_op": "Full Common Test Performance",
+              "to_op": "Write Full Test Predictions"
+            },
+            {
+              "from_port": "through",
+              "to_port": "out 2",
+              "from_op": "Write Full Test Predictions"
+            }
+          ]
+        ]
+      },
+      "after": {
+        "class": "subprocess",
+        "compatibility": "12.1.001",
+        "activated": "true",
+        "parameters": {},
+        "lists": {},
+        "connections": [
+          [
+            {
+              "from_op": "Recall Common Trained Model",
+              "from_port": "result",
+              "to_op": "Apply Model Full Common Test",
+              "to_port": "model"
+            },
+            {
+              "from_op": "Recall Complete Validation Data",
+              "from_port": "result",
+              "to_op": "Apply Model Full Common Test",
+              "to_port": "unlabelled data"
+            },
+            {
+              "from_op": "Apply Model Full Common Test",
+              "from_port": "labelled data",
+              "to_op": "Full Common Test Performance",
+              "to_port": "labelled data"
+            },
+            {
+              "from_op": "Full Common Test Performance",
+              "from_port": "performance",
+              "to_op": "Full Performance to Data",
+              "to_port": "performance vector"
+            },
+            {
+              "from_op": "Full Common Test Performance",
+              "from_port": "example set",
+              "to_op": "Write Full Test Predictions",
+              "to_port": "input"
+            },
+            {
+              "from_op": "Full Performance to Data",
+              "from_port": "example set",
+              "to_op": "Write Full Metrics",
+              "to_port": "input"
+            },
+            {
+              "from_op": "Full Performance to Data",
+              "from_port": "performance vector",
+              "to_port": "out 1"
+            },
+            {
+              "from_op": "Write Full Metrics",
+              "from_port": "through",
+              "to_port": "out 3"
+            },
+            {
+              "from_op": "Write Full Test Predictions",
+              "from_port": "through",
+              "to_port": "out 2"
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "operator": "Full Common Test Performance",
+      "before": {
+        "class": "performance_binominal_classification",
+        "compatibility": "12.1.001",
+        "activated": "true",
+        "parameters": {
+          "main_criterion": "f_measure",
+          "manually_set_positive_class": "true",
+          "positive_class": "Hospitalized",
+          "accuracy": "true",
+          "precision": "true",
+          "recall": "true",
+          "f_measure": "true",
+          "AUC": "true",
+          "false_positive": "true",
+          "false_negative": "true",
+          "true_positive": "true",
+          "true_negative": "true",
+          "use_example_weights": "false"
+        },
+        "lists": {},
+        "connections": []
+      },
+      "after": {
+        "class": "performance_binominal_classification",
+        "compatibility": "12.1.001",
+        "activated": "true",
+        "parameters": {
+          "manually_set_positive_class": "true",
+          "positive_class": "Hospitalized",
+          "main_criterion": "f_measure",
+          "accuracy": "true",
+          "classification_error": "false",
+          "kappa": "false",
+          "AUC (optimistic)": "false",
+          "AUC": "true",
+          "AUC (pessimistic)": "false",
+          "precision": "true",
+          "recall": "true",
+          "lift": "false",
+          "fallout": "false",
+          "f_measure": "true",
+          "false_positive": "true",
+          "false_negative": "true",
+          "true_positive": "true",
+          "true_negative": "true",
+          "sensitivity": "false",
+          "specificity": "false",
+          "youden": "false",
+          "positive_predictive_value": "false",
+          "negative_predictive_value": "false",
+          "psep": "false",
+          "skip_undefined_labels": "true",
+          "use_example_weights": "false"
+        },
+        "lists": {},
+        "connections": []
+      }
+    },
+    {
+      "operator": "Load and Process Data",
+      "before": {
+        "class": "subprocess",
+        "compatibility": "12.1.001",
+        "activated": "true",
+        "parameters": {},
+        "lists": {},
+        "connections": [
+          [
+            {
+              "from_op": "Retrieve Data",
+              "from_port": "output",
+              "to_op": "Create Single Row of Input Data",
+              "to_port": "in 1"
+            },
+            {
+              "from_op": "Create Single Row of Input Data",
+              "from_port": "out 1",
+              "to_op": "Preprocessing",
+              "to_port": "in 1"
+            },
+            {
+              "from_op": "Filter Examples",
+              "from_port": "unmatched example set",
+              "to_op": "Remember (2)",
+              "to_port": "store"
+            },
+            {
+              "from_op": "Sample",
+              "from_port": "example set output",
+              "to_op": "Remember",
+              "to_port": "store"
+            },
+            {
+              "from_port": "example set output",
+              "to_port": "example set input",
+              "from_op": "Common Source Row ID",
+              "to_op": "Name Common Source Row ID"
+            },
+            {
+              "from_port": "example set output",
+              "to_port": "example set input",
+              "from_op": "Name Common Source Row ID",
+              "to_op": "Protect Common Row ID"
+            },
+            {
+              "from_op": "Preprocessing",
+              "from_port": "out 1",
+              "to_op": "Common Source Row ID",
+              "to_port": "example set input"
+            },
+            {
+              "from_op": "Protect Common Row ID",
+              "from_port": "example set output",
+              "to_op": "Filter Examples",
+              "to_port": "example set input"
+            },
+            {
+              "from_op": "Filter Examples",
+              "from_port": "example set output",
+              "to_op": "Sample",
+              "to_port": "example set input"
+            }
+          ]
+        ]
+      },
+      "after": {
+        "class": "subprocess",
+        "compatibility": "12.1.001",
+        "activated": "true",
+        "parameters": {},
+        "lists": {},
+        "connections": [
+          [
+            {
+              "from_op": "Retrieve Data",
+              "from_port": "output",
+              "to_op": "Create Single Row of Input Data",
+              "to_port": "in 1"
+            },
+            {
+              "from_op": "Create Single Row of Input Data",
+              "from_port": "out 1",
+              "to_op": "Preprocessing",
+              "to_port": "in 1"
+            },
+            {
+              "from_op": "Preprocessing",
+              "from_port": "out 1",
+              "to_op": "Common Source Row ID",
+              "to_port": "example set input"
+            },
+            {
+              "from_op": "Common Source Row ID",
+              "from_port": "example set output",
+              "to_op": "Name Common Source Row ID",
+              "to_port": "example set input"
+            },
+            {
+              "from_op": "Name Common Source Row ID",
+              "from_port": "example set output",
+              "to_op": "Protect Common Row ID",
+              "to_port": "example set input"
+            },
+            {
+              "from_op": "Protect Common Row ID",
+              "from_port": "example set output",
+              "to_op": "Filter Examples",
+              "to_port": "example set input"
+            },
+            {
+              "from_op": "Filter Examples",
+              "from_port": "example set output",
+              "to_op": "Sample",
+              "to_port": "example set input"
+            },
+            {
+              "from_op": "Filter Examples",
+              "from_port": "unmatched example set",
+              "to_op": "Remember (2)",
+              "to_port": "store"
+            },
+            {
+              "from_op": "Sample",
+              "from_port": "example set output",
+              "to_op": "Remember",
+              "to_port": "store"
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "operator": "Name Common Source Row ID",
+      "before": {
+        "class": "rename",
+        "compatibility": "12.1.001",
+        "activated": "true",
+        "parameters": {
+          "old_name": "id",
+          "new_name": "COMMON_ROW_ID"
+        },
+        "lists": {},
+        "connections": []
+      },
+      "after": {
+        "class": "rename",
+        "compatibility": "12.1.001",
+        "activated": "true",
+        "parameters": {
+          "old_name": "id",
+          "new_name": "COMMON_ROW_ID"
+        },
+        "lists": {
+          "rename_additional_attributes": []
+        },
+        "connections": []
+      }
+    },
+    {
+      "operator": "Process",
+      "before": {
+        "class": "process",
+        "compatibility": "9.4.000",
+        "activated": "true",
+        "parameters": {
+          "logverbosity": "warning",
+          "random_seed": "2001",
+          "send_mail": "never",
+          "notification_email": "",
+          "process_duration_for_mail": "30",
+          "encoding": "SYSTEM"
+        },
+        "lists": {},
+        "connections": [
+          [
+            {
+              "from_op": "Process Results",
+              "from_port": "out 1",
+              "to_port": "result 5"
+            },
+            {
+              "from_op": "Process Results",
+              "from_port": "out 2",
+              "to_port": "result 6"
+            },
+            {
+              "from_op": "Process Results",
+              "from_port": "out 3",
+              "to_port": "result 7"
+            },
+            {
+              "from_op": "Process Results",
+              "from_port": "out 4",
+              "to_port": "result 8"
+            },
+            {
+              "from_op": "Process Results",
+              "from_port": "out 5",
+              "to_port": "result 9"
+            },
+            {
+              "from_op": "Process Results",
+              "from_port": "out 6",
+              "to_port": "result 10"
+            },
+            {
+              "from_op": "Process Results",
+              "from_port": "out 7",
+              "to_port": "result 11"
+            },
+            {
+              "from_op": "Process Results",
+              "from_port": "out 8",
+              "to_port": "result 12"
+            },
+            {
+              "from_op": "Process Results",
+              "from_port": "out 9",
+              "to_port": "result 13"
+            },
+            {
+              "from_op": "Process Results",
+              "from_port": "out 10",
+              "to_port": "result 14"
+            },
+            {
+              "from_op": "Process Results",
+              "from_port": "out 11",
+              "to_port": "result 15"
+            },
+            {
+              "from_op": "Process Results",
+              "from_port": "out 12",
+              "to_port": "result 16"
+            },
+            {
+              "from_op": "Process Results",
+              "from_port": "out 13",
+              "to_port": "result 17"
+            },
+            {
+              "from_op": "Process Results",
+              "from_port": "out 14",
+              "to_port": "result 18"
+            },
+            {
+              "from_op": "Process Results",
+              "from_port": "out 15",
+              "to_port": "result 19"
+            },
+            {
+              "from_op": "Process Results",
+              "from_port": "out 16",
+              "to_port": "result 20"
+            },
+            {
+              "from_op": "Process Results",
+              "from_port": "out 17",
+              "to_port": "result 21"
+            },
+            {
+              "from_op": "Process Results",
+              "from_port": "out 18",
+              "to_port": "result 22"
+            },
+            {
+              "from_op": "Process Results",
+              "from_port": "out 19",
+              "to_port": "result 23"
+            },
+            {
+              "from_op": "Process Results",
+              "from_port": "out 20",
+              "to_port": "result 24"
+            },
+            {
+              "from_op": "Process Results",
+              "from_port": "out 21",
+              "to_port": "result 25"
+            },
+            {
+              "from_port": "out 1",
+              "to_port": "result 1",
+              "from_op": "Evaluate All Common Test Rows"
+            },
+            {
+              "from_port": "out 2",
+              "to_port": "result 2",
+              "from_op": "Evaluate All Common Test Rows"
+            },
+            {
+              "from_port": "out 1",
+              "to_port": "result 3",
+              "from_op": "Create Validation Set"
+            },
+            {
+              "from_port": "out 2",
+              "to_port": "result 4",
+              "from_op": "Create Validation Set"
+            },
+            {
+              "from_port": "out 3",
+              "to_port": "result 26",
+              "from_op": "Evaluate All Common Test Rows"
+            }
+          ]
+        ]
+      },
+      "after": {
+        "class": "process",
+        "compatibility": "9.4.000",
+        "activated": "true",
+        "parameters": {
+          "logverbosity": "warning",
+          "random_seed": "2001",
+          "send_mail": "never",
+          "notification_email": "",
+          "process_duration_for_mail": "30",
+          "encoding": "SYSTEM"
+        },
+        "lists": {},
+        "connections": [
+          [
+            {
+              "from_op": "Create Validation Set",
+              "from_port": "out 1",
+              "to_port": "result 3"
+            },
+            {
+              "from_op": "Create Validation Set",
+              "from_port": "out 2",
+              "to_port": "result 4"
+            },
+            {
+              "from_op": "Evaluate All Common Test Rows",
+              "from_port": "out 1",
+              "to_port": "result 1"
+            },
+            {
+              "from_op": "Evaluate All Common Test Rows",
+              "from_port": "out 2",
+              "to_port": "result 2"
+            },
+            {
+              "from_op": "Evaluate All Common Test Rows",
+              "from_port": "out 3",
+              "to_port": "result 26"
+            },
+            {
+              "from_op": "Process Results",
+              "from_port": "out 1",
+              "to_port": "result 5"
+            },
+            {
+              "from_op": "Process Results",
+              "from_port": "out 2",
+              "to_port": "result 6"
+            },
+            {
+              "from_op": "Process Results",
+              "from_port": "out 3",
+              "to_port": "result 7"
+            },
+            {
+              "from_op": "Process Results",
+              "from_port": "out 4",
+              "to_port": "result 8"
+            },
+            {
+              "from_op": "Process Results",
+              "from_port": "out 5",
+              "to_port": "result 9"
+            },
+            {
+              "from_op": "Process Results",
+              "from_port": "out 6",
+              "to_port": "result 10"
+            },
+            {
+              "from_op": "Process Results",
+              "from_port": "out 7",
+              "to_port": "result 11"
+            },
+            {
+              "from_op": "Process Results",
+              "from_port": "out 8",
+              "to_port": "result 12"
+            },
+            {
+              "from_op": "Process Results",
+              "from_port": "out 9",
+              "to_port": "result 13"
+            },
+            {
+              "from_op": "Process Results",
+              "from_port": "out 10",
+              "to_port": "result 14"
+            },
+            {
+              "from_op": "Process Results",
+              "from_port": "out 11",
+              "to_port": "result 15"
+            },
+            {
+              "from_op": "Process Results",
+              "from_port": "out 12",
+              "to_port": "result 16"
+            },
+            {
+              "from_op": "Process Results",
+              "from_port": "out 13",
+              "to_port": "result 17"
+            },
+            {
+              "from_op": "Process Results",
+              "from_port": "out 14",
+              "to_port": "result 18"
+            },
+            {
+              "from_op": "Process Results",
+              "from_port": "out 15",
+              "to_port": "result 19"
+            },
+            {
+              "from_op": "Process Results",
+              "from_port": "out 16",
+              "to_port": "result 20"
+            },
+            {
+              "from_op": "Process Results",
+              "from_port": "out 17",
+              "to_port": "result 21"
+            },
+            {
+              "from_op": "Process Results",
+              "from_port": "out 18",
+              "to_port": "result 22"
+            },
+            {
+              "from_op": "Process Results",
+              "from_port": "out 19",
+              "to_port": "result 23"
+            },
+            {
+              "from_op": "Process Results",
+              "from_port": "out 20",
+              "to_port": "result 24"
+            },
+            {
+              "from_op": "Process Results",
+              "from_port": "out 21",
+              "to_port": "result 25"
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "operator": "Protect Common Row ID",
+      "before": {
+        "class": "set_role",
+        "compatibility": "12.1.001",
+        "activated": "true",
+        "parameters": {
+          "attribute_name": "COMMON_ROW_ID",
+          "target_role": "id"
+        },
+        "lists": {},
+        "connections": []
+      },
+      "after": {
+        "class": "set_role",
+        "compatibility": "12.1.001",
+        "activated": "true",
+        "parameters": {
+          "attribute_name": "COMMON_ROW_ID",
+          "target_role": "id"
+        },
+        "lists": {
+          "set_additional_roles": []
+        },
+        "connections": []
+      }
+    },
+    {
+      "operator": "Retrieve Data",
+      "before": {
+        "class": "read_csv",
+        "compatibility": "12.1.001",
+        "activated": "true",
+        "parameters": {
+          "csv_file": "%{common_source}",
+          "column_separators": ",",
+          "use_quotes": "true",
+          "quotes_character": "\"",
+          "first_row_as_names": "true",
+          "trim_lines": "true",
+          "parse_numbers": "true",
+          "decimal_character": ".",
+          "encoding": "UTF-8",
+          "read_all_values_as_polynominal": "false",
+          "read_not_matching_values_as_missings": "false"
+        },
+        "lists": {
+          "data_set_meta_data_information": [
+            {
+              "key": "0",
+              "value": "USMER.true.polynominal.attribute"
+            },
+            {
+              "key": "1",
+              "value": "MEDICAL_UNIT.true.polynominal.attribute"
+            },
+            {
+              "key": "2",
+              "value": "SEX.true.polynominal.attribute"
+            },
+            {
+              "key": "3",
+              "value": "PATIENT_TYPE.true.polynominal.attribute"
+            },
+            {
+              "key": "4",
+              "value": "PNEUMONIA.true.polynominal.attribute"
+            },
+            {
+              "key": "5",
+              "value": "AGE.true.real.attribute"
+            },
+            {
+              "key": "6",
+              "value": "DIABETES.true.polynominal.attribute"
+            },
+            {
+              "key": "7",
+              "value": "COPD.true.polynominal.attribute"
+            },
+            {
+              "key": "8",
+              "value": "ASTHMA.true.polynominal.attribute"
+            },
+            {
+              "key": "9",
+              "value": "INMSUPR.true.polynominal.attribute"
+            },
+            {
+              "key": "10",
+              "value": "HIPERTENSION.true.polynominal.attribute"
+            },
+            {
+              "key": "11",
+              "value": "OTHER_DISEASE.true.polynominal.attribute"
+            },
+            {
+              "key": "12",
+              "value": "CARDIOVASCULAR.true.polynominal.attribute"
+            },
+            {
+              "key": "13",
+              "value": "OBESITY.true.polynominal.attribute"
+            },
+            {
+              "key": "14",
+              "value": "RENAL_CHRONIC.true.polynominal.attribute"
+            },
+            {
+              "key": "15",
+              "value": "TOBACCO.true.polynominal.attribute"
+            }
+          ]
+        },
+        "connections": []
+      },
+      "after": {
+        "class": "read_csv",
+        "compatibility": "12.1.001",
+        "activated": "true",
+        "parameters": {
+          "csv_file": "%{common_source}",
+          "column_separators": ",",
+          "trim_lines": "true",
+          "multiline_text": "false",
+          "use_quotes": "true",
+          "quotes_character": "\"",
+          "escape_character": "\\",
+          "skip_comments": "false",
+          "comment_characters": "#",
+          "starting_row": "1",
+          "parse_numbers": "true",
+          "decimal_character": ".",
+          "grouped_digits": "false",
+          "grouping_character": ",",
+          "infinity_representation": "",
+          "date_format": "",
+          "use_header_row": "true",
+          "header_row": "1",
+          "first_row_as_names": "true",
+          "time_zone": "Asia/Bangkok",
+          "locale": "English (United States)",
+          "encoding": "UTF-8",
+          "read_all_values_as_polynominal": "false",
+          "read_not_matching_values_as_missings": "false"
+        },
+        "lists": {
+          "annotations": [],
+          "data_set_meta_data_information": [
+            {
+              "key": "0",
+              "value": "USMER.true.polynominal.attribute"
+            },
+            {
+              "key": "1",
+              "value": "MEDICAL_UNIT.true.polynominal.attribute"
+            },
+            {
+              "key": "2",
+              "value": "SEX.true.polynominal.attribute"
+            },
+            {
+              "key": "3",
+              "value": "PATIENT_TYPE.true.polynominal.attribute"
+            },
+            {
+              "key": "4",
+              "value": "PNEUMONIA.true.polynominal.attribute"
+            },
+            {
+              "key": "5",
+              "value": "AGE.true.real.attribute"
+            },
+            {
+              "key": "6",
+              "value": "DIABETES.true.polynominal.attribute"
+            },
+            {
+              "key": "7",
+              "value": "COPD.true.polynominal.attribute"
+            },
+            {
+              "key": "8",
+              "value": "ASTHMA.true.polynominal.attribute"
+            },
+            {
+              "key": "9",
+              "value": "INMSUPR.true.polynominal.attribute"
+            },
+            {
+              "key": "10",
+              "value": "HIPERTENSION.true.polynominal.attribute"
+            },
+            {
+              "key": "11",
+              "value": "OTHER_DISEASE.true.polynominal.attribute"
+            },
+            {
+              "key": "12",
+              "value": "CARDIOVASCULAR.true.polynominal.attribute"
+            },
+            {
+              "key": "13",
+              "value": "OBESITY.true.polynominal.attribute"
+            },
+            {
+              "key": "14",
+              "value": "RENAL_CHRONIC.true.polynominal.attribute"
+            },
+            {
+              "key": "15",
+              "value": "TOBACCO.true.polynominal.attribute"
+            }
+          ]
+        },
+        "connections": []
+      }
+    },
+    {
+      "operator": "Select test_ids",
+      "before": {
+        "class": "select_attributes",
+        "compatibility": "12.1.001",
+        "activated": "true",
+        "parameters": {
+          "attribute_filter_type": "regular_expression",
+          "regular_expression": "\\QCOMMON_ROW_ID\\E|\\QPATIENT_TYPE\\E",
+          "invert_selection": "false",
+          "include_special_attributes": "true"
+        },
+        "lists": {},
+        "connections": []
+      },
+      "after": {
+        "class": "select_attributes",
+        "compatibility": "12.1.001",
+        "activated": "true",
+        "parameters": {
+          "attribute_filter_type": "regular_expression",
+          "attribute": "",
+          "attributes": "",
+          "regular_expression": "\\QCOMMON_ROW_ID\\E|\\QPATIENT_TYPE\\E",
+          "use_except_expression": "false",
+          "value_type": "attribute_value",
+          "use_value_type_exception": "false",
+          "except_value_type": "time",
+          "block_type": "attribute_block",
+          "use_block_type_exception": "false",
+          "except_block_type": "value_matrix_row_start",
+          "invert_selection": "false",
+          "include_special_attributes": "true"
+        },
+        "lists": {},
+        "connections": []
+      }
+    },
+    {
+      "operator": "Select train_ids",
+      "before": {
+        "class": "select_attributes",
+        "compatibility": "12.1.001",
+        "activated": "true",
+        "parameters": {
+          "attribute_filter_type": "regular_expression",
+          "regular_expression": "\\QCOMMON_ROW_ID\\E|\\QPATIENT_TYPE\\E",
+          "invert_selection": "false",
+          "include_special_attributes": "true"
+        },
+        "lists": {},
+        "connections": []
+      },
+      "after": {
+        "class": "select_attributes",
+        "compatibility": "12.1.001",
+        "activated": "true",
+        "parameters": {
+          "attribute_filter_type": "regular_expression",
+          "attribute": "",
+          "attributes": "",
+          "regular_expression": "\\QCOMMON_ROW_ID\\E|\\QPATIENT_TYPE\\E",
+          "use_except_expression": "false",
+          "value_type": "attribute_value",
+          "use_value_type_exception": "false",
+          "except_value_type": "time",
+          "block_type": "attribute_block",
+          "use_block_type_exception": "false",
+          "except_block_type": "value_matrix_row_start",
+          "invert_selection": "false",
+          "include_special_attributes": "true"
+        },
+        "lists": {},
+        "connections": []
+      }
+    },
+    {
+      "operator": "Write Full Metrics",
+      "before": {
+        "class": "write_csv",
+        "compatibility": "12.1.001",
+        "activated": "true",
+        "parameters": {
+          "csv_file": "%{common_metrics}",
+          "column_separator": ",",
+          "write_attribute_names": "true",
+          "quote_nominal_values": "true",
+          "append_to_file": "false",
+          "encoding": "UTF-8"
+        },
+        "lists": {},
+        "connections": []
+      },
+      "after": {
+        "class": "write_csv",
+        "compatibility": "12.1.001",
+        "activated": "true",
+        "parameters": {
+          "csv_file": "%{common_metrics}",
+          "column_separator": ",",
+          "write_attribute_names": "true",
+          "quote_nominal_values": "true",
+          "format_date_attributes": "true",
+          "date_format": "yyyy-MM-dd HH:mm:ss",
+          "append_to_file": "false",
+          "encoding": "UTF-8"
+        },
+        "lists": {},
+        "connections": []
+      }
+    },
+    {
+      "operator": "Write Full Test Predictions",
+      "before": {
+        "class": "write_csv",
+        "compatibility": "12.1.001",
+        "activated": "true",
+        "parameters": {
+          "csv_file": "%{common_predictions}",
+          "column_separator": ",",
+          "write_attribute_names": "true",
+          "quote_nominal_values": "true",
+          "append_to_file": "false",
+          "encoding": "UTF-8"
+        },
+        "lists": {},
+        "connections": []
+      },
+      "after": {
+        "class": "write_csv",
+        "compatibility": "12.1.001",
+        "activated": "true",
+        "parameters": {
+          "csv_file": "%{common_predictions}",
+          "column_separator": ",",
+          "write_attribute_names": "true",
+          "quote_nominal_values": "true",
+          "format_date_attributes": "true",
+          "date_format": "yyyy-MM-dd HH:mm:ss",
+          "append_to_file": "false",
+          "encoding": "UTF-8"
+        },
+        "lists": {},
+        "connections": []
+      }
+    },
+    {
+      "operator": "Write test_ids",
+      "before": {
+        "class": "write_csv",
+        "compatibility": "12.1.001",
+        "activated": "true",
+        "parameters": {
+          "csv_file": "%{common_test_ids}",
+          "column_separator": ",",
+          "write_attribute_names": "true",
+          "quote_nominal_values": "true",
+          "append_to_file": "false",
+          "encoding": "UTF-8"
+        },
+        "lists": {},
+        "connections": []
+      },
+      "after": {
+        "class": "write_csv",
+        "compatibility": "12.1.001",
+        "activated": "true",
+        "parameters": {
+          "csv_file": "%{common_test_ids}",
+          "column_separator": ",",
+          "write_attribute_names": "true",
+          "quote_nominal_values": "true",
+          "format_date_attributes": "true",
+          "date_format": "yyyy-MM-dd HH:mm:ss",
+          "append_to_file": "false",
+          "encoding": "UTF-8"
+        },
+        "lists": {},
+        "connections": []
+      }
+    },
+    {
+      "operator": "Write train_ids",
+      "before": {
+        "class": "write_csv",
+        "compatibility": "12.1.001",
+        "activated": "true",
+        "parameters": {
+          "csv_file": "%{common_train_ids}",
+          "column_separator": ",",
+          "write_attribute_names": "true",
+          "quote_nominal_values": "true",
+          "append_to_file": "false",
+          "encoding": "UTF-8"
+        },
+        "lists": {},
+        "connections": []
+      },
+      "after": {
+        "class": "write_csv",
+        "compatibility": "12.1.001",
+        "activated": "true",
+        "parameters": {
+          "csv_file": "%{common_train_ids}",
+          "column_separator": ",",
+          "write_attribute_names": "true",
+          "quote_nominal_values": "true",
+          "format_date_attributes": "true",
+          "date_format": "yyyy-MM-dd HH:mm:ss",
+          "append_to_file": "false",
+          "encoding": "UTF-8"
+        },
+        "lists": {},
+        "connections": []
+      }
+    }
+  ]
+}

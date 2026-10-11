@@ -1,0 +1,27 @@
+﻿Date,ActualRegistrations,ForecastRegistrations,DatasetSegment,Model
+2024-01-01,239866.0,,History,Random Forest
+2024-02-01,208918.0,,History,Random Forest
+2024-03-01,214311.0,,History,Random Forest
+2024-04-01,181314.0,,History,Random Forest
+2024-05-01,227170.0,,History,Random Forest
+2024-06-01,211518.0,,History,Random Forest
+2024-07-01,200405.0,,History,Random Forest
+2024-08-01,187264.0,,History,Random Forest
+2024-09-01,167278.0,,History,Random Forest
+2024-10-01,186652.0,,History,Random Forest
+2024-11-01,183008.0,,History,Random Forest
+2024-12-01,161122.0,,History,Random Forest
+2025-01-01,227900.0,,History,Random Forest
+2025-02-01,203110.0,,History,Random Forest
+2025-03-01,210841.0,,History,Random Forest
+2025-04-01,185014.0,,History,Random Forest
+2025-05-01,227343.0,,History,Random Forest
+2025-06-01,215312.0,,History,Random Forest
+2025-07-01,201436.0,204423.06017063488,Test,Random Forest
+2025-08-01,182449.0,196084.78765079362,Test,Random Forest
+2025-09-01,188713.0,188309.53766666667,Test,Random Forest
+2025-10-01,185344.0,193992.13180952374,Test,Random Forest
+2025-11-01,177066.0,188837.9188015873,Test,Random Forest
+2025-12-01,184093.0,196284.034547619,Test,Random Forest
+2026-01-01,250212.0,200390.88443650788,Test,Random Forest
+2026-02-01,,204586.0,Future,Random Forest

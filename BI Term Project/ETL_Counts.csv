@@ -1,0 +1,5 @@
+﻿Stage,InputRows,OutputRows,Reason
+Raw read,68398,68398,Original retained without modification
+Type validation and normalize labels,68398,68398,Validate counts/period and trim labels; missing model mapped to Unknown model
+Complete consecutive period,68398,35805,Jan 2024-Jan 2026; exclude earlier discontinuous period and incomplete Feb 2026
+Monthly brand vehicle type fact,35805,5712,Sum registrations at Date Brand VehicleType grain; preserve SourceRecords

@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<process version="12.1.001">
+  <context>
+    <input />
+    <output />
+    <macros />
+  </context>
+  <operator class="process" compatibility="12.1.001" expanded="true" name="WS5 AutoModel Data Viewer" activated="true">
+    <parameter key="random_seed" value="2001" />
+    <parameter key="encoding" value="UTF-8" />
+    <process expanded="true">
+      <operator class="generate_macro" compatibility="12.1.001" expanded="true" name="Portable Source Path" height="82" width="90" x="45" y="170" activated="true">
+        <list key="function_descriptions">
+          <parameter key="viewer_source" value="replace(%{process_path}, %{process_file}, &quot;WS5_AutoModel_Heart_Native_Prepared.csv&quot;)" />
+        </list>
+      </operator>
+      <operator class="read_csv" compatibility="12.1.001" expanded="true" name="Read Actual WS4 Native Prepared Data" height="82" width="90" x="179" y="34" activated="true">
+        <parameter key="csv_file" value="%{viewer_source}" />
+        <parameter key="column_separators" value="," />
+        <parameter key="trim_lines" value="true" />
+        <parameter key="use_quotes" value="true" />
+        <parameter key="quotes_character" value="&quot;" />
+        <parameter key="first_row_as_names" value="true" />
+        <parameter key="parse_numbers" value="true" />
+        <parameter key="decimal_character" value="." />
+        <parameter key="encoding" value="UTF-8" />
+        <parameter key="read_all_values_as_polynominal" value="false" />
+        <parameter key="read_not_matching_values_as_missings" value="false" />
+        <list key="data_set_meta_data_information">
+          <parameter key="0" value="HeartDisease.true.binominal.attribute" />
+          <parameter key="1" value="BMI.true.real.attribute" />
+          <parameter key="2" value="Smoking.true.polynominal.attribute" />
+          <parameter key="3" value="AlcoholDrinking.true.polynominal.attribute" />
+          <parameter key="4" value="Stroke.true.polynominal.attribute" />
+          <parameter key="5" value="PhysicalHealth.true.real.attribute" />
+          <parameter key="6" value="MentalHealth.true.real.attribute" />
+          <parameter key="7" value="DiffWalking.true.polynominal.attribute" />
+          <parameter key="8" value="Sex.true.polynominal.attribute" />
+          <parameter key="9" value="AgeCategory.true.polynominal.attribute" />
+          <parameter key="10" value="Race.true.polynominal.attribute" />
+          <parameter key="11" value="Diabetic.true.polynominal.attribute" />
+          <parameter key="12" value="PhysicalActivity.true.polynominal.attribute" />
+          <parameter key="13" value="GenHealth.true.polynominal.attribute" />
+          <parameter key="14" value="SleepTime.true.real.attribute" />
+          <parameter key="15" value="Asthma.true.polynominal.attribute" />
+          <parameter key="16" value="KidneyDisease.true.polynominal.attribute" />
+          <parameter key="17" value="SkinCancer.true.polynominal.attribute" />
+          <parameter key="18" value="AnyUnhealthyDays.true.polynominal.attribute" />
+        </list>
+      </operator>
+      <connect from_op="Read Actual WS4 Native Prepared Data" from_port="output" to_port="result 1" />
+      <portSpacing port="source_input 1" spacing="0" />
+      <portSpacing port="sink_result 1" spacing="0" />
+      <portSpacing port="sink_result 2" spacing="0" />
+      <description align="left" color="yellow" colored="false" height="130" width="650" x="35" y="310">Read-only viewer for actual WS4 native preparation:319795 rows,19 regular attributes,4 numeric columns. No target role assigned, no transformations, sampling, model training or writes. Use Results Auto Model:Predict, HeartDisease target, positive Yes,18 inputs. Native Auto Model workflow/results will be recorded separately from prior direct-learner benchmarks.</description>
+    </process>
+  </operator>
+</process>

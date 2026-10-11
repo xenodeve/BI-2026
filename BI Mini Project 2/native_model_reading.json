@@ -1,0 +1,135 @@
+{
+  "logistic_regression": {
+    "coefficients": [
+      {
+        "feature": "PNEUMONIA.2",
+        "weight": -3.671459770896794,
+        "reference_category": "1 (omitted level inferred from native dictionary/coefficients)",
+        "interpretation": "ลบ ต่อ base logit ของ Hospitalized; final evaluated model มี native confidence calibration/cost wrapper"
+      },
+      {
+        "feature": "PNEUMONIA.99",
+        "weight": -2.442678065141103,
+        "reference_category": "1 (omitted level inferred from native dictionary/coefficients)",
+        "interpretation": "ลบ ต่อ base logit ของ Hospitalized; final evaluated model มี native confidence calibration/cost wrapper"
+      },
+      {
+        "feature": "MEDICAL_UNIT.10",
+        "weight": 7.5308013803731395,
+        "reference_category": "1 (omitted level inferred from native dictionary/coefficients)",
+        "interpretation": "บวก ต่อ base logit ของ Hospitalized; final evaluated model มี native confidence calibration/cost wrapper"
+      },
+      {
+        "feature": "SEX.2",
+        "weight": 0.3229485590883117,
+        "reference_category": "1 (omitted level inferred from native dictionary/coefficients)",
+        "interpretation": "บวก ต่อ base logit ของ Hospitalized; final evaluated model มี native confidence calibration/cost wrapper"
+      },
+      {
+        "feature": "USMER.2",
+        "weight": -0.8825605570142123,
+        "reference_category": "1 (omitted level inferred from native dictionary/coefficients)",
+        "interpretation": "ลบ ต่อ base logit ของ Hospitalized; final evaluated model มี native confidence calibration/cost wrapper"
+      },
+      {
+        "feature": "AGE",
+        "weight": 0.02630556011400486,
+        "reference_category": "Age in years",
+        "interpretation": "บวก ต่อ base logit ของ Hospitalized; final evaluated model มี native confidence calibration/cost wrapper"
+      }
+    ],
+    "screenshot": "screenshots/native_common_LR_reading.png",
+    "note": "Native evaluated common LR base coefficients; fullprecision in native_logistic_coefficients_common.csv. Genuine nativeReadCSV screenshot displays six source-exact exported coefficients, not a model-specific coefficient UI tab; original calibrated/cost-wrapper model preserved.",
+    "source_fit": "common_evaluation",
+    "same_fit_proof": "common_test\\explanation_run\\explanation_results_verification.json",
+    "native_artifact": "common_test\\explanation_run\\LR_evaluated_model.nativeio",
+    "native_artifact_sha256": "eb38047c3f18eb9b8dcb54d5397b91ea2f4cf562f9558f40aef4a360f7d5abb6",
+    "GUI_coefficient_export_lineage": "common_test/explanation_run/LR_coefficient_CSV_viewer_lineage.json"
+  },
+  "decision_tree": {
+    "root": "PNEUMONIA",
+    "path_to_leaf": [
+      "PNEUMONIA = 1"
+    ],
+    "leaf_prediction": "Hospitalized",
+    "screenshot": "screenshots/native_common_DT_reading.png",
+    "note": "Native evaluated common tree; genuine Tree Description shows PNEUMONIA=1 leaf Hospitalized with Outpatient343/Hospitalized1735. These are training-node counts, not test confusion counts.",
+    "source_fit": "common_evaluation",
+    "same_fit_proof": "common_test\\explanation_run\\explanation_results_verification.json",
+    "leaf_training_counts": {
+      "Outpatient": 343,
+      "Hospitalized": 1735
+    },
+    "native_artifact": "common_test\\explanation_run\\DT_evaluated_model.nativeio",
+    "native_artifact_sha256": "fb0d509580718cf85cd63a48eae2a9c284240a8900a794462b8dfd2905b0328a"
+  },
+  "random_forest": {
+    "top3_importance": [
+      {
+        "feature": "AGE",
+        "importance": 0.49164676987916617
+      },
+      {
+        "feature": "SEX",
+        "importance": 0.1012571792117389
+      },
+      {
+        "feature": "USMER",
+        "importance": 0.06499197321694164
+      }
+    ],
+    "screenshot": "screenshots/native_common_RF_importance.png",
+    "note": "Actual native RF learner gain_ratio weights output;15weights sum1.0. Native GUI read-only viewer displays saved genuine weights sorted descending; source belongs to evaluated common fit.",
+    "source_fit": "common_evaluation",
+    "same_fit_proof": "common_test\\explanation_run\\explanation_results_verification.json",
+    "native_artifact": "common_test\\explanation_run\\RF_native_feature_weights.csv",
+    "native_artifact_sha256": "9051e09737f551af8f2e58c1c1ba160993b1d82fa41e32197819ac9abbaee75b",
+    "criterion": "gain_ratio"
+  },
+  "confusion_matrix": {
+    "model": "Deep Learning",
+    "tp": 1612,
+    "fp": 469,
+    "fn": 677,
+    "tn": 9242,
+    "test_set_id": "5701b5d07bbc5533cadee3fc9feedda58c3897c6d758a0ffde4b840f715b7097",
+    "screenshot": "screenshots/native_common_DL_confusion.png",
+    "native_source": "common_test/predictions_DL.csv",
+    "native_metrics_source": "common_test/metrics_DL.csv",
+    "provenance": "Native AI Studio official batch full common holdout",
+    "GUI_source_context": "Actual fresh canonical common native GUI PerformanceVector, DL Result5, 2026-10-11 10:39 run; native table rows predicted/columns true"
+  },
+  "scoring": {
+    "model": "Deep Learning",
+    "record_inputs": {
+      "USMER": "2",
+      "MEDICAL_UNIT": "3",
+      "SEX": "1",
+      "PNEUMONIA": "1",
+      "AGE": 72.0,
+      "DIABETES": "2",
+      "COPD": "2",
+      "ASTHMA": "2",
+      "INMSUPR": "2",
+      "HIPERTENSION": "2",
+      "OTHER_DISEASE": "2",
+      "CARDIOVASCULAR": "2",
+      "OBESITY": "1",
+      "RENAL_CHRONIC": "2",
+      "TOBACCO": "2"
+    },
+    "prediction": "Hospitalized",
+    "confidence_hospitalized": 0.7119504528306805,
+    "threshold": 0.5,
+    "screenshot": "screenshots/native_common_DL_scoring.png",
+    "source_row_id": 348,
+    "actual_label": "Hospitalized",
+    "confidence_outpatient": 0.2880495471693196,
+    "native_source": "common_test/predictions_DL.csv",
+    "provenance": "Native AI Studio official batch full common holdout",
+    "gui_threshold_demo_verified": false,
+    "GUI_source_context": "Native CSV-only viewer of saved official batch row348, true/predicted Hospitalized and exported confidences; not a new model application or live Simulator interaction",
+    "threshold_interpretation": "Report calculation: exact native confidence(Hospitalized)=0.7119504528306805 >=0.50 implies Hospitalized; no GUI threshold change was tested.",
+    "native_cost": 0.4239009056613609
+  }
+}

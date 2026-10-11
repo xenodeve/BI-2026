@@ -1,0 +1,180 @@
+{
+  "file": "D:\\Github\\BI 2026\\BI Term Project\\DLT_Brand_Type_Term_Project.pbix",
+  "bytes": 198073,
+  "sha256": "e4d729c0c5e57127cd29f111e17a62a91119e55bd79f17b031e5f68bc969447f",
+  "modified_local": "2026-10-11T10:18:07.744582+07:00",
+  "inspection_scope": "Save-only file inspection and separately identified read-only live metadata. No reopen, refresh or app actions.",
+  "close_reopen_verified": false,
+  "gui_features_verified": false,
+  "pdf_or_word_changed": false,
+  "zip_crc_pass": true,
+  "data_model_present": true,
+  "data_model_bytes": 132403,
+  "data_model_sha256": "337a407030b1fdb26fa3e085a6a37ee0b23de50d691f8f0d6872e6285c7c3478",
+  "compressed_model_boundary": "DataModel is an XPress9-compressed backup with no DataModelSchema member; full static measure/source decoding was not performed.",
+  "pages": [
+    {
+      "name": "Predictive Results",
+      "type": "Normal",
+      "hidden": false
+    },
+    {
+      "name": "Executive Summary",
+      "type": "Normal",
+      "hidden": false
+    },
+    {
+      "name": "Brand Detail Drillthrough",
+      "type": "Drillthrough",
+      "hidden": true
+    },
+    {
+      "name": "Brand Context Tooltip",
+      "type": "Tooltip",
+      "hidden": true
+    },
+    {
+      "name": "Decision Recommendation",
+      "type": "Normal",
+      "hidden": false
+    },
+    {
+      "name": "Diagnostic Insight",
+      "type": "Normal",
+      "hidden": false
+    },
+    {
+      "name": "Data Quality",
+      "type": "Normal",
+      "hidden": false
+    }
+  ],
+  "page_count": 7,
+  "visible_page_count": 5,
+  "visual_count": 65,
+  "canonical_report_files_missing": [],
+  "exact_json_files_matched": 24,
+  "raw_json_difference_count": 150,
+  "schema_upgrade_visuals": 50,
+  "normalized_report_differences": [
+    {
+      "path": "definition/pages/4a5cbda354f7436c8783/page.json/pageBinding/parameters/0/fieldExpr",
+      "kind": "canonical-only",
+      "canonical": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "DimBrand"
+            }
+          },
+          "Property": "Brand"
+        }
+      }
+    }
+  ],
+  "saved_report_normalizations": [
+    "Visual schema2.7 to2.13",
+    "Default/howCreated/sort flags omitted",
+    "Active projection flags added",
+    "Empty filter placeholders added",
+    "Metric display alias and field-selection annotations persisted"
+  ],
+  "saved_query_references_resolve": true,
+  "unknown_query_references": [],
+  "genuine_field_parameter_binding_preserved": true,
+  "back_action_preserved": true,
+  "visible_back_label_present": true,
+  "manual_tooltip_page_link_present": true,
+  "live_measure_count": 36,
+  "live_measure_expression_format_differences": [],
+  "live_table_count": 12,
+  "live_relationship_count": 8,
+  "live_partition_expression_differences": [],
+  "live_column_set_differences": [],
+  "imported_source_files": [
+    {
+      "table": "DimSeries",
+      "path": "D:\\Github\\BI 2026\\BI Term Project\\DimSeries.csv",
+      "exists": true,
+      "sha256": "abb3eb2a66d4c5cfc67578fe871ed71d4214a1938611614b9f083ebc08e14ef6"
+    },
+    {
+      "table": "DataQuality",
+      "path": "D:\\Github\\BI 2026\\BI Term Project\\DataQuality.csv",
+      "exists": true,
+      "sha256": "f35041a04b12d942548f4934506c0c37bc2622d037cc8e0a22cad38e146b1205"
+    },
+    {
+      "table": "HypothesisEvidence",
+      "path": "D:\\Github\\BI 2026\\BI Term Project\\HypothesisEvidence.csv",
+      "exists": true,
+      "sha256": "b2c87d4bc0cb2f22ab2323a584ca688cdb3f0520d7defd2b19cbba920fb268dd"
+    },
+    {
+      "table": "DimVehicleType",
+      "path": "D:\\Github\\BI 2026\\BI Term Project\\DimVehicleType.csv",
+      "exists": true,
+      "sha256": "40682f3f2a58050ac1e950c45f3e7c0464369e0f882217ea16b3045734db3b7a"
+    },
+    {
+      "table": "FactForecast",
+      "path": "D:\\Github\\BI 2026\\BI Term Project\\FactForecast.csv",
+      "exists": true,
+      "sha256": "29473b92fae9cd3af78fe72e6617b0d19f8b6f3dffed91481a56326a42998cc6"
+    },
+    {
+      "table": "DimDate",
+      "path": "D:\\Github\\BI 2026\\BI Term Project\\DimDate.csv",
+      "exists": true,
+      "sha256": "51a446eaa717c54a82c32a31012c8bac97b0461fc469e966c97e3ccc87a7ca80"
+    },
+    {
+      "table": "TestErrors",
+      "path": "D:\\Github\\BI 2026\\BI Term Project\\TestErrors.csv",
+      "exists": true,
+      "sha256": "2b3eb6328a66c82158be46fb8f162466268d5809b27693c7632846f9256c44be"
+    },
+    {
+      "table": "FactRegistrations",
+      "path": "D:\\Github\\BI 2026\\BI Term Project\\FactRegistrations.csv",
+      "exists": true,
+      "sha256": "d1bf7ab19f1820caf7d26c38e20bb46b65c343922fa19efd911d97d3de4b90ee"
+    },
+    {
+      "table": "DimBrand",
+      "path": "D:\\Github\\BI 2026\\BI Term Project\\DimBrand.csv",
+      "exists": true,
+      "sha256": "95f31ccfb1fdbb5975e2c5766ce245788aef4db90578a5c2aa17b88fc024806d"
+    },
+    {
+      "table": "ETL_Counts",
+      "path": "D:\\Github\\BI 2026\\BI Term Project\\ETL_Counts.csv",
+      "exists": true,
+      "sha256": "1e77b76702ca47def27e10fb8b2be91d95d833a7c5f443a456ad9912c1301087"
+    },
+    {
+      "table": "ModelComparison",
+      "path": "D:\\Github\\BI 2026\\BI Term Project\\ModelComparison.csv",
+      "exists": true,
+      "sha256": "902965e81035efb09593d7d8caa0df5591c03cc7b489a57bdb6d26e93132c12e"
+    }
+  ],
+  "calculated_tables": [
+    "Metric Parameter"
+  ],
+  "authorized_live_identity": {
+    "desktop_pid": 68744,
+    "engine_port": 50620,
+    "engine_pid": 51628,
+    "process_parent_verified": true,
+    "file_path_verified_by_read_only_status": "D:\\Github\\BI 2026\\BI Term Project\\DLT_Brand_Type_Term_Project.pbix"
+  },
+  "findings": [
+    {
+      "severity": "review",
+      "component": "Brand Context Tooltip",
+      "observation": "Saved pageBinding parameters retain the parameter name but omit canonical DimBrand.Brand fieldExpr. Manual Canvas tooltip section links remain.",
+      "boundary": "Potential auto-binding difference; no hover failure is established. Genuine hover/context must be tested by root."
+    }
+  ]
+}

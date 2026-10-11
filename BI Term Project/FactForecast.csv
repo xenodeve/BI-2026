@@ -1,0 +1,183 @@
+﻿SeriesKey,SegmentType,SegmentName,Date,ActualRegistrations,ForecastRegistrations,DatasetSegment,Model
+S01,Total,All,2024-01-01,239866.0,,History,Gradient Boosting
+S01,Total,All,2024-02-01,208918.0,,History,Gradient Boosting
+S01,Total,All,2024-03-01,214311.0,,History,Gradient Boosting
+S01,Total,All,2024-04-01,181314.0,,History,Gradient Boosting
+S01,Total,All,2024-05-01,227170.0,,History,Gradient Boosting
+S01,Total,All,2024-06-01,211518.0,,History,Gradient Boosting
+S01,Total,All,2024-07-01,200405.0,,History,Gradient Boosting
+S01,Total,All,2024-08-01,187264.0,,History,Gradient Boosting
+S01,Total,All,2024-09-01,167278.0,,History,Gradient Boosting
+S01,Total,All,2024-10-01,186652.0,,History,Gradient Boosting
+S01,Total,All,2024-11-01,183008.0,,History,Gradient Boosting
+S01,Total,All,2024-12-01,161122.0,,History,Gradient Boosting
+S01,Total,All,2025-01-01,227900.0,,History,Gradient Boosting
+S01,Total,All,2025-02-01,203110.0,,History,Gradient Boosting
+S01,Total,All,2025-03-01,210841.0,,History,Gradient Boosting
+S01,Total,All,2025-04-01,185014.0,197334.96874175806,Validation,Gradient Boosting
+S01,Total,All,2025-05-01,227343.0,210825.39304515053,Validation,Gradient Boosting
+S01,Total,All,2025-06-01,215312.0,207550.51034278594,Validation,Gradient Boosting
+S01,Total,All,2025-07-01,201436.0,196608.59799026806,Validation,Gradient Boosting
+S01,Total,All,2025-08-01,182449.0,188204.09666654177,Validation,Gradient Boosting
+S01,Total,All,2025-09-01,188713.0,169523.22606739833,Test,Gradient Boosting
+S01,Total,All,2025-10-01,185344.0,184791.01463591965,Test,Gradient Boosting
+S01,Total,All,2025-11-01,177066.0,184847.0267243076,Test,Gradient Boosting
+S01,Total,All,2025-12-01,184093.0,167494.15109418792,Test,Gradient Boosting
+S01,Total,All,2026-01-01,250212.0,213296.67551515883,Test,Gradient Boosting
+S01,Total,All,2026-02-01,,227934.33361677715,Future,Gradient Boosting
+S02,Brand,HONDA,2024-01-01,135987.0,,History,Random Forest
+S02,Brand,HONDA,2024-02-01,126394.0,,History,Random Forest
+S02,Brand,HONDA,2024-03-01,131200.0,,History,Random Forest
+S02,Brand,HONDA,2024-04-01,110792.0,,History,Random Forest
+S02,Brand,HONDA,2024-05-01,143651.0,,History,Random Forest
+S02,Brand,HONDA,2024-06-01,131781.0,,History,Random Forest
+S02,Brand,HONDA,2024-07-01,123064.0,,History,Random Forest
+S02,Brand,HONDA,2024-08-01,112857.0,,History,Random Forest
+S02,Brand,HONDA,2024-09-01,102418.0,,History,Random Forest
+S02,Brand,HONDA,2024-10-01,121921.0,,History,Random Forest
+S02,Brand,HONDA,2024-11-01,116811.0,,History,Random Forest
+S02,Brand,HONDA,2024-12-01,106444.0,,History,Random Forest
+S02,Brand,HONDA,2025-01-01,139618.0,,History,Random Forest
+S02,Brand,HONDA,2025-02-01,129809.0,,History,Random Forest
+S02,Brand,HONDA,2025-03-01,132474.0,,History,Random Forest
+S02,Brand,HONDA,2025-04-01,113633.0,124392.35707142856,Validation,Random Forest
+S02,Brand,HONDA,2025-05-01,141885.0,131412.94833333333,Validation,Random Forest
+S02,Brand,HONDA,2025-06-01,130860.0,125547.59805158732,Validation,Random Forest
+S02,Brand,HONDA,2025-07-01,120112.0,121127.032611111,Validation,Random Forest
+S02,Brand,HONDA,2025-08-01,110377.0,116044.08155158728,Validation,Random Forest
+S02,Brand,HONDA,2025-09-01,114363.0,115642.49341666666,Test,Random Forest
+S02,Brand,HONDA,2025-10-01,114327.0,119429.94357142856,Test,Random Forest
+S02,Brand,HONDA,2025-11-01,111777.0,119009.0849047619,Test,Random Forest
+S02,Brand,HONDA,2025-12-01,115753.0,122840.26910714286,Test,Random Forest
+S02,Brand,HONDA,2026-01-01,133636.0,132028.0751011905,Test,Random Forest
+S02,Brand,HONDA,2026-02-01,,128384.54643759021,Future,Random Forest
+S03,Brand,TOYOTA,2024-01-01,26917.0,,History,Ridge Regression
+S03,Brand,TOYOTA,2024-02-01,22406.0,,History,Ridge Regression
+S03,Brand,TOYOTA,2024-03-01,22592.0,,History,Ridge Regression
+S03,Brand,TOYOTA,2024-04-01,18967.0,,History,Ridge Regression
+S03,Brand,TOYOTA,2024-05-01,20225.0,,History,Ridge Regression
+S03,Brand,TOYOTA,2024-06-01,21118.0,,History,Ridge Regression
+S03,Brand,TOYOTA,2024-07-01,20885.0,,History,Ridge Regression
+S03,Brand,TOYOTA,2024-08-01,19968.0,,History,Ridge Regression
+S03,Brand,TOYOTA,2024-09-01,18324.0,,History,Ridge Regression
+S03,Brand,TOYOTA,2024-10-01,16782.0,,History,Ridge Regression
+S03,Brand,TOYOTA,2024-11-01,16579.0,,History,Ridge Regression
+S03,Brand,TOYOTA,2024-12-01,11762.0,,History,Ridge Regression
+S03,Brand,TOYOTA,2025-01-01,23501.0,,History,Ridge Regression
+S03,Brand,TOYOTA,2025-02-01,20357.0,,History,Ridge Regression
+S03,Brand,TOYOTA,2025-03-01,21337.0,,History,Ridge Regression
+S03,Brand,TOYOTA,2025-04-01,18654.0,19846.0918312738,Validation,Ridge Regression
+S03,Brand,TOYOTA,2025-05-01,20225.0,20483.759259469556,Validation,Ridge Regression
+S03,Brand,TOYOTA,2025-06-01,19539.0,20112.29146223941,Validation,Ridge Regression
+S03,Brand,TOYOTA,2025-07-01,19757.0,19931.94477714354,Validation,Ridge Regression
+S03,Brand,TOYOTA,2025-08-01,17884.0,19053.22912827413,Validation,Ridge Regression
+S03,Brand,TOYOTA,2025-09-01,18533.0,18010.337801216607,Test,Ridge Regression
+S03,Brand,TOYOTA,2025-10-01,17685.0,17409.738882342026,Test,Ridge Regression
+S03,Brand,TOYOTA,2025-11-01,15682.0,17532.635212774676,Test,Ridge Regression
+S03,Brand,TOYOTA,2025-12-01,13884.0,17703.51612636828,Test,Ridge Regression
+S03,Brand,TOYOTA,2026-01-01,23592.0,18404.114349093026,Test,Ridge Regression
+S03,Brand,TOYOTA,2026-02-01,,19006.418584717623,Future,Ridge Regression
+S04,Brand,YAMAHA,2024-01-01,21654.0,,History,Gradient Boosting
+S04,Brand,YAMAHA,2024-02-01,20056.0,,History,Gradient Boosting
+S04,Brand,YAMAHA,2024-03-01,20664.0,,History,Gradient Boosting
+S04,Brand,YAMAHA,2024-04-01,17708.0,,History,Gradient Boosting
+S04,Brand,YAMAHA,2024-05-01,22278.0,,History,Gradient Boosting
+S04,Brand,YAMAHA,2024-06-01,21098.0,,History,Gradient Boosting
+S04,Brand,YAMAHA,2024-07-01,19718.0,,History,Gradient Boosting
+S04,Brand,YAMAHA,2024-08-01,19558.0,,History,Gradient Boosting
+S04,Brand,YAMAHA,2024-09-01,16156.0,,History,Gradient Boosting
+S04,Brand,YAMAHA,2024-10-01,17366.0,,History,Gradient Boosting
+S04,Brand,YAMAHA,2024-11-01,18611.0,,History,Gradient Boosting
+S04,Brand,YAMAHA,2024-12-01,16761.0,,History,Gradient Boosting
+S04,Brand,YAMAHA,2025-01-01,19026.0,,History,Gradient Boosting
+S04,Brand,YAMAHA,2025-02-01,18547.0,,History,Gradient Boosting
+S04,Brand,YAMAHA,2025-03-01,19420.0,,History,Gradient Boosting
+S04,Brand,YAMAHA,2025-04-01,18588.0,18877.693405118345,Validation,Gradient Boosting
+S04,Brand,YAMAHA,2025-05-01,22897.0,19987.729867972022,Validation,Gradient Boosting
+S04,Brand,YAMAHA,2025-06-01,23860.0,20609.07086931608,Validation,Gradient Boosting
+S04,Brand,YAMAHA,2025-07-01,23620.0,19699.882798985003,Validation,Gradient Boosting
+S04,Brand,YAMAHA,2025-08-01,19330.0,19362.987540697857,Validation,Gradient Boosting
+S04,Brand,YAMAHA,2025-09-01,20431.0,17829.60743870886,Test,Gradient Boosting
+S04,Brand,YAMAHA,2025-10-01,19898.0,19363.47251731139,Test,Gradient Boosting
+S04,Brand,YAMAHA,2025-11-01,17197.0,19081.190543383167,Test,Gradient Boosting
+S04,Brand,YAMAHA,2025-12-01,17695.0,18943.67025719788,Test,Gradient Boosting
+S04,Brand,YAMAHA,2026-01-01,19229.0,19219.510231805736,Test,Gradient Boosting
+S04,Brand,YAMAHA,2026-02-01,,18789.232831342553,Future,Gradient Boosting
+S05,VehicleType,รถจักรยานยนต์,2024-01-01,156252.0,,History,Random Forest
+S05,VehicleType,รถจักรยานยนต์,2024-02-01,146241.0,,History,Random Forest
+S05,VehicleType,รถจักรยานยนต์,2024-03-01,152303.0,,History,Random Forest
+S05,VehicleType,รถจักรยานยนต์,2024-04-01,128897.0,,History,Random Forest
+S05,VehicleType,รถจักรยานยนต์,2024-05-01,167818.0,,History,Random Forest
+S05,VehicleType,รถจักรยานยนต์,2024-06-01,152632.0,,History,Random Forest
+S05,VehicleType,รถจักรยานยนต์,2024-07-01,143966.0,,History,Random Forest
+S05,VehicleType,รถจักรยานยนต์,2024-08-01,133825.0,,History,Random Forest
+S05,VehicleType,รถจักรยานยนต์,2024-09-01,119697.0,,History,Random Forest
+S05,VehicleType,รถจักรยานยนต์,2024-10-01,141814.0,,History,Random Forest
+S05,VehicleType,รถจักรยานยนต์,2024-11-01,138333.0,,History,Random Forest
+S05,VehicleType,รถจักรยานยนต์,2024-12-01,126437.0,,History,Random Forest
+S05,VehicleType,รถจักรยานยนต์,2025-01-01,158611.0,,History,Random Forest
+S05,VehicleType,รถจักรยานยนต์,2025-02-01,149699.0,,History,Random Forest
+S05,VehicleType,รถจักรยานยนต์,2025-03-01,153322.0,,History,Random Forest
+S05,VehicleType,รถจักรยานยนต์,2025-04-01,133652.0,143602.89811904758,Validation,Random Forest
+S05,VehicleType,รถจักรยานยนต์,2025-05-01,166494.0,151151.18038492062,Validation,Random Forest
+S05,VehicleType,รถจักรยานยนต์,2025-06-01,155907.0,145497.1020595238,Validation,Random Forest
+S05,VehicleType,รถจักรยานยนต์,2025-07-01,146162.0,142461.57820634914,Validation,Random Forest
+S05,VehicleType,รถจักรยานยนต์,2025-08-01,131862.0,136049.01514285713,Validation,Random Forest
+S05,VehicleType,รถจักรยานยนต์,2025-09-01,136490.0,135601.1733095238,Test,Random Forest
+S05,VehicleType,รถจักรยานยนต์,2025-10-01,135481.0,139392.6509345238,Test,Random Forest
+S05,VehicleType,รถจักรยานยนต์,2025-11-01,129640.0,140965.4727321428,Test,Random Forest
+S05,VehicleType,รถจักรยานยนต์,2025-12-01,138046.0,145953.50203769837,Test,Random Forest
+S05,VehicleType,รถจักรยานยนต์,2026-01-01,154124.0,149354.20899007935,Test,Random Forest
+S05,VehicleType,รถจักรยานยนต์,2026-02-01,,147212.76337012986,Future,Random Forest
+S06,VehicleType,รถยนต์นั่งส่วนบุคคลไม่เกิน 7 คน,2024-01-01,65067.0,,History,Ridge Regression
+S06,VehicleType,รถยนต์นั่งส่วนบุคคลไม่เกิน 7 คน,2024-02-01,47063.0,,History,Ridge Regression
+S06,VehicleType,รถยนต์นั่งส่วนบุคคลไม่เกิน 7 คน,2024-03-01,45315.0,,History,Ridge Regression
+S06,VehicleType,รถยนต์นั่งส่วนบุคคลไม่เกิน 7 คน,2024-04-01,38022.0,,History,Ridge Regression
+S06,VehicleType,รถยนต์นั่งส่วนบุคคลไม่เกิน 7 คน,2024-05-01,43196.0,,History,Ridge Regression
+S06,VehicleType,รถยนต์นั่งส่วนบุคคลไม่เกิน 7 คน,2024-06-01,43147.0,,History,Ridge Regression
+S06,VehicleType,รถยนต์นั่งส่วนบุคคลไม่เกิน 7 คน,2024-07-01,40817.0,,History,Ridge Regression
+S06,VehicleType,รถยนต์นั่งส่วนบุคคลไม่เกิน 7 คน,2024-08-01,39444.0,,History,Ridge Regression
+S06,VehicleType,รถยนต์นั่งส่วนบุคคลไม่เกิน 7 คน,2024-09-01,34710.0,,History,Ridge Regression
+S06,VehicleType,รถยนต์นั่งส่วนบุคคลไม่เกิน 7 คน,2024-10-01,32820.0,,History,Ridge Regression
+S06,VehicleType,รถยนต์นั่งส่วนบุคคลไม่เกิน 7 คน,2024-11-01,32703.0,,History,Ridge Regression
+S06,VehicleType,รถยนต์นั่งส่วนบุคคลไม่เกิน 7 คน,2024-12-01,24659.0,,History,Ridge Regression
+S06,VehicleType,รถยนต์นั่งส่วนบุคคลไม่เกิน 7 คน,2025-01-01,54099.0,,History,Ridge Regression
+S06,VehicleType,รถยนต์นั่งส่วนบุคคลไม่เกิน 7 คน,2025-02-01,39399.0,,History,Ridge Regression
+S06,VehicleType,รถยนต์นั่งส่วนบุคคลไม่เกิน 7 คน,2025-03-01,43782.0,,History,Ridge Regression
+S06,VehicleType,รถยนต์นั่งส่วนบุคคลไม่เกิน 7 คน,2025-04-01,38955.0,40754.88232620178,Validation,Ridge Regression
+S06,VehicleType,รถยนต์นั่งส่วนบุคคลไม่เกิน 7 คน,2025-05-01,47054.0,42435.257582128674,Validation,Ridge Regression
+S06,VehicleType,รถยนต์นั่งส่วนบุคคลไม่เกิน 7 คน,2025-06-01,45691.0,40236.91133591576,Validation,Ridge Regression
+S06,VehicleType,รถยนต์นั่งส่วนบุคคลไม่เกิน 7 คน,2025-07-01,43314.0,39464.688802327655,Validation,Ridge Regression
+S06,VehicleType,รถยนต์นั่งส่วนบุคคลไม่เกิน 7 คน,2025-08-01,39325.0,37438.5974653385,Validation,Ridge Regression
+S06,VehicleType,รถยนต์นั่งส่วนบุคคลไม่เกิน 7 คน,2025-09-01,41140.0,38423.28704912415,Test,Ridge Regression
+S06,VehicleType,รถยนต์นั่งส่วนบุคคลไม่เกิน 7 คน,2025-10-01,39075.0,37242.6483571901,Test,Ridge Regression
+S06,VehicleType,รถยนต์นั่งส่วนบุคคลไม่เกิน 7 คน,2025-11-01,37880.0,37746.788883374094,Test,Ridge Regression
+S06,VehicleType,รถยนต์นั่งส่วนบุคคลไม่เกิน 7 คน,2025-12-01,36725.0,38493.95905447665,Test,Ridge Regression
+S06,VehicleType,รถยนต์นั่งส่วนบุคคลไม่เกิน 7 คน,2026-01-01,83281.0,40445.42163597404,Test,Ridge Regression
+S06,VehicleType,รถยนต์นั่งส่วนบุคคลไม่เกิน 7 คน,2026-02-01,,41273.69802128868,Future,Ridge Regression
+S07,VehicleType,รถยนต์บรรทุกส่วนบุคคล,2024-01-01,11291.0,,History,Naive Forecast
+S07,VehicleType,รถยนต์บรรทุกส่วนบุคคล,2024-02-01,9303.0,,History,Naive Forecast
+S07,VehicleType,รถยนต์บรรทุกส่วนบุคคล,2024-03-01,9754.0,,History,Naive Forecast
+S07,VehicleType,รถยนต์บรรทุกส่วนบุคคล,2024-04-01,8033.0,,History,Naive Forecast
+S07,VehicleType,รถยนต์บรรทุกส่วนบุคคล,2024-05-01,8955.0,,History,Naive Forecast
+S07,VehicleType,รถยนต์บรรทุกส่วนบุคคล,2024-06-01,8544.0,,History,Naive Forecast
+S07,VehicleType,รถยนต์บรรทุกส่วนบุคคล,2024-07-01,8640.0,,History,Naive Forecast
+S07,VehicleType,รถยนต์บรรทุกส่วนบุคคล,2024-08-01,8201.0,,History,Naive Forecast
+S07,VehicleType,รถยนต์บรรทุกส่วนบุคคล,2024-09-01,7624.0,,History,Naive Forecast
+S07,VehicleType,รถยนต์บรรทุกส่วนบุคคล,2024-10-01,6857.0,,History,Naive Forecast
+S07,VehicleType,รถยนต์บรรทุกส่วนบุคคล,2024-11-01,6532.0,,History,Naive Forecast
+S07,VehicleType,รถยนต์บรรทุกส่วนบุคคล,2024-12-01,4693.0,,History,Naive Forecast
+S07,VehicleType,รถยนต์บรรทุกส่วนบุคคล,2025-01-01,8913.0,,History,Naive Forecast
+S07,VehicleType,รถยนต์บรรทุกส่วนบุคคล,2025-02-01,8323.0,,History,Naive Forecast
+S07,VehicleType,รถยนต์บรรทุกส่วนบุคคล,2025-03-01,7330.0,,History,Naive Forecast
+S07,VehicleType,รถยนต์บรรทุกส่วนบุคคล,2025-04-01,6477.0,7330.0,Validation,Naive Forecast
+S07,VehicleType,รถยนต์บรรทุกส่วนบุคคล,2025-05-01,6818.0,6477.0,Validation,Naive Forecast
+S07,VehicleType,รถยนต์บรรทุกส่วนบุคคล,2025-06-01,6774.0,6818.0,Validation,Naive Forecast
+S07,VehicleType,รถยนต์บรรทุกส่วนบุคคล,2025-07-01,6365.0,6774.0,Validation,Naive Forecast
+S07,VehicleType,รถยนต์บรรทุกส่วนบุคคล,2025-08-01,6321.0,6365.0,Validation,Naive Forecast
+S07,VehicleType,รถยนต์บรรทุกส่วนบุคคล,2025-09-01,6220.0,6321.0,Test,Naive Forecast
+S07,VehicleType,รถยนต์บรรทุกส่วนบุคคล,2025-10-01,5754.0,6220.0,Test,Naive Forecast
+S07,VehicleType,รถยนต์บรรทุกส่วนบุคคล,2025-11-01,4913.0,5754.0,Test,Naive Forecast
+S07,VehicleType,รถยนต์บรรทุกส่วนบุคคล,2025-12-01,4442.0,4913.0,Test,Naive Forecast
+S07,VehicleType,รถยนต์บรรทุกส่วนบุคคล,2026-01-01,6312.0,4442.0,Test,Naive Forecast
+S07,VehicleType,รถยนต์บรรทุกส่วนบุคคล,2026-02-01,,6312.0,Future,Naive Forecast

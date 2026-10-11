@@ -1,0 +1,51 @@
+{
+  "engine": "Altair AI Studio Auto Model",
+  "target": "PATIENT_TYPE",
+  "positive_class": "Hospitalized",
+  "target_mapping": {
+    "1": "Outpatient",
+    "2": "Hospitalized"
+  },
+  "prepared_rows": 1048575,
+  "model_rows_used": null,
+  "training_rows": null,
+  "test_rows": null,
+  "test_set_id": null,
+  "split_method": "Per-model initial stratified sample, then automatic 60/40 split with local seed1992; validation split into seven holdout batches, five retained by robust average",
+  "seed": 2001,
+  "sampling_or_license_limit": "Auto Model per-model caps differ: see native_result_audit.json; common testing-set requirement currently unmet",
+  "inputs": [
+    "USMER",
+    "MEDICAL_UNIT",
+    "SEX",
+    "PNEUMONIA",
+    "AGE",
+    "DIABETES",
+    "COPD",
+    "ASTHMA",
+    "INMSUPR",
+    "HIPERTENSION",
+    "OTHER_DISEASE",
+    "CARDIOVASCULAR",
+    "OBESITY",
+    "RENAL_CHRONIC",
+    "TOBACCO"
+  ],
+  "age_numeric_others_nominal": true,
+  "missing_code_policy": "Native nominal dictionaries retain original 98/99 categories plus native MISSING level; AGE remains numeric",
+  "preprocessing_fit_scope": null,
+  "setup_screenshots": [
+    "screenshots/native_02_turbo_prepared.png",
+    "screenshots/native_03_positive_target.png",
+    "screenshots/native_04_inputs15.png",
+    "screenshots/native_05_nine_models.png"
+  ],
+  "selected_model": null,
+  "selection_reason": null,
+  "metric_scale": "fraction_0_to_1",
+  "native_run_complete": true,
+  "split_local_seed": 1992,
+  "same_test_set_requirement_met": false,
+  "native_metrics_available": true,
+  "per_model_result_metadata": "native_result_audit.json"
+}

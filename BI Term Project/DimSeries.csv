@@ -1,0 +1,8 @@
+﻿SeriesKey,SegmentType,SegmentName,DisplayName
+S01,Total,All,All
+S02,Brand,HONDA,HONDA
+S03,Brand,TOYOTA,TOYOTA
+S04,Brand,YAMAHA,YAMAHA
+S05,VehicleType,รถจักรยานยนต์,Motorcycles
+S06,VehicleType,รถยนต์นั่งส่วนบุคคลไม่เกิน 7 คน,Private passenger cars up to 7 seats
+S07,VehicleType,รถยนต์บรรทุกส่วนบุคคล,Private trucks

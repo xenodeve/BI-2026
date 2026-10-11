@@ -1,0 +1,82 @@
+{
+  "result": "passed",
+  "final_workbook": "D:\\Github\\BI 2026\\Workshop 3 What if Analysis in Excel\\Workshop3_WhatIf_Completed.xlsx",
+  "exact_current_backup": "D:\\Github\\BI 2026\\Workshop 3 What if Analysis in Excel\\backups\\Workshop3_WhatIf_current_before_functional_20261011_041659.xlsx",
+  "original_sha256": "e0fac1114a5ada36acb3b4568b53370dfed0ee2dd3721c3ce132bf28cb4412ab",
+  "before": {
+    "B5": 400000.0,
+    "B16": 9399.999874611907,
+    "observed_native_display_PMT": 9400,
+    "origin": "Root verified native PMT at starting price; caches preserved in exact backup"
+  },
+  "mathematical_goal_solution": {
+    "price": 425531.92056985485,
+    "payment": 9999.999999999998,
+    "method": "PV/annuity mathematical solve; NOT native Goal Seek Run"
+  },
+  "native_GoalSeek_run": false,
+  "native_ScenarioManager_Show_verified": false,
+  "native_Summary_dialog_generated": false,
+  "genuine_SpreadsheetML_scenarios": 4,
+  "changing_cells": [
+    "Scenario!B5",
+    "Scenario!B8"
+  ],
+  "scenario_cases": [
+    {
+      "name": "200k_15y",
+      "price": 200000,
+      "years": 15,
+      "down": 0.2,
+      "annual_rate": 0.07,
+      "principal": 160000.0,
+      "payment": 1438.1252333638831,
+      "total_interest": 98862.54200549895
+    },
+    {
+      "name": "200k_30y",
+      "price": 200000,
+      "years": 30,
+      "down": 0.2,
+      "annual_rate": 0.07,
+      "principal": 160000.0,
+      "payment": 1064.4839922866931,
+      "total_interest": 223214.23722320958
+    },
+    {
+      "name": "300k_15y",
+      "price": 300000,
+      "years": 15,
+      "down": 0.2,
+      "annual_rate": 0.07,
+      "principal": 240000.0,
+      "payment": 2157.1878500458247,
+      "total_interest": 148293.81300824846
+    },
+    {
+      "name": "300k_30y",
+      "price": 300000,
+      "years": 30,
+      "down": 0.2,
+      "annual_rate": 0.07,
+      "principal": 240000.0,
+      "payment": 1596.7259884300397,
+      "total_interest": 334821.35583481425
+    }
+  ],
+  "authored_summary": "Scenario Summary: live PMT formulas + calculated caches, not native Summary dialog output",
+  "original_formulas_and_guards_unchanged": true,
+  "original_styles_themes_sharedStrings_unchanged": true,
+  "unrelated_part_bytes_preserved": true,
+  "changed_original_parts": [
+    "[Content_Types].xml",
+    "xl/workbook.xml",
+    "xl/_rels/workbook.xml.rels",
+    "xl/worksheets/sheet1.xml",
+    "xl/worksheets/sheet2.xml",
+    "xl/calcChain.xml",
+    "docProps/app.xml"
+  ],
+  "calcChain_removed_for_safe_rebuild": true,
+  "checked_at": "2026-10-11T04:16:59.832723"
+}

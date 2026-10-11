@@ -1,0 +1,51 @@
+table 'ModelComparison'
+
+	measure 'Model MAE' = MIN(ModelComparison[MAE])
+		formatString: #,0.00
+
+	measure 'Model RMSE' = MIN(ModelComparison[RMSE])
+		formatString: #,0.00
+
+	measure 'Model R2' = MAX(ModelComparison[R2])
+		formatString: 0.0000
+
+	measure 'Selected Model' = CALCULATE(SELECTEDVALUE(ModelComparison[Model]), ModelComparison[SelectedModel] = TRUE())
+
+	measure 'Selected MAE' = CALCULATE(MIN(ModelComparison[MAE]), ModelComparison[SelectedModel] = TRUE())
+		formatString: #,0.00
+
+	column 'Model'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Model
+
+	column 'MAE'
+		dataType: double
+		summarizeBy: none
+		sourceColumn: MAE
+
+	column 'RMSE'
+		dataType: double
+		summarizeBy: none
+		sourceColumn: RMSE
+
+	column 'R2'
+		dataType: double
+		summarizeBy: none
+		sourceColumn: R2
+
+	column 'SelectedModel'
+		dataType: boolean
+		summarizeBy: none
+		sourceColumn: SelectedModel
+
+	partition 'ModelComparison' = m
+		mode: import
+		source =
+			let
+			    Source = Csv.Document(File.Contents("D:/Github/BI 2026/Workshop 10 Deployment/DLT_Model_Comparison_PowerBI.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+			    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+			    Nulls = Table.ReplaceValue(Headers, "", null, Replacer.ReplaceValue, Table.ColumnNames(Headers)),
+			    Typed = Table.TransformColumnTypes(Nulls, {{"Model", type text}, {"MAE", type number}, {"RMSE", type number}, {"R2", type number}, {"SelectedModel", type logical}}, "en-US")
+			in
+			    Typed

@@ -1,0 +1,24 @@
+table 'ประเทศ'
+
+	column 'รหัสประเทศ'
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: รหัสประเทศ
+
+	column 'ชื่อประเทศ'
+		dataType: string
+		summarizeBy: none
+		dataCategory: Country
+		sourceColumn: ชื่อประเทศ
+
+	partition 'ประเทศ' = m
+		mode: import
+		source =
+			let
+			    Source = Excel.Workbook(File.Contents("D:/Github/BI 2026/Workshop 9 Dashboard/Foreign_tourists_En.xlsx"), null, true),
+			    Raw = Source{[Item="ประเทศ",Kind="Sheet"]}[Data],
+			    Headers = Table.PromoteHeaders(Raw, [PromoteAllScalars=true]),
+			    Clean = Table.SelectRows(Headers, each [ชื่อประเทศ] <> null and Text.Lower(Text.Trim([ชื่อประเทศ])) <> "null" and Text.Trim([ชื่อประเทศ]) <> ""),
+			    Typed = Table.TransformColumnTypes(Clean, {{"รหัสประเทศ", Int64.Type}, {"ชื่อประเทศ", type text}})
+			in
+			    Typed

@@ -1,0 +1,51 @@
+table DimDate
+	dataCategory: Time
+
+	column Date
+		dataType: dateTime
+		isKey
+		formatString: Short Date
+		summarizeBy: none
+		sourceColumn: Date
+
+	column Year
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: Year
+
+	column YearBE
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: YearBE
+
+	column Month
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: Month
+
+	column YearMonth
+		dataType: string
+		summarizeBy: none
+		sourceColumn: YearMonth
+
+	column YearMonthSort
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: YearMonthSort
+
+	column IsCompleteMonth
+		dataType: boolean
+		summarizeBy: none
+		sourceColumn: IsCompleteMonth
+
+	partition DimDate = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:/Github/BI 2026/BI Term Project/DimDate.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Nulls = Table.ReplaceValue(Headers, "", null, Replacer.ReplaceValue, Table.ColumnNames(Headers)),
+				    Typed = Table.TransformColumnTypes(Nulls, {{"Date", type date}, {"Year", Int64.Type}, {"YearBE", Int64.Type}, {"Month", Int64.Type}, {"YearMonth", type text}, {"YearMonthSort", Int64.Type}, {"IsCompleteMonth", type logical}}, "en-US")
+				in
+				    Typed
+

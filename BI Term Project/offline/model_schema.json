@@ -1,0 +1,182 @@
+{
+  "DimSeries": {
+    "measures": [],
+    "columns": [
+      "SeriesKey",
+      "SegmentType",
+      "SegmentName",
+      "DisplayName"
+    ],
+    "partitionType": "MPartitionSource"
+  },
+  "DataQuality": {
+    "measures": [
+      "Raw Records",
+      "Raw Registrations",
+      "Complete Source Months",
+      "Incomplete Registrations"
+    ],
+    "columns": [
+      "Date",
+      "SourceRegistrations",
+      "SourceRecords",
+      "IsComplete",
+      "UsedForModeling"
+    ],
+    "partitionType": "MPartitionSource"
+  },
+  "HypothesisEvidence": {
+    "measures": [],
+    "columns": [
+      "Hypothesis",
+      "Question",
+      "ObservedValue",
+      "Threshold",
+      "Result",
+      "Interpretation"
+    ],
+    "partitionType": "MPartitionSource"
+  },
+  "DimVehicleType": {
+    "measures": [],
+    "columns": [
+      "VehicleTypeKey",
+      "VehicleType",
+      "VehicleTypeEnglish"
+    ],
+    "partitionType": "MPartitionSource"
+  },
+  "Metric Parameter": {
+    "measures": [],
+    "columns": [
+      "Metric",
+      "Metric Fields",
+      "Metric Order"
+    ],
+    "partitionType": "CalculatedPartitionSource"
+  },
+  "FactForecast": {
+    "measures": [
+      "Forecast Actual",
+      "Forecast Prediction",
+      "Future Forecast",
+      "Selected Series",
+      "Forecast Target Month"
+    ],
+    "columns": [
+      "SeriesKey",
+      "SegmentType",
+      "SegmentName",
+      "Date",
+      "ActualRegistrations",
+      "ForecastRegistrations",
+      "DatasetSegment",
+      "Model"
+    ],
+    "partitionType": "MPartitionSource"
+  },
+  "DimDate": {
+    "measures": [],
+    "columns": [
+      "Date",
+      "Year",
+      "YearBE",
+      "Month",
+      "YearMonth",
+      "YearMonthSort",
+      "IsCompleteMonth"
+    ],
+    "partitionType": "MPartitionSource"
+  },
+  "TestErrors": {
+    "measures": [
+      "Absolute Test Error"
+    ],
+    "columns": [
+      "SeriesKey",
+      "SegmentType",
+      "SegmentName",
+      "Date",
+      "ActualRegistrations",
+      "PredictedRegistrations",
+      "AbsoluteError",
+      "Model"
+    ],
+    "partitionType": "MPartitionSource"
+  },
+  "FactRegistrations": {
+    "measures": [
+      "Total Registrations",
+      "Source Records",
+      "Fact Rows",
+      "Active Brands",
+      "Active Vehicle Types",
+      "Average Monthly Registrations",
+      "Registrations per Source Record",
+      "Brand Share %",
+      "Vehicle Type Share %",
+      "Previous Year Registrations",
+      "YoY Growth %",
+      "Top 3 Brand Share %",
+      "Selected Brand",
+      "Latest Complete Month",
+      "H5 January YoY %"
+    ],
+    "columns": [
+      "Date",
+      "BrandKey",
+      "VehicleTypeKey",
+      "Registrations",
+      "SourceRecords"
+    ],
+    "partitionType": "MPartitionSource"
+  },
+  "DimBrand": {
+    "measures": [],
+    "columns": [
+      "BrandKey",
+      "Brand"
+    ],
+    "partitionType": "MPartitionSource"
+  },
+  "ETL_Counts": {
+    "measures": [
+      "ETL Input Rows",
+      "ETL Output Rows"
+    ],
+    "columns": [
+      "Stage",
+      "InputRows",
+      "OutputRows",
+      "Reason"
+    ],
+    "partitionType": "MPartitionSource"
+  },
+  "ModelComparison": {
+    "measures": [
+      "Validation MAE",
+      "Test MAE",
+      "Selected Model",
+      "Selected Validation MAE",
+      "Selected Test MAE",
+      "Selected Test RMSE",
+      "Selected Test R2",
+      "Naive Test MAE",
+      "Test Improvement over Naive %"
+    ],
+    "columns": [
+      "SeriesKey",
+      "SegmentType",
+      "SegmentName",
+      "Model",
+      "ValidationMAE",
+      "ValidationRMSE",
+      "ValidationR2",
+      "TestMAE",
+      "TestRMSE",
+      "TestR2",
+      "SelectedModel"
+    ],
+    "partitionType": "MPartitionSource"
+  }
+}

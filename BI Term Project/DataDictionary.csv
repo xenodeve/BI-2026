@@ -1,0 +1,96 @@
+﻿Table,Column,Type,Definition,Grain
+RawData,ปี พ.ศ.,int64,Original Buddhist-era year label; use numeric Source_Year_BE for grouping,One original source period type brand model record
+RawData,เดือน,object,Original Thai month name; use numeric Source_Month for grouping,One original source period type brand model record
+RawData,ประเภทรถ,object,DLT vehicle type label,One original source period type brand model record
+RawData,ยี่ห้อ,object,Vehicle brand label,One original source period type brand model record
+RawData,รุ่น,object,Vehicle model label; 623 raw nulls retained for brand/type aggregation,One original source period type brand model record
+RawData,จำนวน,int64,Registrations represented by this source row (vehicles),One original source period type brand model record
+RawData,Source_Year_BE,int64,Numeric source Buddhist-era year; subtract543 for Gregorian year,One original source period type brand model record
+RawData,Source_Month,int64,Numeric source month1-12,One original source period type brand model record
+RawData,Source_File,object,Original monthly source filename for lineage,One original source period type brand model record
+FactRegistrations,Date,datetime64[ns],Period date (monthly facts use first day; DimDate is daily),One Date BrandKey VehicleTypeKey combination
+FactRegistrations,BrandKey,int64,BrandKey; see table grain and notebook context,One Date BrandKey VehicleTypeKey combination
+FactRegistrations,VehicleTypeKey,int64,VehicleTypeKey; see table grain and notebook context,One Date BrandKey VehicleTypeKey combination
+FactRegistrations,Registrations,int64,Sum of source vehicle registration counts; vehicles not source rows,One Date BrandKey VehicleTypeKey combination
+FactRegistrations,SourceRecords,int64,Number of original source rows represented by this aggregate,One Date BrandKey VehicleTypeKey combination
+DimBrand,BrandKey,int64,BrandKey; see table grain and notebook context,One unique dimension key
+DimBrand,Brand,object,Brand; see table grain and notebook context,One unique dimension key
+DimVehicleType,VehicleTypeKey,int64,VehicleTypeKey; see table grain and notebook context,One unique dimension key
+DimVehicleType,VehicleType,object,VehicleType; see table grain and notebook context,One unique dimension key
+DimVehicleType,VehicleTypeEnglish,object,English display label for major types; original Thai preserved,One unique dimension key
+DimDate,Date,datetime64[ns],Period date (monthly facts use first day; DimDate is daily),One calendar day
+DimDate,Year,int32,Year; see table grain and notebook context,One calendar day
+DimDate,YearBE,int32,YearBE; see table grain and notebook context,One calendar day
+DimDate,Month,int32,Month; see table grain and notebook context,One calendar day
+DimDate,YearMonth,object,YearMonth; see table grain and notebook context,One calendar day
+DimDate,YearMonthSort,int32,YearMonthSort; see table grain and notebook context,One calendar day
+DimDate,IsCompleteMonth,bool,IsCompleteMonth; see table grain and notebook context,One calendar day
+DimSeries,SeriesKey,object,Unique forecast series identity; total/brand/type forecasts overlap and must not be summed together,One unique dimension key
+DimSeries,SegmentType,object,SegmentType; see table grain and notebook context,One unique dimension key
+DimSeries,SegmentName,object,SegmentName; see table grain and notebook context,One unique dimension key
+DimSeries,DisplayName,object,DisplayName; see table grain and notebook context,One unique dimension key
+BrandMonthly,Date,datetime64[ns],Period date (monthly facts use first day; DimDate is daily),One Date BrandKey combination
+BrandMonthly,BrandKey,int64,BrandKey; see table grain and notebook context,One Date BrandKey combination
+BrandMonthly,Brand,object,Brand; see table grain and notebook context,One Date BrandKey combination
+BrandMonthly,Registrations,int64,Sum of source vehicle registration counts; vehicles not source rows,One Date BrandKey combination
+BrandMonthly,SourceRecords,int64,Number of original source rows represented by this aggregate,One Date BrandKey combination
+BrandMonthly,RegistrationShare,float64,Category registrations divided by all registrations in same month,One Date BrandKey combination
+VehicleTypeMonthly,Date,datetime64[ns],Period date (monthly facts use first day; DimDate is daily),One Date VehicleTypeKey combination
+VehicleTypeMonthly,VehicleTypeKey,int64,VehicleTypeKey; see table grain and notebook context,One Date VehicleTypeKey combination
+VehicleTypeMonthly,VehicleType,object,VehicleType; see table grain and notebook context,One Date VehicleTypeKey combination
+VehicleTypeMonthly,Registrations,int64,Sum of source vehicle registration counts; vehicles not source rows,One Date VehicleTypeKey combination
+VehicleTypeMonthly,SourceRecords,int64,Number of original source rows represented by this aggregate,One Date VehicleTypeKey combination
+VehicleTypeMonthly,RegistrationShare,float64,Category registrations divided by all registrations in same month,One Date VehicleTypeKey combination
+FactForecast,SeriesKey,object,Unique forecast series identity; total/brand/type forecasts overlap and must not be summed together,One SeriesKey Date combination
+FactForecast,SegmentType,object,SegmentType; see table grain and notebook context,One SeriesKey Date combination
+FactForecast,SegmentName,object,SegmentName; see table grain and notebook context,One SeriesKey Date combination
+FactForecast,Date,datetime64[ns],Period date (monthly facts use first day; DimDate is daily),One SeriesKey Date combination
+FactForecast,ActualRegistrations,float64,Observed complete-month registration count; blank for Future,One SeriesKey Date combination
+FactForecast,ForecastRegistrations,float64,Model prediction in vehicles; blank for History; nonnegative,One SeriesKey Date combination
+FactForecast,DatasetSegment,object,"History, Validation, Test or Future; periods and fit boundaries fixed chronologically",One SeriesKey Date combination
+FactForecast,Model,object,Model; see table grain and notebook context,One SeriesKey Date combination
+ModelComparison,SeriesKey,object,Unique forecast series identity; total/brand/type forecasts overlap and must not be summed together,One SeriesKey Model combination
+ModelComparison,SegmentType,object,SegmentType; see table grain and notebook context,One SeriesKey Model combination
+ModelComparison,SegmentName,object,SegmentName; see table grain and notebook context,One SeriesKey Model combination
+ModelComparison,Model,object,Model; see table grain and notebook context,One SeriesKey Model combination
+ModelComparison,ValidationMAE,float64,Validation MAE; Apr-Aug2025 using model fit on training only,One SeriesKey Model combination
+ModelComparison,ValidationRMSE,float64,Validation RMSE; Apr-Aug2025 using model fit on training only,One SeriesKey Model combination
+ModelComparison,ValidationR2,float64,Validation R2; Apr-Aug2025 using model fit on training only,One SeriesKey Model combination
+ModelComparison,TestMAE,float64,Held-out test MAE; Sep2025-Jan2026 using refit on train+validation,One SeriesKey Model combination
+ModelComparison,TestRMSE,float64,Held-out test RMSE; Sep2025-Jan2026 using refit on train+validation,One SeriesKey Model combination
+ModelComparison,TestR2,float64,Held-out test R2; Sep2025-Jan2026 using refit on train+validation,One SeriesKey Model combination
+ModelComparison,SelectedModel,bool,True for the lowest-validation-MAE method for its series; never selected using test,One SeriesKey Model combination
+ModelFeatures,SeriesKey,object,Unique forecast series identity; total/brand/type forecasts overlap and must not be summed together,One SeriesKey Date target observation
+ModelFeatures,SegmentType,object,SegmentType; see table grain and notebook context,One SeriesKey Date target observation
+ModelFeatures,SegmentName,object,SegmentName; see table grain and notebook context,One SeriesKey Date target observation
+ModelFeatures,Date,datetime64[ns],Period date (monthly facts use first day; DimDate is daily),One SeriesKey Date target observation
+ModelFeatures,Registrations,int64,Sum of source vehicle registration counts; vehicles not source rows,One SeriesKey Date target observation
+ModelFeatures,Lag1,float64,Registrations observed 1 month(s) before target month,One SeriesKey Date target observation
+ModelFeatures,Lag2,float64,Registrations observed 2 month(s) before target month,One SeriesKey Date target observation
+ModelFeatures,Lag3,float64,Registrations observed 3 month(s) before target month,One SeriesKey Date target observation
+ModelFeatures,MonthSin,float64,"sin(2*pi*month/12), known calendar seasonal feature",One SeriesKey Date target observation
+ModelFeatures,MonthCos,float64,"cos(2*pi*month/12), known calendar seasonal feature",One SeriesKey Date target observation
+ModelFeatures,TimeIndex,int64,Months since Jan2024 (0-based); known calendar feature,One SeriesKey Date target observation
+TestErrors,SeriesKey,object,Unique forecast series identity; total/brand/type forecasts overlap and must not be summed together,One selected SeriesKey Date held-out prediction
+TestErrors,SegmentType,object,SegmentType; see table grain and notebook context,One selected SeriesKey Date held-out prediction
+TestErrors,SegmentName,object,SegmentName; see table grain and notebook context,One selected SeriesKey Date held-out prediction
+TestErrors,Date,datetime64[ns],Period date (monthly facts use first day; DimDate is daily),One selected SeriesKey Date held-out prediction
+TestErrors,ActualRegistrations,int64,Observed complete-month registration count; blank for Future,One selected SeriesKey Date held-out prediction
+TestErrors,PredictedRegistrations,float64,PredictedRegistrations; see table grain and notebook context,One selected SeriesKey Date held-out prediction
+TestErrors,AbsoluteError,float64,AbsoluteError; see table grain and notebook context,One selected SeriesKey Date held-out prediction
+TestErrors,Model,object,Model; see table grain and notebook context,One selected SeriesKey Date held-out prediction
+DataQuality,Date,datetime64[ns],Period date (monthly facts use first day; DimDate is daily),One original observed source month
+DataQuality,SourceRegistrations,int64,SourceRegistrations; see table grain and notebook context,One original observed source month
+DataQuality,SourceRecords,int64,Number of original source rows represented by this aggregate,One original observed source month
+DataQuality,IsComplete,bool,Observed source month treated as complete except known partial Feb2026; a missing month has no row,One original observed source month
+DataQuality,UsedForModeling,bool,True for Jan2024-Jan2026 source months,One original observed source month
+ETL_Counts,Stage,object,Stage; see table grain and notebook context,One transformation stage
+ETL_Counts,InputRows,int64,InputRows; see table grain and notebook context,One transformation stage
+ETL_Counts,OutputRows,int64,OutputRows; see table grain and notebook context,One transformation stage
+ETL_Counts,Reason,object,Reason; see table grain and notebook context,One transformation stage
+HypothesisEvidence,Hypothesis,object,Hypothesis; see table grain and notebook context,One proposed descriptive hypothesis
+HypothesisEvidence,Question,object,Question; see table grain and notebook context,One proposed descriptive hypothesis
+HypothesisEvidence,ObservedValue,float64,ObservedValue; see table grain and notebook context,One proposed descriptive hypothesis
+HypothesisEvidence,Threshold,float64,Threshold; see table grain and notebook context,One proposed descriptive hypothesis
+HypothesisEvidence,Result,object,Descriptive assessment on supplied records; no causal or population inference,One proposed descriptive hypothesis
+HypothesisEvidence,Interpretation,object,Interpretation; see table grain and notebook context,One proposed descriptive hypothesis

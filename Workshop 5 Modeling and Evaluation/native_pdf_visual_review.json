@@ -1,0 +1,29 @@
+[
+  {
+    "pdf": "D:\\Github\\BI 2026\\Workshop 4 \u0e01\u0e32\u0e23\u0e08\u0e31\u0e14\u0e40\u0e15\u0e23\u0e35\u0e22\u0e21\u0e02\u0e49\u0e2d\u0e21\u0e39\u0e25 (Data Preparation)\\Workshop4_Data_Preparation_Report.pdf",
+    "pages": 3,
+    "pdf_sha256": "438353d3448a29b9338af12579fa05398e4a9a43d1d65b5902625019cd557a29",
+    "all_final_pages_visually_reviewed": true,
+    "relocation_update_changed_pages_rendered_and_reviewed": true,
+    "no_clipping_or_overlapping_text_or_tables": true,
+    "native_batch_relocation_verified_GUI_pending_distinguished": true
+  },
+  {
+    "pdf": "D:\\Github\\BI 2026\\Workshop 5 Modeling and Evaluation\\Workshop5_Modeling_Evaluation_Report.pdf",
+    "pages": 5,
+    "pdf_sha256": "2bb05d00f6b48887c838cb1b3c2b6409f878f34ae4b829bf9670db7fe55fd28c",
+    "all_final_pages_visually_reviewed": true,
+    "relocation_update_changed_pages_rendered_and_reviewed": true,
+    "no_clipping_or_overlapping_text_or_tables": true,
+    "native_batch_relocation_verified_GUI_pending_distinguished": true
+  },
+  {
+    "pdf": "D:\\Github\\BI 2026\\BI Mini Project 1\\MiniProject1_Report.pdf",
+    "pages": 7,
+    "pdf_sha256": "68ea2a4a4a692093e5e2841fcc3ab72981ef59f560fce94bf1dfe9ddc0e8aca5",
+    "all_final_pages_visually_reviewed": true,
+    "relocation_update_changed_pages_rendered_and_reviewed": true,
+    "no_clipping_or_overlapping_text_or_tables": true,
+    "native_batch_relocation_verified_GUI_pending_distinguished": true
+  }
+]

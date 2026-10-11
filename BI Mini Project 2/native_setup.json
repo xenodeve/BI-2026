@@ -1,0 +1,61 @@
+{
+  "engine": "Native AI Studio official batch full common holdout",
+  "target": "PATIENT_TYPE",
+  "positive_class": "Hospitalized",
+  "target_mapping": {
+    "1": "Outpatient",
+    "2": "Hospitalized"
+  },
+  "prepared_rows": 1048575,
+  "model_rows_used": 30000,
+  "training_rows": 18000,
+  "test_rows": 12000,
+  "test_set_id": "5701b5d07bbc5533cadee3fc9feedda58c3897c6d758a0ffde4b840f715b7097",
+  "split_method": "Same native stratified sample30000 with local seed2001; automatic split60/40 local seed1992; evaluate all12000 test rows once",
+  "seed": 2001,
+  "sampling_or_license_limit": "Full prepared1,048,575 rows preserved; modeling sample30,000 explicitly for compute cost, identical acrossall9",
+  "inputs": [
+    "USMER",
+    "MEDICAL_UNIT",
+    "SEX",
+    "PNEUMONIA",
+    "AGE",
+    "DIABETES",
+    "COPD",
+    "ASTHMA",
+    "INMSUPR",
+    "HIPERTENSION",
+    "OTHER_DISEASE",
+    "CARDIOVASCULAR",
+    "OBESITY",
+    "RENAL_CHRONIC",
+    "TOBACCO"
+  ],
+  "age_numeric_others_nominal": true,
+  "missing_code_policy": "Nominal98/99 retained as coded categories; native MISSING category handles actual missing values; AGE numeric, ages97/98/99 not recoded as missing",
+  "preprocessing_fit_scope": "Generated native feature/preprocessing fit is downstream of training split; ID role set after generic preprocessing and before sampling; validation transformed using training objects",
+  "setup_screenshots": [
+    "screenshots/native_02_turbo_prepared.png",
+    "screenshots/native_03_positive_target.png",
+    "screenshots/native_04_inputs15.png"
+  ],
+  "selected_model": "Deep Learning",
+  "selection_reason": "Highest common-test Accuracy0.9045, Recall0.7042377, F10.7377574 and AUC0.9111739; balances FN677 with FP469. Selection uses this educational test comparison; no independent post-selection evaluation claimed.",
+  "metric_scale": "fraction_0_to_1",
+  "native_run_complete": true,
+  "split_local_seed": 1992,
+  "setup_screenshot_context": "Original GUI data preparation and target/input setup; not the batch common-result run",
+  "native_evaluations_complete": true,
+  "native_gui_results_verified": false,
+  "execution_provenance": {
+    "mode": "official installed AI Studio batch runner",
+    "launcher": "D:/AI Studio 2026.1.1/scripts/ai-studio-batch.bat",
+    "entrypoint": "com.rapidminer.launcher.CommandLineLauncher",
+    "engine_version": "12.1.1 / AI Studio 2026.1.1",
+    "log": "docs/execution/native-common-batch.log",
+    "gui_run_or_gui_screenshot_claim": false,
+    "original_nine_GUI_AutoModel_default_results_are_separate": true
+  },
+  "common_proof": "common_test_verification.json",
+  "batch_log_success_verified": true
+}

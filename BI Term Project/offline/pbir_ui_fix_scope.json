@@ -1,0 +1,24 @@
+{
+  "formatting_counts": {
+    "cards": 21,
+    "line_charts": 4,
+    "bar_charts": 6,
+    "tooltip_cards": 5,
+    "back_buttons": 1,
+    "layout_adjustments": 4
+  },
+  "changed_visuals": 34,
+  "queries_filters_advanced_bindings_unchanged": true,
+  "semantic_model_and_csv_hashes_unchanged": true,
+  "predictive_table_bounds": [
+    24,
+    670,
+    1552,
+    255
+  ],
+  "predictive_footer_and_navigation_unchanged": true,
+  "tooltip_bounds": [
+    600,
+    400
+  ]
+}

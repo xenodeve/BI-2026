@@ -1,0 +1,6 @@
+step,rows_after,columns_after,rows_removed,reason
+Read original,319795,18,0,Preserve all original bytes
+Missing review,319795,18,0,No blank cells; no imputation
+Duplicate review,319795,18,0,Anonymous matching survey profiles are not proven same people
+Outlier review,319795,18,0,Retain; IQR flag is not invalidity
+Create AnyUnhealthyDays,319795,19,0,Yes if PhysicalHealth>0 or MentalHealth>0; no target used

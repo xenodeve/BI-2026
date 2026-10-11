@@ -1,0 +1,472 @@
+{
+  "WS8": {
+    "Channel": {
+      "Corporate": {
+        "Total Sales": 4282553.0,
+        "Total Cost": 3401170,
+        "Total Profit": 881383.0,
+        "Total Orders": 264,
+        "Total Quantity": 541,
+        "Average Order Value": 16221.79,
+        "Gross Margin %": 0.205807844059373
+      },
+      "Online": {
+        "Total Sales": 11731434.5,
+        "Total Cost": 9383940,
+        "Total Profit": 2347494.5,
+        "Total Orders": 673,
+        "Total Quantity": 1391,
+        "Average Order Value": 17431.55,
+        "Gross Margin %": 0.20010293711310412
+      },
+      "Store": {
+        "Total Sales": 8552028.0,
+        "Total Cost": 6812780,
+        "Total Profit": 1739248.0,
+        "Total Orders": 563,
+        "Total Quantity": 1130,
+        "Average Order Value": 15190.1,
+        "Gross Margin %": 0.20337258016461124
+      }
+    },
+    "Category": {
+      "Accessories": {
+        "Total Sales": 678949.0,
+        "Total Cost": 395350,
+        "Total Profit": 283599.0,
+        "Total Orders": 281,
+        "Total Quantity": 567,
+        "Average Order Value": 2416.19,
+        "Gross Margin %": 0.41770294970608984
+      },
+      "Audio": {
+        "Total Sales": 971667.0,
+        "Total Cost": 608190,
+        "Total Profit": 363477.0,
+        "Total Orders": 169,
+        "Total Quantity": 378,
+        "Average Order Value": 5749.51,
+        "Gross Margin %": 0.3740756864234352
+      },
+      "Computer": {
+        "Total Sales": 11138040.0,
+        "Total Cost": 9459300,
+        "Total Profit": 1678740.0,
+        "Total Orders": 226,
+        "Total Quantity": 450,
+        "Average Order Value": 49283.36,
+        "Gross Margin %": 0.1507213118286521
+      },
+      "Display": {
+        "Total Sales": 1794287.5,
+        "Total Cost": 1300460,
+        "Total Profit": 493827.5,
+        "Total Orders": 177,
+        "Total Quantity": 357,
+        "Average Order Value": 10137.22,
+        "Gross Margin %": 0.2752220588952439
+      },
+      "Mobile": {
+        "Total Sales": 6360405.0,
+        "Total Cost": 5178900,
+        "Total Profit": 1181505.0,
+        "Total Orders": 209,
+        "Total Quantity": 414,
+        "Average Order Value": 30432.56,
+        "Gross Margin %": 0.18575939739686387
+      },
+      "Network": {
+        "Total Sales": 623901.5,
+        "Total Cost": 387840,
+        "Total Profit": 236061.5,
+        "Total Orders": 146,
+        "Total Quantity": 296,
+        "Average Order Value": 4273.3,
+        "Gross Margin %": 0.37836341153210884
+      },
+      "Office": {
+        "Total Sales": 2293044.0,
+        "Total Cost": 1764790,
+        "Total Profit": 528254.0,
+        "Total Orders": 151,
+        "Total Quantity": 313,
+        "Average Order Value": 15185.72,
+        "Gross Margin %": 0.2303723783756439
+      },
+      "Storage": {
+        "Total Sales": 705721.5,
+        "Total Cost": 503060,
+        "Total Profit": 202661.5,
+        "Total Orders": 141,
+        "Total Quantity": 287,
+        "Average Order Value": 5005.12,
+        "Gross Margin %": 0.28716923035503383
+      }
+    },
+    "Region": {
+      "Bangkok": {
+        "Total Sales": 4577602.5,
+        "Total Cost": 3686110,
+        "Total Profit": 891492.5,
+        "Total Orders": 258,
+        "Total Quantity": 504,
+        "Average Order Value": 17742.65,
+        "Gross Margin %": 0.19475096406907327
+      },
+      "Central": {
+        "Total Sales": 3789048.0,
+        "Total Cost": 3014080,
+        "Total Profit": 774968.0,
+        "Total Orders": 224,
+        "Total Quantity": 443,
+        "Average Order Value": 16915.39,
+        "Gross Margin %": 0.2045284198036024
+      },
+      "East": {
+        "Total Sales": 4363430.5,
+        "Total Cost": 3523030,
+        "Total Profit": 840400.5,
+        "Total Orders": 253,
+        "Total Quantity": 549,
+        "Average Order Value": 17246.76,
+        "Gross Margin %": 0.1926008675971807
+      },
+      "North": {
+        "Total Sales": 3618237.0,
+        "Total Cost": 2885220,
+        "Total Profit": 733017.0,
+        "Total Orders": 243,
+        "Total Quantity": 471,
+        "Average Order Value": 14889.86,
+        "Gross Margin %": 0.2025895484458315
+      },
+      "Northeast": {
+        "Total Sales": 4116674.0,
+        "Total Cost": 3252660,
+        "Total Profit": 864014.0,
+        "Total Orders": 254,
+        "Total Quantity": 522,
+        "Average Order Value": 16207.38,
+        "Gross Margin %": 0.20988156944173864
+      },
+      "South": {
+        "Total Sales": 4101023.5,
+        "Total Cost": 3236790,
+        "Total Profit": 864233.5,
+        "Total Orders": 268,
+        "Total Quantity": 573,
+        "Average Order Value": 15302.33,
+        "Gross Margin %": 0.21073605162223527
+      }
+    },
+    "Year": {
+      "2025": {
+        "Total Sales": 13997390.0,
+        "Total Cost": 11144550,
+        "Total Profit": 2852840.0,
+        "Total Orders": 873,
+        "Total Quantity": 1767,
+        "Average Order Value": 16033.67,
+        "Gross Margin %": 0.20381228214688596
+      },
+      "2026": {
+        "Total Sales": 10568625.5,
+        "Total Cost": 8453340,
+        "Total Profit": 2115285.5,
+        "Total Orders": 627,
+        "Total Quantity": 1295,
+        "Average Order Value": 16855.86,
+        "Gross Margin %": 0.200147644554157
+      }
+    },
+    "Quarter": {
+      "Q1": {
+        "Total Sales": 7498947.0,
+        "Total Cost": 6017630,
+        "Total Profit": 1481317.0,
+        "Total Orders": 446,
+        "Total Quantity": 877,
+        "Average Order Value": 16813.78,
+        "Gross Margin %": 0.19753666748144774
+      },
+      "Q2": {
+        "Total Sales": 5825256.5,
+        "Total Cost": 4594990,
+        "Total Profit": 1230266.5,
+        "Total Orders": 441,
+        "Total Quantity": 891,
+        "Average Order Value": 13209.2,
+        "Gross Margin %": 0.21119524951390553
+      },
+      "Q3": {
+        "Total Sales": 7164096.0,
+        "Total Cost": 5721050,
+        "Total Profit": 1443046.0,
+        "Total Orders": 381,
+        "Total Quantity": 801,
+        "Average Order Value": 18803.4,
+        "Gross Margin %": 0.20142750739241908
+      },
+      "Q4": {
+        "Total Sales": 4077716.0,
+        "Total Cost": 3264220,
+        "Total Profit": 813496.0,
+        "Total Orders": 232,
+        "Total Quantity": 493,
+        "Average Order Value": 17576.36,
+        "Gross Margin %": 0.19949795424693628
+      }
+    },
+    "MonthName": {
+      "Apr": {
+        "Total Sales": 1750177.5,
+        "Total Cost": 1355790,
+        "Total Profit": 394387.5,
+        "Total Orders": 139,
+        "Total Quantity": 291,
+        "Average Order Value": 12591.21,
+        "Gross Margin %": 0.22534142965499213
+      },
+      "Aug": {
+        "Total Sales": 2906624.0,
+        "Total Cost": 2339180,
+        "Total Profit": 567444.0,
+        "Total Orders": 159,
+        "Total Quantity": 315,
+        "Average Order Value": 18280.65,
+        "Gross Margin %": 0.19522442531266515
+      },
+      "Dec": {
+        "Total Sales": 1459517.5,
+        "Total Cost": 1185700,
+        "Total Profit": 273817.5,
+        "Total Orders": 69,
+        "Total Quantity": 154,
+        "Average Order Value": 21152.43,
+        "Gross Margin %": 0.18760823354293457
+      },
+      "Feb": {
+        "Total Sales": 2577648.0,
+        "Total Cost": 2037480,
+        "Total Profit": 540168.0,
+        "Total Orders": 144,
+        "Total Quantity": 288,
+        "Average Order Value": 17900.33,
+        "Gross Margin %": 0.20955848122008902
+      },
+      "Jan": {
+        "Total Sales": 1883899.5,
+        "Total Cost": 1514870,
+        "Total Profit": 369029.5,
+        "Total Orders": 130,
+        "Total Quantity": 251,
+        "Average Order Value": 14491.53,
+        "Gross Margin %": 0.19588598011730457
+      },
+      "Jul": {
+        "Total Sales": 2955582.0,
+        "Total Cost": 2368920,
+        "Total Profit": 586662.0,
+        "Total Orders": 149,
+        "Total Quantity": 336,
+        "Average Order Value": 19836.12,
+        "Gross Margin %": 0.19849288566515833
+      },
+      "Jun": {
+        "Total Sales": 1726032.5,
+        "Total Cost": 1348610,
+        "Total Profit": 377422.5,
+        "Total Orders": 152,
+        "Total Quantity": 316,
+        "Average Order Value": 11355.48,
+        "Gross Margin %": 0.21866477021724678
+      },
+      "Mar": {
+        "Total Sales": 3037399.5,
+        "Total Cost": 2465280,
+        "Total Profit": 572119.5,
+        "Total Orders": 172,
+        "Total Quantity": 338,
+        "Average Order Value": 17659.3,
+        "Gross Margin %": 0.1883583308682312
+      },
+      "May": {
+        "Total Sales": 2349046.5,
+        "Total Cost": 1890590,
+        "Total Profit": 458456.5,
+        "Total Orders": 150,
+        "Total Quantity": 284,
+        "Average Order Value": 15660.31,
+        "Gross Margin %": 0.19516706033703463
+      },
+      "Nov": {
+        "Total Sales": 1357631.5,
+        "Total Cost": 1082500,
+        "Total Profit": 275131.5,
+        "Total Orders": 79,
+        "Total Quantity": 181,
+        "Average Order Value": 17185.21,
+        "Gross Margin %": 0.2026555070355984
+      },
+      "Oct": {
+        "Total Sales": 1260567.0,
+        "Total Cost": 996020,
+        "Total Profit": 264547.0,
+        "Total Orders": 84,
+        "Total Quantity": 158,
+        "Average Order Value": 15006.75,
+        "Gross Margin %": 0.20986349793386627
+      },
+      "Sep": {
+        "Total Sales": 1301890.0,
+        "Total Cost": 1012950,
+        "Total Profit": 288940.0,
+        "Total Orders": 73,
+        "Total Quantity": 150,
+        "Average Order Value": 17834.11,
+        "Gross Margin %": 0.2219388734839349
+      }
+    },
+    "Total": {
+      "Total Sales": 24566015.5,
+      "Total Cost": 19597890,
+      "Total Profit": 4968125.5,
+      "Total Orders": 1500,
+      "Total Quantity": 3062,
+      "Average Order Value": 16377.34,
+      "Gross Margin %": 0.20223570647832573
+    },
+    "coverage": {
+      "minimum": "2025-01-03T00:00:00",
+      "maximum": "2026-08-31T00:00:00",
+      "rows": 1500,
+      "customers": 120,
+      "products": 20
+    },
+    "slicer_checks": {
+      "Year=2025": {
+        "Total Sales": 13997390.0,
+        "Total Cost": 11144550,
+        "Total Profit": 2852840.0,
+        "Total Orders": 873,
+        "Total Quantity": 1767,
+        "Average Order Value": 16033.67,
+        "Gross Margin %": 0.20381228214688596
+      },
+      "Region=Bangkok": {
+        "Total Sales": 4577602.5,
+        "Total Cost": 3686110,
+        "Total Profit": 891492.5,
+        "Total Orders": 258,
+        "Total Quantity": 504,
+        "Average Order Value": 17742.65,
+        "Gross Margin %": 0.19475096406907327
+      },
+      "Channel=Store": {
+        "Total Sales": 8552028.0,
+        "Total Cost": 6812780,
+        "Total Profit": 1739248.0,
+        "Total Orders": 563,
+        "Total Quantity": 1130,
+        "Average Order Value": 15190.1,
+        "Gross Margin %": 0.20337258016461124
+      },
+      "Year=2025 AND Region=Bangkok AND Channel=Store": {
+        "Total Sales": 827988.0,
+        "Total Cost": 681150,
+        "Total Profit": 146838.0,
+        "Total Orders": 55,
+        "Total Quantity": 99,
+        "Average Order Value": 15054.33,
+        "Gross Margin %": 0.1773431499007232
+      }
+    }
+  },
+  "WS9": {
+    "years": {
+      "2553": 15936400,
+      "2554": 19230470,
+      "2555": 22353903,
+      "2556": 26546725,
+      "2557": 24809683,
+      "2558": 29923185,
+      "2559": 32529588,
+      "2560": 35591978,
+      "2561": 38178194,
+      "2562": 39916251
+    },
+    "continents_2562": {
+      "East Asia": 27388987,
+      "Europe": 6712091,
+      "Americas": 1630874,
+      "South Asia": 2398755,
+      "Oceania": 884685,
+      "Middle East": 702539,
+      "Africa": 198320
+    },
+    "countries_2562": {
+      "Argentina": 29498,
+      "Australia": 767291,
+      "Austria": 111428,
+      "Bangladesh": 136677,
+      "Belgium": 114669,
+      "Brazil": 69714,
+      "Brunei Darussalam": 15613,
+      "Cambodia": 910696,
+      "Canada": 273214,
+      "China": 10997338,
+      "Denmark": 162456,
+      "Eastern Europe": 559149,
+      "Egypt": 23722,
+      "Finland": 128014,
+      "France": 745346,
+      "Germany": 852481,
+      "Hong Kong": 1045361,
+      "India": 1996842,
+      "Indonesia": 710494,
+      "Ireland": 69655,
+      "Israel": 195856,
+      "Italy": 272374,
+      "Japan": 1806438,
+      "Kuwait": 78199,
+      "Laos": 1854792,
+      "Malaysia": 4265574,
+      "Myanmar": 378232,
+      "Nepal": 60377,
+      "Netherlands": 241608,
+      "New Zealand": 112680,
+      "Norway": 127992,
+      "Other Countries": 789533,
+      "Pakistan": 79843,
+      "Philippines": 506430,
+      "Russia": 1483337,
+      "Saudi Arabia": 30006,
+      "Singapore": 1059484,
+      "South Africa": 96452,
+      "South Korea": 1890973,
+      "Spain": 188997,
+      "Sri Lanka": 71043,
+      "Sweden": 287341,
+      "Switzerland": 192130,
+      "Taiwan": 790039,
+      "United Arab Emirates": 130158,
+      "United Kingdom": 992574,
+      "United States": 1165950,
+      "Vietnam": 1048181
+    },
+    "Total Tourists": 285016377,
+    "Total Countries": 48,
+    "East Asia Share 2562": 0.6861613080847698,
+    "coverage": {
+      "fact_rows": 540,
+      "country_dimension_rows": 55,
+      "years": "2553-2562 BE (2010-2019 CE)"
+    },
+    "slicer_checks": {
+      "Year=2562": 39916251,
+      "Year=2562 AND Continent=East Asia": 27388987,
+      "Year=2562 AND Country=China": 10997338,
+      "Country=Taiwan (all years)": 5233216
+    }
+  }
+}

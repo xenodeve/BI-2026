@@ -1,0 +1,32 @@
+relationship 61191b38-02f6-49e2-83c0-6ddb78eacc74
+	fromColumn: FactRegistrations.Date
+	toColumn: DimDate.Date
+
+relationship 3f9e80dc-800c-4589-8e7c-f1b5a685929e
+	fromColumn: FactRegistrations.BrandKey
+	toColumn: DimBrand.BrandKey
+
+relationship ff00dd2e-cd8a-40cb-821c-0c274d067dab
+	fromColumn: FactRegistrations.VehicleTypeKey
+	toColumn: DimVehicleType.VehicleTypeKey
+
+relationship 899293b1-2005-48b0-8fc1-0ec2dfa69139
+	fromColumn: FactForecast.Date
+	toColumn: DimDate.Date
+
+relationship c23c0135-7068-4e23-8941-39122fa34d9f
+	fromColumn: FactForecast.SeriesKey
+	toColumn: DimSeries.SeriesKey
+
+relationship 9db03b98-dd86-4f08-aca8-53e5f41af914
+	fromColumn: ModelComparison.SeriesKey
+	toColumn: DimSeries.SeriesKey
+
+relationship 53d050c6-da3b-4c2a-be15-c9ba3cdc2e3d
+	fromColumn: TestErrors.Date
+	toColumn: DimDate.Date
+
+relationship afd6dd44-e2ee-4840-bfb4-b4a819261e34
+	fromColumn: TestErrors.SeriesKey
+	toColumn: DimSeries.SeriesKey
+

@@ -1,0 +1,150 @@
+{
+  "rows_before": 319795,
+  "rows_after": 319795,
+  "columns_before": 18,
+  "columns_after": 19,
+  "missing_cells_before": 0,
+  "missing_cells_after": 0,
+  "exact_duplicate_rows_before": 18078,
+  "exact_duplicate_rows_after": 18078,
+  "duplicate_predictor_rows": 19214,
+  "target_before": {
+    "No": 292422,
+    "Yes": 27373
+  },
+  "target_after": {
+    "No": 292422,
+    "Yes": 27373
+  },
+  "raw_sha256": "90a1e2e8bdcb4aba54314a41d35d2ac3be4763e459df33951e08e415f527f5a8",
+  "numeric": {
+    "BMI": {
+      "min": 12.02,
+      "max": 94.85,
+      "median": 27.34,
+      "mean": 28.32539852092747,
+      "q1": 24.03,
+      "q3": 31.42,
+      "iqr_low": 12.945,
+      "iqr_high": 42.505,
+      "iqr_flag_count": 10396
+    },
+    "PhysicalHealth": {
+      "min": 0.0,
+      "max": 30.0,
+      "median": 0.0,
+      "mean": 3.3717100017198516,
+      "q1": 0.0,
+      "q3": 2.0,
+      "iqr_low": -3.0,
+      "iqr_high": 5.0,
+      "iqr_flag_count": 47146
+    },
+    "MentalHealth": {
+      "min": 0.0,
+      "max": 30.0,
+      "median": 0.0,
+      "mean": 3.898366140808956,
+      "q1": 0.0,
+      "q3": 3.0,
+      "iqr_low": -4.5,
+      "iqr_high": 7.5,
+      "iqr_flag_count": 51576
+    },
+    "SleepTime": {
+      "min": 1.0,
+      "max": 24.0,
+      "median": 7.0,
+      "mean": 7.097074688472302,
+      "q1": 6.0,
+      "q3": 8.0,
+      "iqr_low": 3.0,
+      "iqr_high": 11.0,
+      "iqr_flag_count": 4543
+    }
+  },
+  "categories": {
+    "HeartDisease": {
+      "No": 292422,
+      "Yes": 27373
+    },
+    "Smoking": {
+      "No": 187887,
+      "Yes": 131908
+    },
+    "AlcoholDrinking": {
+      "No": 298018,
+      "Yes": 21777
+    },
+    "Stroke": {
+      "No": 307726,
+      "Yes": 12069
+    },
+    "DiffWalking": {
+      "No": 275385,
+      "Yes": 44410
+    },
+    "Sex": {
+      "Female": 167805,
+      "Male": 151990
+    },
+    "AgeCategory": {
+      "65-69": 34151,
+      "60-64": 33686,
+      "70-74": 31065,
+      "55-59": 29757,
+      "50-54": 25382,
+      "80 or older": 24153,
+      "45-49": 21791,
+      "75-79": 21482,
+      "18-24": 21064,
+      "40-44": 21006,
+      "35-39": 20550,
+      "30-34": 18753,
+      "25-29": 16955
+    },
+    "Race": {
+      "White": 245212,
+      "Hispanic": 27446,
+      "Black": 22939,
+      "Other": 10928,
+      "Asian": 8068,
+      "American Indian/Alaskan Native": 5202
+    },
+    "Diabetic": {
+      "No": 269653,
+      "Yes": 40802,
+      "No, borderline diabetes": 6781,
+      "Yes (during pregnancy)": 2559
+    },
+    "PhysicalActivity": {
+      "Yes": 247957,
+      "No": 71838
+    },
+    "GenHealth": {
+      "Very good": 113858,
+      "Good": 93129,
+      "Excellent": 66842,
+      "Fair": 34677,
+      "Poor": 11289
+    },
+    "Asthma": {
+      "No": 276923,
+      "Yes": 42872
+    },
+    "KidneyDisease": {
+      "No": 308016,
+      "Yes": 11779
+    },
+    "SkinCancer": {
+      "No": 289976,
+      "Yes": 29819
+    }
+  },
+  "logical_invalid_counts": {
+    "BMI_nonpositive": 0,
+    "PhysicalHealth_outside_0_30": 0,
+    "MentalHealth_outside_0_30": 0,
+    "SleepTime_outside_0_24": 0
+  }
+}

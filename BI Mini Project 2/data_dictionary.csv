@@ -1,0 +1,22 @@
+﻿Attribute,ModelRole,PlannedType,Interpretation
+USMER,Input,nominal,Categorical code; do not treat numerical code as a continuous quantity
+MEDICAL_UNIT,Input,nominal,Categorical code; do not treat numerical code as a continuous quantity
+SEX,Input,nominal,Categorical code; do not treat numerical code as a continuous quantity
+PATIENT_TYPE,Target,nominal,"Admission outcome: 1 Outpatient, 2 Hospitalized; positive Hospitalized"
+DATE_DIED,Excluded,nominal,Removed from pre-admission model
+INTUBED,Excluded,nominal,Removed from pre-admission model
+PNEUMONIA,Input,nominal,Categorical code; do not treat numerical code as a continuous quantity
+AGE,Input,numeric,Age in years; numeric values 97/98/99 remain ages
+PREGNANT,Excluded,nominal,Removed from pre-admission model
+DIABETES,Input,nominal,Categorical code; do not treat numerical code as a continuous quantity
+COPD,Input,nominal,Categorical code; do not treat numerical code as a continuous quantity
+ASTHMA,Input,nominal,Categorical code; do not treat numerical code as a continuous quantity
+INMSUPR,Input,nominal,Categorical code; do not treat numerical code as a continuous quantity
+HIPERTENSION,Input,nominal,Categorical code; do not treat numerical code as a continuous quantity
+OTHER_DISEASE,Input,nominal,Categorical code; do not treat numerical code as a continuous quantity
+CARDIOVASCULAR,Input,nominal,Categorical code; do not treat numerical code as a continuous quantity
+OBESITY,Input,nominal,Categorical code; do not treat numerical code as a continuous quantity
+RENAL_CHRONIC,Input,nominal,Categorical code; do not treat numerical code as a continuous quantity
+TOBACCO,Input,nominal,Categorical code; do not treat numerical code as a continuous quantity
+CLASIFFICATION_FINAL,Excluded,nominal,Removed from pre-admission model
+ICU,Excluded,nominal,Removed from pre-admission model

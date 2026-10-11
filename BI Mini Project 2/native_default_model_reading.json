@@ -1,0 +1,88 @@
+{
+  "logistic_regression": {
+    "coefficients": [
+      {
+        "feature": "PNEUMONIA.2",
+        "weight": -3.727260017505557,
+        "reference_category": "1 จาก encoded native names (inferred)",
+        "interpretation": "ลบ ต่อ base logit ของ Hospitalized; final model มี calibration และ cost wrapper"
+      },
+      {
+        "feature": "PNEUMONIA.99",
+        "weight": -2.4502735733305716,
+        "reference_category": "1 จาก encoded native names (inferred)",
+        "interpretation": "ลบ ต่อ base logit ของ Hospitalized; final model มี calibration และ cost wrapper"
+      },
+      {
+        "feature": "MEDICAL_UNIT.10",
+        "weight": 1.9300024831215616,
+        "reference_category": "1 จาก encoded native names (inferred)",
+        "interpretation": "บวก ต่อ base logit ของ Hospitalized; final model มี calibration และ cost wrapper"
+      },
+      {
+        "feature": "COPD.98",
+        "weight": -1.727987436006364,
+        "reference_category": "1 จาก encoded native names (inferred)",
+        "interpretation": "ลบ ต่อ base logit ของ Hospitalized; final model มี calibration และ cost wrapper"
+      },
+      {
+        "feature": "RENAL_CHRONIC.98",
+        "weight": -1.461029419815949,
+        "reference_category": "1 จาก encoded native names (inferred)",
+        "interpretation": "ลบ ต่อ base logit ของ Hospitalized; final model มี calibration และ cost wrapper"
+      },
+      {
+        "feature": "MEDICAL_UNIT.7",
+        "weight": 0.9903372058640233,
+        "reference_category": "1 จาก encoded native names (inferred)",
+        "interpretation": "บวก ต่อ base logit ของ Hospitalized; final model มี calibration และ cost wrapper"
+      },
+      {
+        "feature": "AGE",
+        "weight": 0.026058827818387312,
+        "reference_category": "อายุต่อ1ปี native normMul=null",
+        "interpretation": "บวก ต่อ base logit ของ Hospitalized; final model มี calibration และ cost wrapper"
+      }
+    ],
+    "screenshot": null,
+    "note": "Each entry: feature, reference_category if applicable, weight, interpretation; sign refers to Hospitalized positive class",
+    "native_file": "Native_AI_Repository/MiniProject2_AutoModel_9Models/Logistic Regression/Model.rmmodel",
+    "coefficient_layer": "baseModel.baseModel; full coefficients in native_logistic_coefficients.csv"
+  },
+  "decision_tree": {
+    "root": "PNEUMONIA",
+    "path_to_leaf": [
+      "PNEUMONIA = 1"
+    ],
+    "leaf_prediction": "Hospitalized",
+    "screenshot": null,
+    "leaf_training_counts": {
+      "Outpatient": 6008,
+      "Hospitalized": 30238
+    },
+    "native_file": "Native_AI_Repository/MiniProject2_AutoModel_9Models/Decision Tree/Model.rmmodel",
+    "note": "Read from native serialized base tree; leaf counts are training-node counts, not the test confusion matrix."
+  },
+  "random_forest": {
+    "top3_importance": [],
+    "screenshot": null,
+    "note": "Saved Weights.rmweights assigns all15 inputs weight1.0; no ranked importance can be inferred. Model Simulator globalWeights=null. Actual native GUI importance remains pending."
+  },
+  "confusion_matrix": {
+    "model": null,
+    "tp": null,
+    "fp": null,
+    "fn": null,
+    "tn": null,
+    "test_set_id": null,
+    "screenshot": null
+  },
+  "scoring": {
+    "model": null,
+    "record_inputs": null,
+    "prediction": null,
+    "confidence_hospitalized": null,
+    "threshold": 0.5,
+    "screenshot": null
+  }
+}

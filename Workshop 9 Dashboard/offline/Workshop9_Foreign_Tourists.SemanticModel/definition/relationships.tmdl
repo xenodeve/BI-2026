@@ -1,0 +1,10 @@
+relationship a2dda616-09c2-499c-be28-d35fdc9da074
+	fromColumn: 'นักท่องเที่ยวต่างชาติ'.'รหัสประเทศ'
+	toColumn: 'ประเทศ'.'รหัสประเทศ'
+	crossFilteringBehavior: oneDirection
+
+relationship d6d6e867-271f-4284-9e53-809f265e29b0
+	fromColumn: 'นักท่องเที่ยวต่างชาติ'.'รหัสทวีป'
+	toColumn: 'ทวีป'.'รหัสทวีป'
+	crossFilteringBehavior: oneDirection
+

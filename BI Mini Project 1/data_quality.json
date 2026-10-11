@@ -1,0 +1,99 @@
+{
+  "source_rows": 45211,
+  "source_columns": 17,
+  "positive": 5289,
+  "negative": 39922,
+  "positive_rate": 0.11698480458295547,
+  "empty_cells": 0,
+  "exact_duplicate_rows": 0,
+  "duplicate_predictor_rows_after_duration_removal": 16,
+  "unknown_counts": {
+    "job": 288,
+    "education": 1857,
+    "contact": 13020,
+    "poutcome": 36959
+  },
+  "negative_balance_rows": 3766,
+  "pdays_minus_one": 36954,
+  "previous_zero": 36954,
+  "numeric": {
+    "age": {
+      "min": 18,
+      "max": 95,
+      "mean": 40.93621021432837,
+      "median": 39.0,
+      "q1": 33.0,
+      "q3": 48.0,
+      "iqr_low": 10.5,
+      "iqr_high": 70.5,
+      "iqr_flag_count": 487
+    },
+    "balance": {
+      "min": -8019,
+      "max": 102127,
+      "mean": 1362.2720576850766,
+      "median": 448.0,
+      "q1": 72.0,
+      "q3": 1428.0,
+      "iqr_low": -1962.0,
+      "iqr_high": 3462.0,
+      "iqr_flag_count": 4729
+    },
+    "day": {
+      "min": 1,
+      "max": 31,
+      "mean": 15.80641879188693,
+      "median": 16.0,
+      "q1": 8.0,
+      "q3": 21.0,
+      "iqr_low": -11.5,
+      "iqr_high": 40.5,
+      "iqr_flag_count": 0
+    },
+    "duration": {
+      "min": 0,
+      "max": 4918,
+      "mean": 258.1630797814691,
+      "median": 180.0,
+      "q1": 103.0,
+      "q3": 319.0,
+      "iqr_low": -221.0,
+      "iqr_high": 643.0,
+      "iqr_flag_count": 3235
+    },
+    "campaign": {
+      "min": 1,
+      "max": 63,
+      "mean": 2.763840658246887,
+      "median": 2.0,
+      "q1": 1.0,
+      "q3": 3.0,
+      "iqr_low": -2.0,
+      "iqr_high": 6.0,
+      "iqr_flag_count": 3064
+    },
+    "pdays": {
+      "min": -1,
+      "max": 871,
+      "mean": 40.19782796222158,
+      "median": -1.0,
+      "q1": -1.0,
+      "q3": -1.0,
+      "iqr_low": -1.0,
+      "iqr_high": -1.0,
+      "iqr_flag_count": 8257
+    },
+    "previous": {
+      "min": 0,
+      "max": 275,
+      "mean": 0.5803233726305546,
+      "median": 0.0,
+      "q1": 0.0,
+      "q3": 0.0,
+      "iqr_low": 0.0,
+      "iqr_high": 0.0,
+      "iqr_flag_count": 8257
+    }
+  },
+  "raw_sha256": "d1513ec63b385506f7cfce9f2c5caa9fe99e7ba4e8c3fa264b3aaf0f849ed32d"
+}

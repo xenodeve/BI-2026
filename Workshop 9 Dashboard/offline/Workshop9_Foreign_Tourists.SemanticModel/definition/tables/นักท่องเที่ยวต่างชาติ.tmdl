@@ -1,0 +1,42 @@
+table 'นักท่องเที่ยวต่างชาติ'
+
+	measure 'Total Tourists' = SUM('นักท่องเที่ยวต่างชาติ'[จำนวนคน])
+		formatString: #,0 "people"
+
+	measure 'Total Countries' = DISTINCTCOUNT('นักท่องเที่ยวต่างชาติ'[รหัสประเทศ])
+		formatString: #,0
+
+	measure 'Tourist Share %' = DIVIDE([Total Tourists], CALCULATE([Total Tourists], REMOVEFILTERS('ทวีป')), 0)
+		formatString: 0.00%
+
+	column 'รหัสทวีป'
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: รหัสทวีป
+
+	column 'รหัสประเทศ'
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: รหัสประเทศ
+
+	column 'ปี'
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: ปี
+
+	column 'จำนวนคน'
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: จำนวนคน
+
+	partition 'นักท่องเที่ยวต่างชาติ' = m
+		mode: import
+		source =
+			let
+			    Source = Excel.Workbook(File.Contents("D:/Github/BI 2026/Workshop 9 Dashboard/Foreign_tourists_En.xlsx"), null, true),
+			    Raw = Source{[Item="นักท่องเที่ยวต่างชาติ",Kind="Sheet"]}[Data],
+			    Headers = Table.PromoteHeaders(Raw, [PromoteAllScalars=true]),
+			    Years = Table.TransformColumns(Headers, { {"ปี", each let y=Number.From(_) in if y < 2400 then y+543 else y, Int64.Type} }),
+			    Typed = Table.TransformColumnTypes(Years, {{"รหัสทวีป", Int64.Type}, {"รหัสประเทศ", Int64.Type}, {"ปี", Int64.Type}, {"จำนวนคน", Int64.Type}})
+			in
+			    Typed

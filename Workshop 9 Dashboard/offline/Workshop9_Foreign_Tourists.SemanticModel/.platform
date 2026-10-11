@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Workshop9_Foreign_Tourists"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "804782a2-98f0-408d-81dc-554c7e3943a9"
+  }
+}

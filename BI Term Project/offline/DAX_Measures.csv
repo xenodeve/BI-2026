@@ -1,0 +1,37 @@
+﻿Table,Measure,DAX,Format
+FactRegistrations,Total Registrations,SUM(FactRegistrations[Registrations]),"#,0 ""registrations"""
+FactRegistrations,Source Records,SUM(FactRegistrations[SourceRecords]),"#,0"
+FactRegistrations,Fact Rows,COUNTROWS(FactRegistrations),"#,0"
+FactRegistrations,Active Brands,DISTINCTCOUNT(FactRegistrations[BrandKey]),"#,0"
+FactRegistrations,Active Vehicle Types,DISTINCTCOUNT(FactRegistrations[VehicleTypeKey]),"#,0"
+FactRegistrations,Average Monthly Registrations,"DIVIDE([Total Registrations], DISTINCTCOUNT(FactRegistrations[Date]), 0)","#,0.00"
+FactRegistrations,Registrations per Source Record,"DIVIDE([Total Registrations], [Source Records], 0)","#,0.00"
+FactRegistrations,Brand Share %,"DIVIDE([Total Registrations], CALCULATE([Total Registrations], REMOVEFILTERS(DimBrand)), 0)",0.00%
+FactRegistrations,Vehicle Type Share %,"DIVIDE([Total Registrations], CALCULATE([Total Registrations], REMOVEFILTERS(DimVehicleType)), 0)",0.00%
+FactRegistrations,Previous Year Registrations,"CALCULATE([Total Registrations], DATEADD(DimDate[Date], -1, YEAR))","#,0 ""registrations"""
+FactRegistrations,YoY Growth %,"DIVIDE([Total Registrations] - [Previous Year Registrations], [Previous Year Registrations])",0.00%
+FactRegistrations,Top 3 Brand Share %,"VAR TopBrands = TOPN(3, ALL(DimBrand[Brand]), [Total Registrations], DESC) RETURN DIVIDE(SUMX(TopBrands, [Total Registrations]), CALCULATE([Total Registrations], REMOVEFILTERS(DimBrand)), 0)",0.00%
+FactRegistrations,Selected Brand,"SELECTEDVALUE(DimBrand[Brand], ""All / multiple brands"")",
+FactRegistrations,Latest Complete Month,MAX(FactRegistrations[Date]),MMM yyyy
+FactRegistrations,H5 January YoY %,"VAR Jan2026 = CALCULATE([Total Registrations], REMOVEFILTERS(DimDate), DimDate[Year] = 2026, DimDate[Month] = 1) VAR Jan2025 = CALCULATE([Total Registrations], REMOVEFILTERS(DimDate), DimDate[Year] = 2025, DimDate[Month] = 1) RETURN DIVIDE(Jan2026-Jan2025, Jan2025)",0.00%
+FactForecast,Forecast Actual,"IF(HASONEVALUE(DimSeries[SeriesKey]), SUM(FactForecast[ActualRegistrations]))","#,0 ""registrations"""
+FactForecast,Forecast Prediction,"IF(HASONEVALUE(DimSeries[SeriesKey]), SUM(FactForecast[ForecastRegistrations]))","#,0 ""registrations"""
+FactForecast,Future Forecast,"IF(HASONEVALUE(DimSeries[SeriesKey]), CALCULATE(SUM(FactForecast[ForecastRegistrations]), FactForecast[DatasetSegment] = ""Future""))","#,0 ""registrations"""
+FactForecast,Selected Series,"SELECTEDVALUE(DimSeries[DisplayName], ""Choose exactly one series"")",
+FactForecast,Forecast Target Month,"CALCULATE(MAX(FactForecast[Date]), FactForecast[DatasetSegment] = ""Future"")",MMM yyyy
+ModelComparison,Validation MAE,"IF(HASONEVALUE(DimSeries[SeriesKey]), MIN(ModelComparison[ValidationMAE]))","#,0.00"
+ModelComparison,Test MAE,"IF(HASONEVALUE(DimSeries[SeriesKey]), MIN(ModelComparison[TestMAE]))","#,0.00"
+ModelComparison,Selected Model,"IF(HASONEVALUE(DimSeries[SeriesKey]), CALCULATE(SELECTEDVALUE(ModelComparison[Model]), ModelComparison[SelectedModel] = TRUE()), ""Choose exactly one series"")",
+ModelComparison,Selected Validation MAE,"IF(HASONEVALUE(DimSeries[SeriesKey]), CALCULATE(MIN(ModelComparison[ValidationMAE]), ModelComparison[SelectedModel] = TRUE()))","#,0.00"
+ModelComparison,Selected Test MAE,"IF(HASONEVALUE(DimSeries[SeriesKey]), CALCULATE(MIN(ModelComparison[TestMAE]), ModelComparison[SelectedModel] = TRUE()))","#,0.00"
+ModelComparison,Selected Test RMSE,"IF(HASONEVALUE(DimSeries[SeriesKey]), CALCULATE(MIN(ModelComparison[TestRMSE]), ModelComparison[SelectedModel] = TRUE()))","#,0.00"
+ModelComparison,Selected Test R2,"IF(HASONEVALUE(DimSeries[SeriesKey]), CALCULATE(MAX(ModelComparison[TestR2]), ModelComparison[SelectedModel] = TRUE()))",0.0000
+ModelComparison,Naive Test MAE,"IF(HASONEVALUE(DimSeries[SeriesKey]), CALCULATE(MIN(ModelComparison[TestMAE]), ModelComparison[Model] = ""Naive Forecast""))","#,0.00"
+ModelComparison,Test Improvement over Naive %,"DIVIDE([Naive Test MAE]-[Selected Test MAE], [Naive Test MAE])",0.00%
+DataQuality,Raw Records,SUM(DataQuality[SourceRecords]),"#,0"
+DataQuality,Raw Registrations,SUM(DataQuality[SourceRegistrations]),"#,0 ""registrations"""
+DataQuality,Complete Source Months,"CALCULATE(COUNTROWS(DataQuality), DataQuality[UsedForModeling] = TRUE())","#,0"
+DataQuality,Incomplete Registrations,"CALCULATE(SUM(DataQuality[SourceRegistrations]), DataQuality[IsComplete] = FALSE())","#,0 ""registrations"""
+ETL_Counts,ETL Input Rows,MAX(ETL_Counts[InputRows]),"#,0"
+ETL_Counts,ETL Output Rows,MAX(ETL_Counts[OutputRows]),"#,0"
+TestErrors,Absolute Test Error,SUM(TestErrors[AbsoluteError]),"#,0.00"

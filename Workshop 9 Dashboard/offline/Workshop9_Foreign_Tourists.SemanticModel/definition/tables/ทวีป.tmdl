@@ -1,0 +1,23 @@
+table 'ทวีป'
+
+	column 'รหัสทวีป'
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: รหัสทวีป
+
+	column 'ชื่อทวีป'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: ชื่อทวีป
+
+	partition 'ทวีป' = m
+		mode: import
+		source =
+			let
+			    Source = Excel.Workbook(File.Contents("D:/Github/BI 2026/Workshop 9 Dashboard/Foreign_tourists_En.xlsx"), null, true),
+			    Raw = Source{[Item="ทวีป",Kind="Sheet"]}[Data],
+			    Headers = Table.PromoteHeaders(Raw, [PromoteAllScalars=true]),
+			    Clean = Table.Distinct(Headers, {"ชื่อทวีป"}),
+			    Typed = Table.TransformColumnTypes(Clean, {{"รหัสทวีป", Int64.Type}, {"ชื่อทวีป", type text}})
+			in
+			    Typed

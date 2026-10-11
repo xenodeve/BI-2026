@@ -1,0 +1,20 @@
+{
+  "concurrency:parallel_decision_tree": "concurrency-12.1.1-all__com__rapidminer__extension__resources__OperatorsConcurrency.xml",
+  "concurrency:parallel_random_forest": "concurrency-12.1.1-all__com__rapidminer__extension__resources__OperatorsConcurrency.xml",
+  "read_csv": "rapidminer-studio-core-12.1.1__com__rapidminer__resources__OperatorsCore.xml",
+  "set_role": "rapidminer-studio-core-12.1.1__com__rapidminer__resources__OperatorsCore.xml",
+  "h2o:logistic_regression": "h2o-11.0.3-all__com__rapidminer__h2o__resources__OperatorsH2O.xml",
+  "nominal_to_numerical": "rapidminer-studio-core-12.1.1__com__rapidminer__resources__OperatorsCore.xml",
+  "performance_binominal_classification": "rapidminer-studio-core-12.1.1__com__rapidminer__resources__OperatorsCore.xml",
+  "select_attributes": "rapidminer-studio-core-12.1.1__com__rapidminer__resources__OperatorsCore.xml",
+  "write_csv": "rapidminer-studio-core-12.1.1__com__rapidminer__resources__OperatorsCore.xml",
+  "normalize": "rapidminer-studio-core-12.1.1__com__rapidminer__resources__OperatorsCore.xml",
+  "apply_model": "rapidminer-studio-core-12.1.1__com__rapidminer__resources__OperatorsCore.xml",
+  "filter_examples": "rapidminer-studio-core-12.1.1__com__rapidminer__resources__OperatorsCore.xml",
+  "performance_to_data": "rapidminer-studio-core-12.1.1__com__rapidminer__resources__OperatorsCore.xml",
+  "h2o:gradient_boosted_trees": "h2o-11.0.3-all__com__rapidminer__h2o__resources__OperatorsH2O.xml",
+  "generate_macro": "rapidminer-studio-core-12.1.1__com__rapidminer__resources__OperatorsCore.xml",
+  "multiply": "rapidminer-studio-core-12.1.1__com__rapidminer__resources__OperatorsCore.xml",
+  "naive_bayes": "rapidminer-studio-core-12.1.1__com__rapidminer__resources__OperatorsCore.xml",
+  "generate_attributes": "rapidminer-studio-core-12.1.1__com__rapidminer__resources__OperatorsCore.xml"
+}

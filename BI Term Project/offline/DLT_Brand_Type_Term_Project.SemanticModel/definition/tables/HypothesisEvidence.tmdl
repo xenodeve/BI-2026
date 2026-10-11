@@ -1,0 +1,43 @@
+table HypothesisEvidence
+
+	column Hypothesis
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Hypothesis
+
+	column Question
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Question
+
+	column ObservedValue
+		dataType: double
+		summarizeBy: none
+		sourceColumn: ObservedValue
+
+	column Threshold
+		dataType: double
+		summarizeBy: none
+		sourceColumn: Threshold
+
+	column Result
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Result
+
+	column Interpretation
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Interpretation
+
+	partition HypothesisEvidence = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:/Github/BI 2026/BI Term Project/HypothesisEvidence.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Nulls = Table.ReplaceValue(Headers, "", null, Replacer.ReplaceValue, Table.ColumnNames(Headers)),
+				    Typed = Table.TransformColumnTypes(Nulls, {{"Hypothesis", type text}, {"Question", type text}, {"ObservedValue", type number}, {"Threshold", type number}, {"Result", type text}, {"Interpretation", type text}}, "en-US")
+				in
+				    Typed
+

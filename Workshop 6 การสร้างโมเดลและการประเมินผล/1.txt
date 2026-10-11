@@ -1,0 +1,5 @@
+1. Precision 
+2. Recall
+3. Accuracy
+4. F-Measure
+5. Area Under Curve (AUC)

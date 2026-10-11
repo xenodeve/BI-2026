@@ -1,0 +1,3 @@
+UCI Bank Marketing
+https://archive.ics.uci.edu/static/public/222/bank%2Bmarketing.zip
+Original bank-full.csv is semicolon-delimited.

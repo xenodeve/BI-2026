@@ -1,0 +1,7 @@
+﻿Hypothesis,Question,ObservedValue,Threshold,Result,Interpretation
+H1,Motorcycles exceed 50 percent of registrations in 2024-2025,0.7238296086115095,0.5,Supported descriptively,"Registration composition, not sales or causal demand"
+H2,Honda is the largest brand overall in 2024-2025,0.6176228552835166,0.0,Supported descriptively,Overall brand composition mixes motorcycles and passenger cars; compare brands within type for a product decision
+H3,Private passenger car registrations declined in 2025 against 2024,0.03999482506884511,0.0,Not supported descriptively,Like-for-like full calendar years within passenger cars up to 7 seats
+H4,The largest 3 brands account for over 70 percent in 2024-2025,0.8143039743795359,0.7,Supported descriptively,Full-period concentration is descriptive; predictive segment selection uses training period only
+H5,January 2026 registrations exceed January 2025,0.09790258885476089,0.0,Supported descriptively,A one-month year-on-year change does not prove sustained growth
+H6,The validation-selected total model beats Naive on held-out test MAE,0.11003042696725285,0.0,Supported descriptively,Test is reporting-only; a negative improvement does not permit switching the selected model

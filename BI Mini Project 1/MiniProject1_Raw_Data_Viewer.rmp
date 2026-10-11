@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8'?>
+<process version="12.1.001">
+  <context>
+    <input />
+    <output />
+    <macros />
+  </context>
+  <operator class="process" compatibility="12.1.001" expanded="true" name="Mini Project1 Original Raw Data Viewer" activated="true">
+    <parameter key="random_seed" value="2026" />
+    <parameter key="encoding" value="UTF-8" />
+    <process expanded="true">
+      <operator class="generate_macro" compatibility="12.1.001" expanded="true" height="103" width="90" name="Portable Dataset Path" x="35" y="30" activated="true">
+        <list key="function_descriptions">
+          <parameter key="dataset_path" value="replace(%{process_path}, %{process_file}, &quot;bank-full.csv&quot;)" />
+        </list>
+      </operator>
+      <operator class="read_csv" compatibility="12.1.001" expanded="true" height="103" width="90" name="Read Original bank-full.csv" x="35" y="170" activated="true">
+        <parameter key="csv_file" value="%{dataset_path}" />
+        <parameter key="column_separators" value=";" />
+        <parameter key="trim_lines" value="true" />
+        <parameter key="use_quotes" value="true" />
+        <parameter key="quotes_character" value="&quot;" />
+        <parameter key="first_row_as_names" value="true" />
+        <parameter key="parse_numbers" value="true" />
+        <parameter key="decimal_character" value="." />
+        <parameter key="encoding" value="UTF-8" />
+        <parameter key="read_not_matching_values_as_missings" value="false" />
+        <list key="data_set_meta_data_information">
+          <parameter key="0" value="age.true.integer.attribute" />
+          <parameter key="1" value="job.true.polynominal.attribute" />
+          <parameter key="2" value="marital.true.polynominal.attribute" />
+          <parameter key="3" value="education.true.polynominal.attribute" />
+          <parameter key="4" value="default.true.binominal.attribute" />
+          <parameter key="5" value="balance.true.integer.attribute" />
+          <parameter key="6" value="housing.true.binominal.attribute" />
+          <parameter key="7" value="loan.true.binominal.attribute" />
+          <parameter key="8" value="contact.true.polynominal.attribute" />
+          <parameter key="9" value="day.true.integer.attribute" />
+          <parameter key="10" value="month.true.polynominal.attribute" />
+          <parameter key="11" value="duration.true.integer.attribute" />
+          <parameter key="12" value="campaign.true.integer.attribute" />
+          <parameter key="13" value="pdays.true.integer.attribute" />
+          <parameter key="14" value="previous.true.integer.attribute" />
+          <parameter key="15" value="poutcome.true.polynominal.attribute" />
+          <parameter key="16" value="y.true.binominal.attribute" />
+        </list>
+      </operator>
+      <connect from_op="Read Original bank-full.csv" from_port="output" to_port="result 1" />
+      <portSpacing port="sink_result 1" spacing="0" />
+      <portSpacing port="sink_result 2" spacing="0" />
+      <description align="left" color="yellow" colored="true" width="900" height="100" x="35" y="350">READ ONLY ORIGINAL RAW DATA: all17 typed regular attributes including duration and y. No target role, exclusion, generated feature, split, training or writes. Open raw result in native Turbo Prep and perform genuine interactive exclusion of duration and previously_contacted = if(pdays == -1, "no", "yes"). GUI history is not created by this viewer.</description>
+    </process>
+  </operator>
+</process>

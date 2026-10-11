@@ -1,0 +1,36 @@
+table 'ProductsTable'
+
+	column 'ProductID'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: ProductID
+
+	column 'ProductName'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: ProductName
+
+	column 'Category'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Category
+
+	column 'UnitPrice'
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: UnitPrice
+
+	column 'UnitCost'
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: UnitCost
+
+	partition 'ProductsTable' = m
+		mode: import
+		source =
+			let
+			    Source = Excel.Workbook(File.Contents("D:/Github/BI 2026/Workshop 8 Data Analysis Expressions (DAX)/DAX_Lab.xlsx"), null, true),
+			    Raw = Source{[Item="ProductsTable",Kind="Table"]}[Data],
+			    Typed = Table.TransformColumnTypes(Raw, {{"ProductID", type text}, {"ProductName", type text}, {"Category", type text}, {"UnitPrice", Int64.Type}, {"UnitCost", Int64.Type}})
+			in
+			    Typed

@@ -1,0 +1,6 @@
+Dataset: Indicators of Heart Disease, Kamil Pytlak, Kaggle
+https://www.kaggle.com/datasets/kamilpytlak/personal-key-indicators-of-heart-disease
+File pinned: heart_2020_cleaned.csv (2020 cleaned extract), 319795 rows, 18 columns. Current Kaggle title may mention2022; this task does not silently switch files.
+CDC 2020 BRFSS source documentation https://www.cdc.gov/brfss/annual_data/annual_2020.html
+CDC2020 calculatedvariables https://www.cdc.gov/brfss/annual_data/2020/Summary_Matrix_20.html
+90a1e2e8bdcb4aba54314a41d35d2ac3be4763e459df33951e08e415f527f5a8

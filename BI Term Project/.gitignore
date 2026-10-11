@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.jupyter/
+qa/
+presentation-build/node_modules/
+presentation-build/previews/
+presentation-build/final-previews/
+presentation-build/candidate.pptx
+presentation-build/previous_final_v1.pptx
+presentation-build/before_native_overview.pptx
+presentation-build/*.inspect.ndjson

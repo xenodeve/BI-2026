@@ -1,0 +1,383 @@
+{
+  "status": "NATIVE_GUI_MODELS_PROCESS_AND_GENUINE_TURBOPREP_VERIFIED",
+  "reported_GUI_start_local": "2026-10-11T12:06:58+07:00",
+  "reported_GUI_finished_local": "2026-10-11T12:07:06+07:00",
+  "root_native_GUI_run_verified": true,
+  "independent_file_and_photo_review_verified": true,
+  "canonical_process_sha256": "0a5f5223645f5296b93117afaff17010547974a690d9dfed2ddf4524a7e12018",
+  "raw_source_sha256": "d1513ec63b385506f7cfce9f2c5caa9fe99e7ba4e8c3fa264b3aaf0f849ed32d",
+  "all5_GUI_exports_byte_identical_to_preGUI_backup_and_original_batch_proof": true,
+  "native_batch_provenance_preserved": true,
+  "models": {
+    "NB": {
+      "model": "Naive Bayes",
+      "screenshot": "screenshots/native_NB_performance.png",
+      "screenshot_sha256": "049bf2217c17c5932200fa50495aff620f6820820083107ce54bc5b7d341dc11",
+      "image_format": "JPEG",
+      "image_pixels": [
+        1920,
+        1032
+      ],
+      "native_metrics_file": "native_NB.csv",
+      "native_metrics_sha256": "1827a9a4a9a81376f1644df29b7569f7563e28c4fb3b3e1edb0eb4913e38e8c4",
+      "GUI_export_mtime_local": "2026-10-11T12:06:58.602057+07:00",
+      "GUI_export_mtime_UTC": "2026-10-11T05:06:58.602057+00:00",
+      "backup_metrics_sha256": "1827a9a4a9a81376f1644df29b7569f7563e28c4fb3b3e1edb0eb4913e38e8c4",
+      "metrics": {
+        "accuracy": 0.8093482748451785,
+        "precision_yes": 0.2976913730255164,
+        "recall_yes": 0.4631379962192816,
+        "f1_yes": 0.3624260355029586,
+        "roc_auc": 0.7267423767850829
+      },
+      "counts": {
+        "tn": 10243,
+        "fp": 1734,
+        "fn": 852,
+        "tp": 735
+      },
+      "positive_class": "yes",
+      "test_rows": 13564,
+      "GUI_observed_rounded_values": [
+        80.93,
+        29.77,
+        46.31,
+        36.24,
+        0.727
+      ],
+      "independent_original_photo_values_verified": true,
+      "GUI_confusion_orientation": "rows predicted; columns true"
+    },
+    "LR": {
+      "model": "Logistic Regression",
+      "screenshot": "screenshots/native_LR_performance.png",
+      "screenshot_sha256": "297bdcc495e8cf35ed267321a63b79547415baf2ed3db9eb4bc322732e0064ba",
+      "image_format": "JPEG",
+      "image_pixels": [
+        1920,
+        1032
+      ],
+      "native_metrics_file": "native_LR.csv",
+      "native_metrics_sha256": "3661e793d115731811161a6fe39fd96a25e20fa4c441c3396ed869b6a5d1940c",
+      "GUI_export_mtime_local": "2026-10-11T12:07:00.201787+07:00",
+      "GUI_export_mtime_UTC": "2026-10-11T05:07:00.201787+00:00",
+      "backup_metrics_sha256": "3661e793d115731811161a6fe39fd96a25e20fa4c441c3396ed869b6a5d1940c",
+      "metrics": {
+        "accuracy": 0.8765850781480389,
+        "precision_yes": 0.4693877551020408,
+        "recall_yes": 0.4202898550724637,
+        "f1_yes": 0.4434840425531915,
+        "roc_auc": 0.762951401444225
+      },
+      "counts": {
+        "tn": 11223,
+        "fp": 754,
+        "fn": 920,
+        "tp": 667
+      },
+      "positive_class": "yes",
+      "test_rows": 13564,
+      "GUI_observed_rounded_values": [
+        87.66,
+        46.94,
+        42.03,
+        44.35,
+        0.763
+      ],
+      "independent_original_photo_values_verified": true,
+      "GUI_confusion_orientation": "rows predicted; columns true"
+    },
+    "DT": {
+      "model": "Decision Tree",
+      "screenshot": "screenshots/native_DT_performance.png",
+      "screenshot_sha256": "c316e7c28697af6faa3235a6be5abb6c41cea68ad8f6bdfdb76ca5080f86239b",
+      "image_format": "JPEG",
+      "image_pixels": [
+        1920,
+        1032
+      ],
+      "native_metrics_file": "native_DT.csv",
+      "native_metrics_sha256": "c497828a8a11436c2ef4d5122eb1296a7c46f132b5b9db89ebca12458b7b72be",
+      "GUI_export_mtime_local": "2026-10-11T12:07:00.551567+07:00",
+      "GUI_export_mtime_UTC": "2026-10-11T05:07:00.551567+00:00",
+      "backup_metrics_sha256": "c497828a8a11436c2ef4d5122eb1296a7c46f132b5b9db89ebca12458b7b72be",
+      "metrics": {
+        "accuracy": 0.8919935122382778,
+        "precision_yes": 0.639269406392694,
+        "recall_yes": 0.1764335223692501,
+        "f1_yes": 0.2765432098765432,
+        "roc_auc": 0.581620785564687
+      },
+      "counts": {
+        "tn": 11819,
+        "fp": 158,
+        "fn": 1307,
+        "tp": 280
+      },
+      "positive_class": "yes",
+      "test_rows": 13564,
+      "GUI_observed_rounded_values": [
+        89.2,
+        63.93,
+        17.64,
+        27.65,
+        0.582
+      ],
+      "independent_original_photo_values_verified": true,
+      "GUI_confusion_orientation": "rows predicted; columns true"
+    },
+    "RF": {
+      "model": "Random Forest",
+      "screenshot": "screenshots/native_RF_performance.png",
+      "screenshot_sha256": "57a3b6f68c5c98cdb7cfc7bccfea3afce52d3a1a07615b3096c7b37778c29391",
+      "image_format": "JPEG",
+      "image_pixels": [
+        1920,
+        1032
+      ],
+      "native_metrics_file": "native_RF.csv",
+      "native_metrics_sha256": "5e87d9b94fbd34e1d8603a5a134972db5b4f83de903c1288cbde02a08ac1c476",
+      "GUI_export_mtime_local": "2026-10-11T12:07:04.116671+07:00",
+      "GUI_export_mtime_UTC": "2026-10-11T05:07:04.116671+00:00",
+      "backup_metrics_sha256": "5e87d9b94fbd34e1d8603a5a134972db5b4f83de903c1288cbde02a08ac1c476",
+      "metrics": {
+        "accuracy": 0.8926570333235034,
+        "precision_yes": 0.7027863777089783,
+        "recall_yes": 0.143037177063642,
+        "f1_yes": 0.237696335078534,
+        "roc_auc": 0.7722726698551979
+      },
+      "counts": {
+        "tn": 11881,
+        "fp": 96,
+        "fn": 1360,
+        "tp": 227
+      },
+      "positive_class": "yes",
+      "test_rows": 13564,
+      "GUI_observed_rounded_values": [
+        89.27,
+        70.28,
+        14.3,
+        23.77,
+        0.772
+      ],
+      "independent_original_photo_values_verified": true,
+      "GUI_confusion_orientation": "rows predicted; columns true"
+    },
+    "GBT": {
+      "model": "Gradient Boosted Trees",
+      "screenshot": "screenshots/native_GBT_performance.png",
+      "screenshot_sha256": "bc14119e479be23c4c0dae3aa25183cd73e727210e343ede75e61314d26c0182",
+      "image_format": "JPEG",
+      "image_pixels": [
+        1920,
+        1032
+      ],
+      "native_metrics_file": "native_GBT.csv",
+      "native_metrics_sha256": "74336daa8e178c60f960c130b8cb213839f21b3676aecc077a6598107a75665b",
+      "GUI_export_mtime_local": "2026-10-11T12:07:06.813005+07:00",
+      "GUI_export_mtime_UTC": "2026-10-11T05:07:06.813005+00:00",
+      "backup_metrics_sha256": "74336daa8e178c60f960c130b8cb213839f21b3676aecc077a6598107a75665b",
+      "metrics": {
+        "accuracy": 0.876732527278089,
+        "precision_yes": 0.4748073503260225,
+        "recall_yes": 0.504725897920605,
+        "f1_yes": 0.4893097128894318,
+        "roc_auc": 0.7910559932161534
+      },
+      "counts": {
+        "tn": 11091,
+        "fp": 886,
+        "fn": 786,
+        "tp": 801
+      },
+      "positive_class": "yes",
+      "test_rows": 13564,
+      "GUI_observed_rounded_values": [
+        87.67,
+        47.48,
+        50.47,
+        48.93,
+        0.791
+      ],
+      "independent_original_photo_values_verified": true,
+      "GUI_confusion_orientation": "rows predicted; columns true"
+    }
+  },
+  "extra_photos": {
+    "native_GBT_confusion.png": {
+      "screenshot": "screenshots/native_GBT_confusion.png",
+      "sha256": "5178f030026d2a51effcdf874ae660bbe357743f0d9487785ab391a22ee72c01",
+      "purpose": "Genuine selected GBT native confusion; TN11091 FP886 FN786 TP801",
+      "independent_photo_reviewed": true
+    },
+    "native_all5_completed.png": {
+      "screenshot": "screenshots/native_all5_completed.png",
+      "sha256": "3cbba055038a0480cb15fc6d8383a78cc8a006a9a9e33150712b26f15e129a9c",
+      "purpose": "Completed native five-model results and20 result objects, GBT9criteria displayed",
+      "independent_photo_reviewed": true
+    },
+    "native_process_full_overview.png": {
+      "screenshot": "screenshots/native_process_full_overview.png",
+      "sha256": "4dd2e8f3d12135ff1e5934058ab59c324b29ece9de6987ad73e82cd9d6c43ac1",
+      "purpose": "Native full graph at50%, all5learner branches andresultports visible",
+      "independent_photo_reviewed": true
+    },
+    "native_process_completed.png": {
+      "screenshot": "screenshots/native_process_completed.png",
+      "sha256": "ccef8db6519a81c64a6c6b682fd06788bba6383f6d69c40454d25593abc2b86c",
+      "purpose": "Postrun native process at67%; right outputs cropped; partialgraph context only",
+      "independent_photo_reviewed": true
+    },
+    "native_process_before_run.png": {
+      "screenshot": "screenshots/native_process_before_run.png",
+      "sha256": "06f6f1405548362b8b7ddde266d5fbcd409807c5ca329953ad58c1c9bb545435",
+      "purpose": "Initial native preparation/split100% process view; pre-run context only",
+      "independent_photo_reviewed": true
+    },
+    "native_relocated_all5_completed.png": {
+      "screenshot": "screenshots/native_relocated_all5_completed.png",
+      "sha256": "4b2f31a1fc9b0c20557cc508db945a1e635c5d7517bb3ee052c98b3e22eb6a28",
+      "purpose": "ActualrelocatedprocessGUIopen/Runfinished, all5matchingnativeexports",
+      "independent_photo_reviewed": true
+    }
+  },
+  "TurboPrep": {
+    "interactive_verified": true,
+    "screenshots": [
+      {
+        "screenshot": "screenshots/native_raw_import.png",
+        "sha256": "3d9a8eeabf6345c98343c47ecec1a70be1050cba6e5a696a0da67dbe8a94be1a",
+        "pixels": [
+          1920,
+          1032
+        ],
+        "image_format": "JPEG",
+        "purpose": "OriginalrawResults context45,211×17, allregular fields",
+        "context_only": true
+      },
+      {
+        "screenshot": "screenshots/native_turboprep_original.png",
+        "sha256": "127ec66c6e8c749ebca9a2be28c0eb982e8b9566e10208b1f208fce0be977a68",
+        "pixels": [
+          1920,
+          1032
+        ],
+        "image_format": "JPEG",
+        "purpose": "ActualOpeninTurboPrep original45,211×17; LastChangeNone",
+        "context_only": false
+      },
+      {
+        "screenshot": "screenshots/native_turboprep_quality_review.png",
+        "sha256": "42e9ed311ed776266c0a57beff0e1b22f26d6f75d11568fdd305bfbd492bfe6f",
+        "pixels": [
+          1920,
+          1032
+        ],
+        "image_format": "JPEG",
+        "purpose": "Contextonly: AGEselected/Cleanseopened, disabledmissingreplacement; noCleanse/dedup/outlier commit",
+        "context_only": true
+      },
+      {
+        "screenshot": "screenshots/native_turboprep_duration_selected.png",
+        "sha256": "4e25ef54bc869943f1eb3f19acda79ec5c1c8830a0a4c76eb7eb202bae437498",
+        "pixels": [
+          1920,
+          1032
+        ],
+        "image_format": "JPEG",
+        "purpose": "ActualTransform selectedduration only",
+        "context_only": false
+      },
+      {
+        "screenshot": "screenshots/native_turboprep_duration_removed.png",
+        "sha256": "fb4471543f3ebe1cf0b762ee774862118af0f9e43eee5eb711f852947a33cac6",
+        "pixels": [
+          1920,
+          1032
+        ],
+        "image_format": "JPEG",
+        "purpose": "ActualcommittedRemoveduration,45,211×16/10nom6num",
+        "context_only": false
+      },
+      {
+        "screenshot": "screenshots/native_turboprep_feature_formula.png",
+        "sha256": "f3828adaf7ed13f84dbba60cb11ff9426747ff70668b8117235f3928b6ce07d4",
+        "pixels": [
+          1920,
+          1032
+        ],
+        "image_format": "JPEG",
+        "purpose": "ActualGenerateexactif(pdays == -1,\"no\",\"yes\") preview",
+        "context_only": false
+      },
+      {
+        "screenshot": "screenshots/native_turboprep_prepared.png",
+        "sha256": "c0232cf65e367b821f9be36061a0b222a3de14a9c0fb2328f5a5ea868215eaae",
+        "pixels": [
+          1920,
+          1032
+        ],
+        "image_format": "JPEG",
+        "purpose": "ActualcommittedGenerateprepared45,211×17/11nom6num",
+        "context_only": false
+      },
+      {
+        "screenshot": "screenshots/native_turboprep_history.png",
+        "sha256": "914c451934c947524d064992fb444eff5aafff2e6f26d201d6b0312090f987c9",
+        "pixels": [
+          1920,
+          1032
+        ],
+        "image_format": "JPEG",
+        "purpose": "NativefullwindowHistorytwoactualstepsRemove+Generate",
+        "context_only": false
+      },
+      {
+        "screenshot": "screenshots/native_turboprep_history_detail.png",
+        "sha256": "7867061396553958e832fd3b5092f52f6e76cdbecc39b83349a962ce996649a4",
+        "pixels": [
+          586,
+          393
+        ],
+        "image_format": "JPEG",
+        "purpose": "NativeHistorydialogdetail, same2steps/actualformula",
+        "context_only": false
+      },
+      {
+        "screenshot": "screenshots/native_turboprep_export_result.png",
+        "sha256": "a671f063853a22b96fe70baf3c982f1f240f810f962f284251ffbc930b134531",
+        "pixels": [
+          1920,
+          1032
+        ],
+        "image_format": "JPEG",
+        "purpose": "NativeCSVExportFinished; actualexportfilenamechecked on disk",
+        "context_only": false
+      }
+    ],
+    "native_export": "bank_turboprep_GUI.csv",
+    "native_export_sha256": "d1e97091305cedb7a370dc8989f576832f894057d8b7a95e9264ebc933b49a59",
+    "delimiter": ",",
+    "verification_file": "turboprep_export_verification.json",
+    "verification_file_sha256": "982d219d629464fd387621ec9242222df228ddba960ed13d3707a16cf803be4a",
+    "duration_excluded_and_flag_derived": true,
+    "committed_history_steps": 2,
+    "GUI_Cleanse_committed": false,
+    "canonical_authored_interactively_claimed": false,
+    "equivalent_replay_not_original_model_training_input": true,
+    "pending": []
+  },
+  "final_report_ready": true,
+  "pending": [],
+  "no_fake_interactive_history": true,
+  "GUI_portability": {
+    "verified": true,
+    "proof": "native_GUI_portability_verification.json",
+    "proof_sha256": "2e0f87ed71b46fab01ec79d4ad5cae05a99941d35f4a006ea51d59618bebab67",
+    "screenshot": "screenshots/native_relocated_all5_completed.png",
+    "screenshot_sha256": "4b2f31a1fc9b0c20557cc508db945a1e635c5d7517bb3ee052c98b3e22eb6a28",
+    "actual_native_GUI_run": true
+  }
+}

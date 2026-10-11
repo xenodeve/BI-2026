@@ -1,0 +1,20 @@
+﻿attribute,type_th,definition_th,role
+HeartDisease,หมวดหมู่ 2 ค่า,ประวัติโรคหัวใจตามคำตอบแบบสำรวจ Yes เป็น positive class,Target
+BMI,ตัวเลข,ดัชนีมวลกายตามไฟล์,Input
+Smoking,Yes หรือ No,ประวัติสูบบุหรี่ตามคำถามแบบสำรวจ,Input
+AlcoholDrinking,Yes หรือ No,การดื่มหนักตามตัวแปรแบบสำรวจ,Input
+Stroke,Yes หรือ No,ประวัติโรคหลอดเลือดสมองตามคำตอบ,Input
+PhysicalHealth,ตัวเลข,จำนวนวันที่สุขภาพกายไม่ดีใน 30 วันที่ผ่านมา,Input
+MentalHealth,ตัวเลข,จำนวนวันที่สุขภาพจิตไม่ดีใน 30 วันที่ผ่านมา,Input
+DiffWalking,Yes หรือ No,มีความลำบากในการเดินหรือขึ้นบันได,Input
+Sex,หมวดหมู่,Female หรือ Male ตามไฟล์,Input
+AgeCategory,หมวดหมู่,ช่วงอายุ 13 ระดับจาก 18–24 ถึง 80 or older,Input
+Race,หมวดหมู่,กลุ่มเชื้อชาติ 6 ระดับตามไฟล์,Input
+Diabetic,หมวดหมู่,4 ค่า รวม borderline และ during pregnancy ไม่ยุบเป็น 2 ค่า,Input
+PhysicalActivity,Yes หรือ No,การมีกิจกรรมทางกายตามแบบสำรวจ,Input
+GenHealth,หมวดหมู่,การประเมินสุขภาพทั่วไป 5 ระดับ,Input
+SleepTime,ตัวเลข,ชั่วโมงการนอนตามคำตอบ,Input
+Asthma,Yes หรือ No,ประวัติหอบหืดตามคำตอบ,Input
+KidneyDisease,Yes หรือ No,ประวัติโรคไตตามคำตอบ,Input
+SkinCancer,Yes หรือ No,ประวัติมะเร็งผิวหนังตามคำตอบ,Input
+AnyUnhealthyDays,หมวดหมู่ 2 ค่า,Yes เมื่อ PhysicalHealth>0 หรือ MentalHealth>0 สร้างโดยไม่ใช้ Target,Derived

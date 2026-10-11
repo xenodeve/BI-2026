@@ -1,0 +1,157 @@
+{
+  "source_file": "data/Covid Data.csv",
+  "source_url": "https://www.kaggle.com/datasets/meirnizri/covid19-dataset",
+  "source_url_provenance": "Course plan; this collector does not download or verify live website content",
+  "source_sha256": "d65681480d2a7ebe41974cc197140a8cb7b59b9462f1864b89e8fc1991be3d86",
+  "raw_rows": 1048575,
+  "raw_columns": 21,
+  "planned_prepared_rows_without_dropping_records": 1048575,
+  "planned_prepared_columns": 16,
+  "planned_input_count": 15,
+  "removed_columns": [
+    "PREGNANT",
+    "DATE_DIED",
+    "INTUBED",
+    "ICU",
+    "CLASIFFICATION_FINAL"
+  ],
+  "inputs": [
+    "USMER",
+    "MEDICAL_UNIT",
+    "SEX",
+    "PNEUMONIA",
+    "AGE",
+    "DIABETES",
+    "COPD",
+    "ASTHMA",
+    "INMSUPR",
+    "HIPERTENSION",
+    "OTHER_DISEASE",
+    "CARDIOVASCULAR",
+    "OBESITY",
+    "RENAL_CHRONIC",
+    "TOBACCO"
+  ],
+  "target": "PATIENT_TYPE",
+  "target_mapping": {
+    "1": "Outpatient",
+    "2": "Hospitalized"
+  },
+  "positive_class": "Hospitalized",
+  "target_counts": {
+    "1": 848544,
+    "2": 200031
+  },
+  "hospitalized_fraction": 0.19076460911236678,
+  "majority_class_accuracy_baseline": 0.8092353908876332,
+  "blank_cells": 0,
+  "exact_duplicate_raw_rows": 812049,
+  "duplicate_prepared_profiles_including_target": 932648,
+  "duplicate_input_profiles_excluding_target": 952225,
+  "age": {
+    "min": 0,
+    "max": 121,
+    "mean": 41.794102472403026,
+    "median": 40.0
+  },
+  "missing_code_counts": {
+    "USMER": {
+      "97": 0,
+      "98": 0,
+      "99": 0
+    },
+    "MEDICAL_UNIT": {
+      "97": 0,
+      "98": 0,
+      "99": 0
+    },
+    "SEX": {
+      "97": 0,
+      "98": 0,
+      "99": 0
+    },
+    "PATIENT_TYPE": {
+      "97": 0,
+      "98": 0,
+      "99": 0
+    },
+    "INTUBED": {
+      "97": 848544,
+      "98": 0,
+      "99": 7325
+    },
+    "PNEUMONIA": {
+      "97": 0,
+      "98": 0,
+      "99": 16003
+    },
+    "PREGNANT": {
+      "97": 523511,
+      "98": 3754,
+      "99": 0
+    },
+    "DIABETES": {
+      "97": 0,
+      "98": 3338,
+      "99": 0
+    },
+    "COPD": {
+      "97": 0,
+      "98": 3003,
+      "99": 0
+    },
+    "ASTHMA": {
+      "97": 0,
+      "98": 2979,
+      "99": 0
+    },
+    "INMSUPR": {
+      "97": 0,
+      "98": 3404,
+      "99": 0
+    },
+    "HIPERTENSION": {
+      "97": 0,
+      "98": 3104,
+      "99": 0
+    },
+    "OTHER_DISEASE": {
+      "97": 0,
+      "98": 5045,
+      "99": 0
+    },
+    "CARDIOVASCULAR": {
+      "97": 0,
+      "98": 3076,
+      "99": 0
+    },
+    "OBESITY": {
+      "97": 0,
+      "98": 3032,
+      "99": 0
+    },
+    "RENAL_CHRONIC": {
+      "97": 0,
+      "98": 3006,
+      "99": 0
+    },
+    "TOBACCO": {
+      "97": 0,
+      "98": 3220,
+      "99": 0
+    },
+    "CLASIFFICATION_FINAL": {
+      "97": 0,
+      "98": 0,
+      "99": 0
+    },
+    "ICU": {
+      "97": 848544,
+      "98": 0,
+      "99": 7488
+    }
+  },
+  "missing_code_interpretation": "97/98/99 are coded unavailable/not applicable responses in categorical fields; inspect the source dictionary before combining meanings. AGE 97/98/99 are valid numeric ages, not missing codes.",
+  "row_policy": "Retain anonymous profiles. Duplicate profiles do not establish duplicate people; no patient identifier is available. Do not duplicate or synthesize rows to meet the requirement.",
+  "native_preparation_verified_by_collector": false
+}

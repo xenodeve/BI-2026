@@ -1,0 +1,34 @@
+{
+  "VehicleForecast": {
+    "measures": [
+      "Actual Registrations",
+      "Forecast Registrations",
+      "Future Forecast"
+    ],
+    "columns": [
+      "Date",
+      "ActualRegistrations",
+      "ForecastRegistrations",
+      "DatasetSegment",
+      "Model"
+    ],
+    "partitionType": "MPartitionSource"
+  },
+  "ModelComparison": {
+    "measures": [
+      "Model MAE",
+      "Model RMSE",
+      "Model R2",
+      "Selected Model",
+      "Selected MAE"
+    ],
+    "columns": [
+      "Model",
+      "MAE",
+      "RMSE",
+      "R2",
+      "SelectedModel"
+    ],
+    "partitionType": "MPartitionSource"
+  }
+}

@@ -1,0 +1,39 @@
+table 'DateTable'
+	dataCategory: Time
+
+	column 'Date'
+		dataType: dateTime
+		formatString: Short Date
+		summarizeBy: none
+		sourceColumn: Date
+
+	column 'Year'
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: Year
+
+	column 'Quarter'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Quarter
+
+	column 'MonthNo'
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: MonthNo
+
+	column 'MonthName'
+		dataType: string
+		summarizeBy: none
+		sortByColumn: MonthNo
+		sourceColumn: MonthName
+
+	partition 'DateTable' = m
+		mode: import
+		source =
+			let
+			    Source = Excel.Workbook(File.Contents("D:/Github/BI 2026/Workshop 8 Data Analysis Expressions (DAX)/DAX_Lab.xlsx"), null, true),
+			    Raw = Source{[Item="DateTable",Kind="Table"]}[Data],
+			    Typed = Table.TransformColumnTypes(Raw, {{"Date", type date}, {"Year", Int64.Type}, {"Quarter", type text}, {"MonthNo", Int64.Type}, {"MonthName", type text}})
+			in
+			    Typed

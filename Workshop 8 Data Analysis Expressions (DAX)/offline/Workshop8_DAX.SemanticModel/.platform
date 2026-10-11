@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Workshop8_DAX"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "c7d68b12-3aa6-4076-87a6-347db157b905"
+  }
+}

@@ -1,0 +1,26 @@
+table 'CustomersTable'
+
+	column 'CustomerID'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: CustomerID
+
+	column 'CustomerName'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: CustomerName
+
+	column 'Region'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Region
+
+	partition 'CustomersTable' = m
+		mode: import
+		source =
+			let
+			    Source = Excel.Workbook(File.Contents("D:/Github/BI 2026/Workshop 8 Data Analysis Expressions (DAX)/DAX_Lab.xlsx"), null, true),
+			    Raw = Source{[Item="CustomersTable",Kind="Table"]}[Data],
+			    Typed = Table.TransformColumnTypes(Raw, {{"CustomerID", type text}, {"CustomerName", type text}, {"Region", type text}})
+			in
+			    Typed
